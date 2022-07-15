@@ -86,5 +86,32 @@
   <ItemGroup>
     <None Include="Resources\Duck - Icon %28enlarged x2%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart %2832x32%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart %2864x64%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart2 %2832x32%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sword %2832x32%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sword %2864x64%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin %2832x32%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu %2864x64%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu %2832x32%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBlack %2832x32%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

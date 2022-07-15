@@ -63,9 +63,9 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Duck___Icon {
+        internal static System.Drawing.Bitmap Coin_Icon {
             get {
-                object obj = ResourceManager.GetObject("Duck - Icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Coin_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,39 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Duck___Icon__enlarged_x2_ {
+        internal static System.Drawing.Bitmap Duck_GameFormBackground {
             get {
-                object obj = ResourceManager.GetObject("Duck - Icon (enlarged x2)", resourceCulture);
+                object obj = ResourceManager.GetObject("Duck_GameFormBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Health_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Menu_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Menu_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Strength_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Strength_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
