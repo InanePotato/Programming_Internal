@@ -30,7 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.PNL_Game = new System.Windows.Forms.Panel();
+            this.Break_Line = new System.Windows.Forms.Panel();
+            this.PNL_Top = new System.Windows.Forms.Panel();
+            this.LBL_Coins = new System.Windows.Forms.Label();
+            this.LBL_Strength = new System.Windows.Forms.Label();
+            this.LBL_Health = new System.Windows.Forms.Label();
+            this.PNL_PausedCover = new System.Windows.Forms.Panel();
+            this.PNL_Menu = new System.Windows.Forms.Panel();
+            this.BTN_Help = new System.Windows.Forms.Button();
+            this.BTN_Quit = new System.Windows.Forms.Button();
+            this.BTN_MainMenu = new System.Windows.Forms.Button();
             this.PNL_ArmyCamp = new System.Windows.Forms.Panel();
+            this.PIC_ShopButton = new System.Windows.Forms.PictureBox();
+            this.LBL_Slot4Units = new System.Windows.Forms.Label();
+            this.LBL_Slot3Units = new System.Windows.Forms.Label();
+            this.LBL_Slot2Units = new System.Windows.Forms.Label();
+            this.LBL_Slot1Units = new System.Windows.Forms.Label();
             this.LBL_Slot0Units = new System.Windows.Forms.Label();
             this.PNL_AC_Slot4 = new System.Windows.Forms.Panel();
             this.PNL_AC_Slot3 = new System.Windows.Forms.Panel();
@@ -39,32 +54,19 @@
             this.PNL_AC_Slot0 = new System.Windows.Forms.Panel();
             this.PIC_KingDuck = new System.Windows.Forms.PictureBox();
             this.PNL_ACPausedCover = new System.Windows.Forms.Panel();
-            this.Break_Line = new System.Windows.Forms.Panel();
-            this.PNL_Top = new System.Windows.Forms.Panel();
             this.BTN_Menu = new System.Windows.Forms.Button();
-            this.LBL_Coins = new System.Windows.Forms.Label();
             this.PIC_Coins = new System.Windows.Forms.PictureBox();
-            this.LBL_Strength = new System.Windows.Forms.Label();
             this.PIC_Strength = new System.Windows.Forms.PictureBox();
-            this.LBL_Health = new System.Windows.Forms.Label();
             this.PIC_Health = new System.Windows.Forms.PictureBox();
-            this.PNL_PausedCover = new System.Windows.Forms.Panel();
-            this.PNL_Menu = new System.Windows.Forms.Panel();
-            this.BTN_Help = new System.Windows.Forms.Button();
-            this.BTN_Quit = new System.Windows.Forms.Button();
-            this.BTN_MainMenu = new System.Windows.Forms.Button();
-            this.LBL_Slot1Units = new System.Windows.Forms.Label();
-            this.LBL_Slot2Units = new System.Windows.Forms.Label();
-            this.LBL_Slot3Units = new System.Windows.Forms.Label();
-            this.LBL_Slot4Units = new System.Windows.Forms.Label();
             this.PNL_Game.SuspendLayout();
-            this.PNL_ArmyCamp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).BeginInit();
             this.PNL_Top.SuspendLayout();
+            this.PNL_Menu.SuspendLayout();
+            this.PNL_ArmyCamp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_ShopButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Coins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Strength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Health)).BeginInit();
-            this.PNL_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_Game
@@ -82,10 +84,131 @@
             this.PNL_Game.Size = new System.Drawing.Size(886, 867);
             this.PNL_Game.TabIndex = 0;
             // 
+            // Break_Line
+            // 
+            this.Break_Line.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Break_Line.Location = new System.Drawing.Point(0, 762);
+            this.Break_Line.Name = "Break_Line";
+            this.Break_Line.Size = new System.Drawing.Size(886, 10);
+            this.Break_Line.TabIndex = 3;
+            // 
+            // PNL_Top
+            // 
+            this.PNL_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(40)))));
+            this.PNL_Top.Controls.Add(this.BTN_Menu);
+            this.PNL_Top.Controls.Add(this.LBL_Coins);
+            this.PNL_Top.Controls.Add(this.PIC_Coins);
+            this.PNL_Top.Controls.Add(this.LBL_Strength);
+            this.PNL_Top.Controls.Add(this.PIC_Strength);
+            this.PNL_Top.Controls.Add(this.LBL_Health);
+            this.PNL_Top.Controls.Add(this.PIC_Health);
+            this.PNL_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PNL_Top.Location = new System.Drawing.Point(0, 0);
+            this.PNL_Top.Name = "PNL_Top";
+            this.PNL_Top.Size = new System.Drawing.Size(886, 48);
+            this.PNL_Top.TabIndex = 0;
+            // 
+            // LBL_Coins
+            // 
+            this.LBL_Coins.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Coins.Location = new System.Drawing.Point(417, 4);
+            this.LBL_Coins.Name = "LBL_Coins";
+            this.LBL_Coins.Size = new System.Drawing.Size(122, 40);
+            this.LBL_Coins.TabIndex = 4;
+            this.LBL_Coins.Text = "00000";
+            this.LBL_Coins.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LBL_Strength
+            // 
+            this.LBL_Strength.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LBL_Strength.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Strength.Location = new System.Drawing.Point(591, 4);
+            this.LBL_Strength.Name = "LBL_Strength";
+            this.LBL_Strength.Size = new System.Drawing.Size(119, 40);
+            this.LBL_Strength.TabIndex = 2;
+            this.LBL_Strength.Text = "00000";
+            this.LBL_Strength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LBL_Health
+            // 
+            this.LBL_Health.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Health.Location = new System.Drawing.Point(762, 4);
+            this.LBL_Health.Name = "LBL_Health";
+            this.LBL_Health.Size = new System.Drawing.Size(119, 40);
+            this.LBL_Health.TabIndex = 1;
+            this.LBL_Health.Text = "00000";
+            this.LBL_Health.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // PNL_PausedCover
+            // 
+            this.PNL_PausedCover.BackColor = System.Drawing.SystemColors.Control;
+            this.PNL_PausedCover.Enabled = false;
+            this.PNL_PausedCover.Location = new System.Drawing.Point(28, 789);
+            this.PNL_PausedCover.Name = "PNL_PausedCover";
+            this.PNL_PausedCover.Size = new System.Drawing.Size(20, 20);
+            this.PNL_PausedCover.TabIndex = 2;
+            this.PNL_PausedCover.Visible = false;
+            // 
+            // PNL_Menu
+            // 
+            this.PNL_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(45)))), ((int)(((byte)(34)))));
+            this.PNL_Menu.Controls.Add(this.BTN_Help);
+            this.PNL_Menu.Controls.Add(this.BTN_Quit);
+            this.PNL_Menu.Controls.Add(this.BTN_MainMenu);
+            this.PNL_Menu.Enabled = false;
+            this.PNL_Menu.Location = new System.Drawing.Point(0, 789);
+            this.PNL_Menu.Name = "PNL_Menu";
+            this.PNL_Menu.Size = new System.Drawing.Size(20, 20);
+            this.PNL_Menu.TabIndex = 1;
+            this.PNL_Menu.Visible = false;
+            // 
+            // BTN_Help
+            // 
+            this.BTN_Help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Help.FlatAppearance.BorderSize = 0;
+            this.BTN_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Help.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Help.Location = new System.Drawing.Point(0, 6);
+            this.BTN_Help.Name = "BTN_Help";
+            this.BTN_Help.Size = new System.Drawing.Size(200, 56);
+            this.BTN_Help.TabIndex = 2;
+            this.BTN_Help.Text = "Help";
+            this.BTN_Help.UseMnemonic = false;
+            this.BTN_Help.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Quit
+            // 
+            this.BTN_Quit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Quit.FlatAppearance.BorderSize = 0;
+            this.BTN_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Quit.Location = new System.Drawing.Point(0, 130);
+            this.BTN_Quit.Name = "BTN_Quit";
+            this.BTN_Quit.Size = new System.Drawing.Size(200, 56);
+            this.BTN_Quit.TabIndex = 1;
+            this.BTN_Quit.Text = "Save & Quit";
+            this.BTN_Quit.UseMnemonic = false;
+            this.BTN_Quit.UseVisualStyleBackColor = true;
+            // 
+            // BTN_MainMenu
+            // 
+            this.BTN_MainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_MainMenu.FlatAppearance.BorderSize = 0;
+            this.BTN_MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_MainMenu.Location = new System.Drawing.Point(0, 68);
+            this.BTN_MainMenu.Name = "BTN_MainMenu";
+            this.BTN_MainMenu.Size = new System.Drawing.Size(200, 56);
+            this.BTN_MainMenu.TabIndex = 0;
+            this.BTN_MainMenu.Text = "Main Menu";
+            this.BTN_MainMenu.UseMnemonic = false;
+            this.BTN_MainMenu.UseVisualStyleBackColor = true;
+            // 
             // PNL_ArmyCamp
             // 
             this.PNL_ArmyCamp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(168)))), ((int)(((byte)(61)))));
             this.PNL_ArmyCamp.BackgroundImage = global::Programming_Internal.Properties.Resources.Background_ArmyCamp;
+            this.PNL_ArmyCamp.Controls.Add(this.PIC_ShopButton);
             this.PNL_ArmyCamp.Controls.Add(this.LBL_Slot4Units);
             this.PNL_ArmyCamp.Controls.Add(this.LBL_Slot3Units);
             this.PNL_ArmyCamp.Controls.Add(this.LBL_Slot2Units);
@@ -102,6 +225,70 @@
             this.PNL_ArmyCamp.Name = "PNL_ArmyCamp";
             this.PNL_ArmyCamp.Size = new System.Drawing.Size(886, 714);
             this.PNL_ArmyCamp.TabIndex = 4;
+            // 
+            // PIC_ShopButton
+            // 
+            this.PIC_ShopButton.BackColor = System.Drawing.Color.Transparent;
+            this.PIC_ShopButton.BackgroundImage = global::Programming_Internal.Properties.Resources.Sign_Shop;
+            this.PIC_ShopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PIC_ShopButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PIC_ShopButton.Location = new System.Drawing.Point(560, 130);
+            this.PIC_ShopButton.Name = "PIC_ShopButton";
+            this.PIC_ShopButton.Size = new System.Drawing.Size(128, 128);
+            this.PIC_ShopButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PIC_ShopButton.TabIndex = 14;
+            this.PIC_ShopButton.TabStop = false;
+            this.PIC_ShopButton.Click += new System.EventHandler(this.PIC_ShopButton_Click);
+            this.PIC_ShopButton.MouseLeave += new System.EventHandler(this.PIC_ShopButton_MouseLeave);
+            this.PIC_ShopButton.MouseHover += new System.EventHandler(this.PIC_ShopButton_MouseHover);
+            // 
+            // LBL_Slot4Units
+            // 
+            this.LBL_Slot4Units.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_Slot4Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBL_Slot4Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Slot4Units.Location = new System.Drawing.Point(698, 661);
+            this.LBL_Slot4Units.Name = "LBL_Slot4Units";
+            this.LBL_Slot4Units.Size = new System.Drawing.Size(130, 27);
+            this.LBL_Slot4Units.TabIndex = 13;
+            this.LBL_Slot4Units.Text = "0000 Units";
+            this.LBL_Slot4Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LBL_Slot3Units
+            // 
+            this.LBL_Slot3Units.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_Slot3Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBL_Slot3Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Slot3Units.Location = new System.Drawing.Point(557, 661);
+            this.LBL_Slot3Units.Name = "LBL_Slot3Units";
+            this.LBL_Slot3Units.Size = new System.Drawing.Size(130, 27);
+            this.LBL_Slot3Units.TabIndex = 12;
+            this.LBL_Slot3Units.Text = "0000 Units";
+            this.LBL_Slot3Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LBL_Slot2Units
+            // 
+            this.LBL_Slot2Units.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_Slot2Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBL_Slot2Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Slot2Units.Location = new System.Drawing.Point(416, 661);
+            this.LBL_Slot2Units.Name = "LBL_Slot2Units";
+            this.LBL_Slot2Units.Size = new System.Drawing.Size(130, 27);
+            this.LBL_Slot2Units.TabIndex = 11;
+            this.LBL_Slot2Units.Text = "0000 Units";
+            this.LBL_Slot2Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LBL_Slot1Units
+            // 
+            this.LBL_Slot1Units.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_Slot1Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBL_Slot1Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Slot1Units.Location = new System.Drawing.Point(275, 661);
+            this.LBL_Slot1Units.Name = "LBL_Slot1Units";
+            this.LBL_Slot1Units.Size = new System.Drawing.Size(130, 27);
+            this.LBL_Slot1Units.TabIndex = 10;
+            this.LBL_Slot1Units.Text = "0000 Units";
+            this.LBL_Slot1Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LBL_Slot0Units
             // 
@@ -186,30 +373,6 @@
             this.PNL_ACPausedCover.TabIndex = 3;
             this.PNL_ACPausedCover.Visible = false;
             // 
-            // Break_Line
-            // 
-            this.Break_Line.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.Break_Line.Location = new System.Drawing.Point(0, 762);
-            this.Break_Line.Name = "Break_Line";
-            this.Break_Line.Size = new System.Drawing.Size(886, 10);
-            this.Break_Line.TabIndex = 3;
-            // 
-            // PNL_Top
-            // 
-            this.PNL_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(40)))));
-            this.PNL_Top.Controls.Add(this.BTN_Menu);
-            this.PNL_Top.Controls.Add(this.LBL_Coins);
-            this.PNL_Top.Controls.Add(this.PIC_Coins);
-            this.PNL_Top.Controls.Add(this.LBL_Strength);
-            this.PNL_Top.Controls.Add(this.PIC_Strength);
-            this.PNL_Top.Controls.Add(this.LBL_Health);
-            this.PNL_Top.Controls.Add(this.PIC_Health);
-            this.PNL_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PNL_Top.Location = new System.Drawing.Point(0, 0);
-            this.PNL_Top.Name = "PNL_Top";
-            this.PNL_Top.Size = new System.Drawing.Size(886, 48);
-            this.PNL_Top.TabIndex = 0;
-            // 
             // BTN_Menu
             // 
             this.BTN_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -223,16 +386,6 @@
             this.BTN_Menu.UseVisualStyleBackColor = true;
             this.BTN_Menu.Click += new System.EventHandler(this.BTN_Menu_Click);
             // 
-            // LBL_Coins
-            // 
-            this.LBL_Coins.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Coins.Location = new System.Drawing.Point(417, 4);
-            this.LBL_Coins.Name = "LBL_Coins";
-            this.LBL_Coins.Size = new System.Drawing.Size(122, 40);
-            this.LBL_Coins.TabIndex = 4;
-            this.LBL_Coins.Text = "00000";
-            this.LBL_Coins.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // PIC_Coins
             // 
             this.PIC_Coins.Image = global::Programming_Internal.Properties.Resources.Coin_Icon;
@@ -242,17 +395,6 @@
             this.PIC_Coins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PIC_Coins.TabIndex = 5;
             this.PIC_Coins.TabStop = false;
-            // 
-            // LBL_Strength
-            // 
-            this.LBL_Strength.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LBL_Strength.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Strength.Location = new System.Drawing.Point(591, 4);
-            this.LBL_Strength.Name = "LBL_Strength";
-            this.LBL_Strength.Size = new System.Drawing.Size(119, 40);
-            this.LBL_Strength.TabIndex = 2;
-            this.LBL_Strength.Text = "00000";
-            this.LBL_Strength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PIC_Strength
             // 
@@ -264,16 +406,6 @@
             this.PIC_Strength.TabIndex = 3;
             this.PIC_Strength.TabStop = false;
             // 
-            // LBL_Health
-            // 
-            this.LBL_Health.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Health.Location = new System.Drawing.Point(762, 4);
-            this.LBL_Health.Name = "LBL_Health";
-            this.LBL_Health.Size = new System.Drawing.Size(119, 40);
-            this.LBL_Health.TabIndex = 1;
-            this.LBL_Health.Text = "00000";
-            this.LBL_Health.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // PIC_Health
             // 
             this.PIC_Health.Image = global::Programming_Internal.Properties.Resources.Health_Icon;
@@ -283,119 +415,6 @@
             this.PIC_Health.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PIC_Health.TabIndex = 1;
             this.PIC_Health.TabStop = false;
-            // 
-            // PNL_PausedCover
-            // 
-            this.PNL_PausedCover.BackColor = System.Drawing.SystemColors.Control;
-            this.PNL_PausedCover.Enabled = false;
-            this.PNL_PausedCover.Location = new System.Drawing.Point(28, 789);
-            this.PNL_PausedCover.Name = "PNL_PausedCover";
-            this.PNL_PausedCover.Size = new System.Drawing.Size(20, 20);
-            this.PNL_PausedCover.TabIndex = 2;
-            this.PNL_PausedCover.Visible = false;
-            // 
-            // PNL_Menu
-            // 
-            this.PNL_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(45)))), ((int)(((byte)(34)))));
-            this.PNL_Menu.Controls.Add(this.BTN_Help);
-            this.PNL_Menu.Controls.Add(this.BTN_Quit);
-            this.PNL_Menu.Controls.Add(this.BTN_MainMenu);
-            this.PNL_Menu.Enabled = false;
-            this.PNL_Menu.Location = new System.Drawing.Point(0, 789);
-            this.PNL_Menu.Name = "PNL_Menu";
-            this.PNL_Menu.Size = new System.Drawing.Size(20, 20);
-            this.PNL_Menu.TabIndex = 1;
-            this.PNL_Menu.Visible = false;
-            // 
-            // BTN_Help
-            // 
-            this.BTN_Help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Help.FlatAppearance.BorderSize = 0;
-            this.BTN_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Help.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Help.Location = new System.Drawing.Point(0, 6);
-            this.BTN_Help.Name = "BTN_Help";
-            this.BTN_Help.Size = new System.Drawing.Size(200, 56);
-            this.BTN_Help.TabIndex = 2;
-            this.BTN_Help.Text = "Help";
-            this.BTN_Help.UseMnemonic = false;
-            this.BTN_Help.UseVisualStyleBackColor = true;
-            // 
-            // BTN_Quit
-            // 
-            this.BTN_Quit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Quit.FlatAppearance.BorderSize = 0;
-            this.BTN_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Quit.Location = new System.Drawing.Point(0, 130);
-            this.BTN_Quit.Name = "BTN_Quit";
-            this.BTN_Quit.Size = new System.Drawing.Size(200, 56);
-            this.BTN_Quit.TabIndex = 1;
-            this.BTN_Quit.Text = "Save & Quit";
-            this.BTN_Quit.UseMnemonic = false;
-            this.BTN_Quit.UseVisualStyleBackColor = true;
-            // 
-            // BTN_MainMenu
-            // 
-            this.BTN_MainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_MainMenu.FlatAppearance.BorderSize = 0;
-            this.BTN_MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_MainMenu.Location = new System.Drawing.Point(0, 68);
-            this.BTN_MainMenu.Name = "BTN_MainMenu";
-            this.BTN_MainMenu.Size = new System.Drawing.Size(200, 56);
-            this.BTN_MainMenu.TabIndex = 0;
-            this.BTN_MainMenu.Text = "Main Menu";
-            this.BTN_MainMenu.UseMnemonic = false;
-            this.BTN_MainMenu.UseVisualStyleBackColor = true;
-            // 
-            // LBL_Slot1Units
-            // 
-            this.LBL_Slot1Units.BackColor = System.Drawing.Color.Transparent;
-            this.LBL_Slot1Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LBL_Slot1Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Slot1Units.Location = new System.Drawing.Point(275, 661);
-            this.LBL_Slot1Units.Name = "LBL_Slot1Units";
-            this.LBL_Slot1Units.Size = new System.Drawing.Size(130, 27);
-            this.LBL_Slot1Units.TabIndex = 10;
-            this.LBL_Slot1Units.Text = "0000 Units";
-            this.LBL_Slot1Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LBL_Slot2Units
-            // 
-            this.LBL_Slot2Units.BackColor = System.Drawing.Color.Transparent;
-            this.LBL_Slot2Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LBL_Slot2Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Slot2Units.Location = new System.Drawing.Point(416, 661);
-            this.LBL_Slot2Units.Name = "LBL_Slot2Units";
-            this.LBL_Slot2Units.Size = new System.Drawing.Size(130, 27);
-            this.LBL_Slot2Units.TabIndex = 11;
-            this.LBL_Slot2Units.Text = "0000 Units";
-            this.LBL_Slot2Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LBL_Slot3Units
-            // 
-            this.LBL_Slot3Units.BackColor = System.Drawing.Color.Transparent;
-            this.LBL_Slot3Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LBL_Slot3Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Slot3Units.Location = new System.Drawing.Point(557, 661);
-            this.LBL_Slot3Units.Name = "LBL_Slot3Units";
-            this.LBL_Slot3Units.Size = new System.Drawing.Size(130, 27);
-            this.LBL_Slot3Units.TabIndex = 12;
-            this.LBL_Slot3Units.Text = "0000 Units";
-            this.LBL_Slot3Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LBL_Slot4Units
-            // 
-            this.LBL_Slot4Units.BackColor = System.Drawing.Color.Transparent;
-            this.LBL_Slot4Units.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LBL_Slot4Units.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Slot4Units.Location = new System.Drawing.Point(698, 661);
-            this.LBL_Slot4Units.Name = "LBL_Slot4Units";
-            this.LBL_Slot4Units.Size = new System.Drawing.Size(130, 27);
-            this.LBL_Slot4Units.TabIndex = 13;
-            this.LBL_Slot4Units.Text = "0000 Units";
-            this.LBL_Slot4Units.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Game
             // 
@@ -415,13 +434,14 @@
             this.SizeChanged += new System.EventHandler(this.Game_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);
             this.PNL_Game.ResumeLayout(false);
-            this.PNL_ArmyCamp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).EndInit();
             this.PNL_Top.ResumeLayout(false);
+            this.PNL_Menu.ResumeLayout(false);
+            this.PNL_ArmyCamp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_ShopButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Coins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Strength)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Health)).EndInit();
-            this.PNL_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -456,6 +476,7 @@
         private System.Windows.Forms.Label LBL_Slot3Units;
         private System.Windows.Forms.Label LBL_Slot2Units;
         private System.Windows.Forms.Label LBL_Slot1Units;
+        private System.Windows.Forms.PictureBox PIC_ShopButton;
     }
 }
 

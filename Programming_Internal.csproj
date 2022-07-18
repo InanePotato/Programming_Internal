@@ -167,5 +167,14 @@
   <ItemGroup>
     <None Include="Resources\Duck - Tall %28Enlarged x4%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign - Shop %28128x128%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign - Blank %28128x128%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

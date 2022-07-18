@@ -525,5 +525,22 @@ namespace Programming_Internal
                 g.DrawImage(AC_Slot4Image, rec);
             }
         }
+
+        private void PIC_ShopButton_MouseHover(object sender, EventArgs e)
+        {
+            PIC_ShopButton.Size = new Size(PIC_ShopButton.Width + 10, PIC_ShopButton.Height + 10);
+            PIC_ShopButton.Location = new Point(PIC_ShopButton.Location.X - 5, PIC_ShopButton.Location.Y - 10);
+        }
+
+        private void PIC_ShopButton_MouseLeave(object sender, EventArgs e)
+        {
+            PIC_ShopButton.Size = new Size(PIC_ShopButton.Width - 10, PIC_ShopButton.Height - 10);
+            PIC_ShopButton.Location = new Point(PIC_ShopButton.Location.X + 5, PIC_ShopButton.Location.Y + 10);
+        }
+
+        private void PIC_ShopButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
