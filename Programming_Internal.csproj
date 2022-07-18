@@ -113,5 +113,59 @@
   <ItemGroup>
     <None Include="Resources\MenuBlack %2832x32%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AC1 %28x2%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - King 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - King 1 %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AC_SlotBckground1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AC_SlotBckground2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AC_SlotBackground2_Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Agent %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Axe %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Buff %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Gunner %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Icon %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - King 2 %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Sacked %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Sniper %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Spear %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Sword %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Tall %28Enlarged x4%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
