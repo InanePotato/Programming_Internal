@@ -247,6 +247,7 @@
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The Duck Song - But It\'s A Game";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
             this.SizeChanged += new System.EventHandler(this.Game_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);

@@ -33,6 +33,11 @@ namespace Programming_Internal
         private static Image[] v_Magic_Ducks = new Image[3];
         private static Image[] v_Gun_Ducks = new Image[3];
         private static Image[] v_Giant_Ducks = new Image[3];
+        private static Image[] v_Basic_Ducks_FR = new Image[3];
+        private static Image[] v_Range_Ducks_FR = new Image[3];
+        private static Image[] v_Magic_Ducks_FR = new Image[3];
+        private static Image[] v_Gun_Ducks_FR = new Image[3];
+        private static Image[] v_Giant_Ducks_FR = new Image[3];
 
         public static int UnitUpgrades_Basic
         {
@@ -141,6 +146,31 @@ namespace Programming_Internal
         {
             get { return v_Giant_Ducks; }
             set { v_Giant_Ducks = value; }
+        }
+        public static Image[] Basic_Ducks_FR
+        {
+            get { return v_Basic_Ducks_FR; }
+            set { v_Basic_Ducks_FR = value; }
+        }
+        public static Image[] Range_Ducks_FR
+        {
+            get { return v_Range_Ducks_FR; }
+            set { v_Range_Ducks_FR = value; }
+        }
+        public static Image[] Magic_Ducks_FR
+        {
+            get { return v_Magic_Ducks_FR; }
+            set { v_Magic_Ducks_FR = value; }
+        }
+        public static Image[] Gun_Ducks_FR
+        {
+            get { return v_Gun_Ducks_FR; }
+            set { v_Gun_Ducks_FR = value; }
+        }
+        public static Image[] Giant_Ducks_FR
+        {
+            get { return v_Giant_Ducks_FR; }
+            set { v_Giant_Ducks_FR = value; }
         }
     }
 }

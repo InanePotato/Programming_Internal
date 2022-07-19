@@ -75,7 +75,7 @@
             // 
             // PNL_PauseCover
             // 
-            this.PNL_PauseCover.BackColor = System.Drawing.Color.Transparent;
+            this.PNL_PauseCover.BackColor = System.Drawing.SystemColors.Control;
             this.PNL_PauseCover.Location = new System.Drawing.Point(12, 680);
             this.PNL_PauseCover.Name = "PNL_PauseCover";
             this.PNL_PauseCover.Size = new System.Drawing.Size(23, 22);
@@ -240,6 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 714);
             this.Controls.Add(this.PNL_ArmyCamp);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ArmyCamp";
             this.ShowIcon = false;

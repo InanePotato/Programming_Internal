@@ -30,28 +30,58 @@ namespace Programming_Internal
             GlobalVariables.Basic_Ducks[0] = Properties.Resources.Duck_Spear;
             GlobalVariables.Basic_Ducks[1] = Properties.Resources.Duck_Sword;
             GlobalVariables.Basic_Ducks[2] = Properties.Resources.Duck_Axe;
+            GlobalVariables.Basic_Ducks_FR[0] = Properties.Resources.Duck_Spear;
+            GlobalVariables.Basic_Ducks_FR[0].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Basic_Ducks_FR[1] = Properties.Resources.Duck_Sword;
+            GlobalVariables.Basic_Ducks_FR[1].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Basic_Ducks_FR[2] = Properties.Resources.Duck_Axe;
+            GlobalVariables.Basic_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             GlobalVariables.Range_Ducks[0] = Properties.Resources.Blank;
             GlobalVariables.Range_Ducks[1] = Properties.Resources.Blank;
             GlobalVariables.Range_Ducks[2] = Properties.Resources.Blank;
+            GlobalVariables.Range_Ducks_FR[0] = Properties.Resources.Blank;
+            GlobalVariables.Range_Ducks_FR[0].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Range_Ducks_FR[1] = Properties.Resources.Blank;
+            GlobalVariables.Range_Ducks_FR[1].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Range_Ducks_FR[2] = Properties.Resources.Blank;
+            GlobalVariables.Range_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             GlobalVariables.Magic_Ducks[0] = Properties.Resources.Blank;
             GlobalVariables.Magic_Ducks[1] = Properties.Resources.Blank;
             GlobalVariables.Magic_Ducks[2] = Properties.Resources.Blank;
+            GlobalVariables.Magic_Ducks_FR[0] = Properties.Resources.Blank;
+            GlobalVariables.Magic_Ducks_FR[0].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Magic_Ducks_FR[1] = Properties.Resources.Blank;
+            GlobalVariables.Magic_Ducks_FR[1].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Magic_Ducks_FR[2] = Properties.Resources.Blank;
+            GlobalVariables.Magic_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             GlobalVariables.Gun_Ducks[0] = Properties.Resources.Duck_Agent;
             GlobalVariables.Gun_Ducks[1] = Properties.Resources.Duck_Gunner;
             GlobalVariables.Gun_Ducks[2] = Properties.Resources.Duck_Sniper;
+            GlobalVariables.Gun_Ducks_FR[0] = Properties.Resources.Duck_Agent;
+            GlobalVariables.Gun_Ducks_FR[0].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Gun_Ducks_FR[1] = Properties.Resources.Duck_Gunner;
+            GlobalVariables.Gun_Ducks_FR[1].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Gun_Ducks_FR[2] = Properties.Resources.Duck_Sniper;
+            GlobalVariables.Gun_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             GlobalVariables.Giant_Ducks[0] = Properties.Resources.Duck_Stacked;
             GlobalVariables.Giant_Ducks[1] = Properties.Resources.Duck_Tall;
             GlobalVariables.Giant_Ducks[2] = Properties.Resources.Duck_Buff;
+            GlobalVariables.Giant_Ducks_FR[0] = Properties.Resources.Duck_Stacked;
+            GlobalVariables.Giant_Ducks_FR[0].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Giant_Ducks_FR[1] = Properties.Resources.Duck_Tall;
+            GlobalVariables.Giant_Ducks_FR[1].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            GlobalVariables.Giant_Ducks_FR[2] = Properties.Resources.Duck_Buff;
+            GlobalVariables.Giant_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             //
             // ---------  TEMP  ------------
             //
 
-                GlobalVariables.UnitUpgrades_Gun = 0;
+            GlobalVariables.UnitUpgrades_Gun = 0;
                 GlobalVariables.UnitUpgrades_Basic = 0;
                 GlobalVariables.UnitUpgrades_Range = 0;
                 GlobalVariables.UnitUpgrades_Magic = 0;
@@ -96,6 +126,10 @@ namespace Programming_Internal
             {
 
             }
+            else if (GlobalVariables.ChildOpen == "shop")
+            {
+                openChildForm(new Shop());
+            }
             else // if the other two arn't set then it has to ether be army camp or nothing set, and if nothing get then make sure it shows somthing (army camp)
             {
                 GlobalVariables.ChildOpen = "army_camp";
@@ -107,7 +141,8 @@ namespace Programming_Internal
         {
             if (GlobalVariables.Paused == false)
             {
-                Pause_Game();
+                GlobalVariables.Paused = true;
+
                 PNL_Menu.Location = new Point(0,PNL_Top.Height);
                 PNL_Menu.Size = new Size(200, PNL_Game.Height - PNL_Top.Height);
                 PNL_Menu.BringToFront();
@@ -115,13 +150,13 @@ namespace Programming_Internal
                 PNL_Menu.Visible = true;
 
                 GlobalVariables.PauseCoverX = PNL_Menu.Width;
-                GlobalVariables.PauseCoverY = PNL_Menu.Height;
+                GlobalVariables.PauseCoverY = 0;
                 GlobalVariables.PauseCoverWidth = PNL_Game.Width - PNL_Menu.Width;
                 GlobalVariables.PauseCoverHeight = PNL_Game.Height - PNL_Top.Height;
             }
             else
             {
-                Play_Game();
+                GlobalVariables.Paused = false;
 
                 PNL_Menu.Enabled = false;
                 PNL_Menu.Visible = false;
@@ -144,16 +179,6 @@ namespace Programming_Internal
                     e.Graphics.DrawRectangle(p, new Rectangle(PNL_Game.Location.X - halfThickness, PNL_Game.Location.Y - halfThickness, PNL_Game.Width + thickness, PNL_Game.Height + thickness));
                 }
             }
-        }
-
-        public void Pause_Game()
-        {
-            GlobalVariables.Paused = true;
-        }
-
-        public void Play_Game()
-        {
-            GlobalVariables.Paused = false;
         }
 
         private Form activeForm = null;
@@ -206,8 +231,28 @@ namespace Programming_Internal
             {
                 GlobalVariables.ChildToOpen = null;
 
-                // ----- Open Child Code Here -----
+                GlobalVariables.ChildOpen = "shop";
+                openChildForm(new Shop());
             }
+        }
+
+        private void Game_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GlobalVariables.Basic_Ducks_FR[0] = null;
+            GlobalVariables.Basic_Ducks_FR[1] = null;
+            GlobalVariables.Basic_Ducks_FR[2] = null;
+            GlobalVariables.Range_Ducks_FR[0] = null;
+            GlobalVariables.Range_Ducks_FR[1] = null;
+            GlobalVariables.Range_Ducks_FR[2] = null;
+            GlobalVariables.Magic_Ducks_FR[0] = null;
+            GlobalVariables.Magic_Ducks_FR[1] = null;
+            GlobalVariables.Magic_Ducks_FR[2] = null;
+            GlobalVariables.Gun_Ducks_FR[0] = null;
+            GlobalVariables.Gun_Ducks_FR[1] = null;
+            GlobalVariables.Gun_Ducks_FR[2] = null;
+            GlobalVariables.Giant_Ducks_FR[0] = null;
+            GlobalVariables.Giant_Ducks_FR[1] = null;
+            GlobalVariables.Giant_Ducks_FR[2] = null;
         }
     }
 }

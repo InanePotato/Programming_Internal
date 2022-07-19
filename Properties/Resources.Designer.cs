@@ -263,6 +263,26 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Shop_Background {
+            get {
+                object obj = ResourceManager.GetObject("Shop_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shop_Exit_Button_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Shop_Exit_Button_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sign_Blank {
             get {
                 object obj = ResourceManager.GetObject("Sign_Blank", resourceCulture);

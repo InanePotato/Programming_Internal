@@ -61,27 +61,27 @@ namespace Programming_Internal
             if (GlobalVariables.SlotContents[0] == "basic")
             {
                 PNL_Slot0.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot0Image = GlobalVariables.Basic_Ducks[GlobalVariables.UnitUpgrades_Basic];
+                Slot0Image = GlobalVariables.Basic_Ducks_FR[GlobalVariables.UnitUpgrades_Basic];
             }
             else if (GlobalVariables.SlotContents[0] == "range")
             {
                 PNL_Slot0.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot0Image = GlobalVariables.Range_Ducks[GlobalVariables.UnitUpgrades_Range];
+                Slot0Image = GlobalVariables.Range_Ducks_FR[GlobalVariables.UnitUpgrades_Range];
             }
             else if (GlobalVariables.SlotContents[0] == "magic")
             {
                 PNL_Slot0.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot0Image = GlobalVariables.Magic_Ducks[GlobalVariables.UnitUpgrades_Magic];
+                Slot0Image = GlobalVariables.Magic_Ducks_FR[GlobalVariables.UnitUpgrades_Magic];
             }
             else if (GlobalVariables.SlotContents[0] == "gun")
             {
                 PNL_Slot0.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot0Image = GlobalVariables.Gun_Ducks[GlobalVariables.UnitUpgrades_Gun];
+                Slot0Image = GlobalVariables.Gun_Ducks_FR[GlobalVariables.UnitUpgrades_Gun];
             }
             else if (GlobalVariables.SlotContents[0] == "giant")
             {
                 PNL_Slot0.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot0Image = GlobalVariables.Giant_Ducks[GlobalVariables.UnitUpgrades_Giant];
+                Slot0Image = GlobalVariables.Giant_Ducks_FR[GlobalVariables.UnitUpgrades_Giant];
             }
             else
             {
@@ -95,7 +95,7 @@ namespace Programming_Internal
                 Slot0[4] = new Rectangle(0, 0, 1, 1);
             }
 
-            Slot0Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            //Slot0Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             PNL_Slot0.Invalidate();
 
@@ -113,26 +113,26 @@ namespace Programming_Internal
             if (GlobalVariables.SlotContents[1] == "basic")
             {
                 PNL_Slot1.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot1Image = GlobalVariables.Basic_Ducks[GlobalVariables.UnitUpgrades_Basic];
+                Slot1Image = GlobalVariables.Basic_Ducks_FR[GlobalVariables.UnitUpgrades_Basic];
             }
             else if (GlobalVariables.SlotContents[1] == "range")
             {
-                Slot1Image = GlobalVariables.Range_Ducks[GlobalVariables.UnitUpgrades_Range];
+                Slot1Image = GlobalVariables.Range_Ducks_FR[GlobalVariables.UnitUpgrades_Range];
             }
             else if (GlobalVariables.SlotContents[1] == "magic")
             {
                 PNL_Slot1.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot1Image = GlobalVariables.Magic_Ducks[GlobalVariables.UnitUpgrades_Magic];
+                Slot1Image = GlobalVariables.Magic_Ducks_FR[GlobalVariables.UnitUpgrades_Magic];
             }
             else if (GlobalVariables.SlotContents[1] == "gun")
             {
                 PNL_Slot1.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot1Image = GlobalVariables.Gun_Ducks[GlobalVariables.UnitUpgrades_Gun];
+                Slot1Image = GlobalVariables.Gun_Ducks_FR[GlobalVariables.UnitUpgrades_Gun];
             }
             else if (GlobalVariables.SlotContents[1] == "giant")
             {
                 PNL_Slot1.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot1Image = GlobalVariables.Giant_Ducks[GlobalVariables.UnitUpgrades_Giant];
+                Slot1Image = GlobalVariables.Giant_Ducks_FR[GlobalVariables.UnitUpgrades_Giant];
             }
             else
             {
@@ -146,7 +146,7 @@ namespace Programming_Internal
                 Slot1[4] = new Rectangle(0, 0, 1, 1);
             }
 
-            Slot1Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            //Slot1Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             PNL_Slot1.Invalidate();
 
@@ -164,27 +164,27 @@ namespace Programming_Internal
             if (GlobalVariables.SlotContents[2] == "basic")
             {
                 PNL_Slot2.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot2Image = GlobalVariables.Basic_Ducks[GlobalVariables.UnitUpgrades_Basic];
+                Slot2Image = GlobalVariables.Basic_Ducks_FR[GlobalVariables.UnitUpgrades_Basic];
             }
             else if (GlobalVariables.SlotContents[2] == "range")
             {
                 PNL_Slot2.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot2Image = GlobalVariables.Range_Ducks[GlobalVariables.UnitUpgrades_Range];
+                Slot2Image = GlobalVariables.Range_Ducks_FR[GlobalVariables.UnitUpgrades_Range];
             }
             else if (GlobalVariables.SlotContents[2] == "magic")
             {
                 PNL_Slot2.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot2Image = GlobalVariables.Magic_Ducks[GlobalVariables.UnitUpgrades_Magic];
+                Slot2Image = GlobalVariables.Magic_Ducks_FR[GlobalVariables.UnitUpgrades_Magic];
             }
             else if (GlobalVariables.SlotContents[2] == "gun")
             {
                 PNL_Slot2.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot2Image = GlobalVariables.Gun_Ducks[GlobalVariables.UnitUpgrades_Gun];
+                Slot2Image = GlobalVariables.Gun_Ducks_FR[GlobalVariables.UnitUpgrades_Gun];
             }
             else if (GlobalVariables.SlotContents[2] == "giant")
             {
                 PNL_Slot2.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot2Image = GlobalVariables.Giant_Ducks[GlobalVariables.UnitUpgrades_Giant];
+                Slot2Image = GlobalVariables.Giant_Ducks_FR[GlobalVariables.UnitUpgrades_Giant];
             }
             else
             {
@@ -198,7 +198,7 @@ namespace Programming_Internal
                 Slot2[4] = new Rectangle(0, 0, 1, 1);
             }
 
-            Slot2Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            //Slot2Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             PNL_Slot2.Invalidate();
 
@@ -216,27 +216,27 @@ namespace Programming_Internal
             if (GlobalVariables.SlotContents[3] == "basic")
             {
                 PNL_Slot3.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot3Image = GlobalVariables.Basic_Ducks[GlobalVariables.UnitUpgrades_Basic];
+                Slot3Image = GlobalVariables.Basic_Ducks_FR[GlobalVariables.UnitUpgrades_Basic];
             }
             else if (GlobalVariables.SlotContents[3] == "range")
             {
                 PNL_Slot3.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot3Image = GlobalVariables.Range_Ducks[GlobalVariables.UnitUpgrades_Range];
+                Slot3Image = GlobalVariables.Range_Ducks_FR[GlobalVariables.UnitUpgrades_Range];
             }
             else if (GlobalVariables.SlotContents[3] == "magic")
             {
                 PNL_Slot3.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot3Image = GlobalVariables.Magic_Ducks[GlobalVariables.UnitUpgrades_Magic];
+                Slot3Image = GlobalVariables.Magic_Ducks_FR[GlobalVariables.UnitUpgrades_Magic];
             }
             else if (GlobalVariables.SlotContents[3] == "gun")
             {
                 PNL_Slot3.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot3Image = GlobalVariables.Gun_Ducks[GlobalVariables.UnitUpgrades_Gun];
+                Slot3Image = GlobalVariables.Gun_Ducks_FR[GlobalVariables.UnitUpgrades_Gun];
             }
             else if (GlobalVariables.SlotContents[3] == "giant")
             {
                 PNL_Slot3.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot3Image = GlobalVariables.Giant_Ducks[GlobalVariables.UnitUpgrades_Giant];
+                Slot3Image = GlobalVariables.Giant_Ducks_FR[GlobalVariables.UnitUpgrades_Giant];
             }
             else
             {
@@ -250,7 +250,7 @@ namespace Programming_Internal
                 Slot3[4] = new Rectangle(0, 0, 1, 1);
             }
 
-            Slot3Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            //Slot3Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             PNL_Slot3.Invalidate();
 
@@ -268,27 +268,27 @@ namespace Programming_Internal
             if (GlobalVariables.SlotContents[4] == "basic")
             {
                 PNL_Slot4.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot4Image = GlobalVariables.Basic_Ducks[GlobalVariables.UnitUpgrades_Basic];
+                Slot4Image = GlobalVariables.Basic_Ducks_FR[GlobalVariables.UnitUpgrades_Basic];
             }
             else if (GlobalVariables.SlotContents[4] == "range")
             {
                 PNL_Slot4.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot4Image = GlobalVariables.Range_Ducks[GlobalVariables.UnitUpgrades_Range];
+                Slot4Image = GlobalVariables.Range_Ducks_FR[GlobalVariables.UnitUpgrades_Range];
             }
             else if (GlobalVariables.SlotContents[4] == "magic")
             {
                 PNL_Slot4.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot4Image = GlobalVariables.Magic_Ducks[GlobalVariables.UnitUpgrades_Magic];
+                Slot4Image = GlobalVariables.Magic_Ducks_FR[GlobalVariables.UnitUpgrades_Magic];
             }
             else if (GlobalVariables.SlotContents[4] == "gun")
             {
                 PNL_Slot4.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot4Image = GlobalVariables.Gun_Ducks[GlobalVariables.UnitUpgrades_Gun];
+                Slot4Image = GlobalVariables.Gun_Ducks_FR[GlobalVariables.UnitUpgrades_Gun];
             }
             else if (GlobalVariables.SlotContents[4] == "giant")
             {
                 PNL_Slot4.BackgroundImage = Properties.Resources.AC_SlotBckground;
-                Slot4Image = GlobalVariables.Giant_Ducks[GlobalVariables.UnitUpgrades_Giant];
+                Slot4Image = GlobalVariables.Giant_Ducks_FR[GlobalVariables.UnitUpgrades_Giant];
             }
             else
             {
@@ -302,7 +302,7 @@ namespace Programming_Internal
                 Slot4[4] = new Rectangle(0, 0, 1, 1);
             }
 
-            Slot4Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            //Slot4Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             PNL_Slot4.Invalidate();
         }
@@ -359,7 +359,7 @@ namespace Programming_Internal
 
         private void PIC_ShopButton_Click(object sender, EventArgs e)
         {
-
+            GlobalVariables.ChildToOpen = "shop";
         }
 
         private void PIC_ShopButton_MouseHover(object sender, EventArgs e)
@@ -388,6 +388,8 @@ namespace Programming_Internal
             else
             {
                 PNL_PauseCover.Location = new Point(0, PNL_ArmyCamp.Height - PNL_PauseCover.Height);
+                PNL_PauseCover.Visible = false;
+                PNL_PauseCover.SendToBack();
             }
         }
     }

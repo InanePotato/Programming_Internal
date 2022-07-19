@@ -1,0 +1,107 @@
+﻿namespace Programming_Internal
+{
+    partial class Shop
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.PNL_Shop = new System.Windows.Forms.Panel();
+            this.PIC_ExitBTN = new System.Windows.Forms.PictureBox();
+            this.PNL_PauseCover = new System.Windows.Forms.Panel();
+            this.TMR_PausePlayCheck = new System.Windows.Forms.Timer(this.components);
+            this.PNL_Shop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_ExitBTN)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // PNL_Shop
+            // 
+            this.PNL_Shop.BackColor = System.Drawing.Color.Transparent;
+            this.PNL_Shop.BackgroundImage = global::Programming_Internal.Properties.Resources.Shop_Background;
+            this.PNL_Shop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PNL_Shop.Controls.Add(this.PIC_ExitBTN);
+            this.PNL_Shop.Location = new System.Drawing.Point(83, 47);
+            this.PNL_Shop.Name = "PNL_Shop";
+            this.PNL_Shop.Size = new System.Drawing.Size(720, 620);
+            this.PNL_Shop.TabIndex = 0;
+            // 
+            // PIC_ExitBTN
+            // 
+            this.PIC_ExitBTN.BackColor = System.Drawing.Color.Transparent;
+            this.PIC_ExitBTN.BackgroundImage = global::Programming_Internal.Properties.Resources.Shop_Exit_Button_Icon;
+            this.PIC_ExitBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PIC_ExitBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PIC_ExitBTN.Location = new System.Drawing.Point(657, 13);
+            this.PIC_ExitBTN.Name = "PIC_ExitBTN";
+            this.PIC_ExitBTN.Size = new System.Drawing.Size(50, 50);
+            this.PIC_ExitBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PIC_ExitBTN.TabIndex = 17;
+            this.PIC_ExitBTN.TabStop = false;
+            this.PIC_ExitBTN.Click += new System.EventHandler(this.PIC_ExitBTN_Click);
+            this.PIC_ExitBTN.MouseLeave += new System.EventHandler(this.PIC_ExitBTN_MouseLeave);
+            this.PIC_ExitBTN.MouseHover += new System.EventHandler(this.PIC_ExitBTN_MouseHover);
+            // 
+            // PNL_PauseCover
+            // 
+            this.PNL_PauseCover.BackColor = System.Drawing.SystemColors.Control;
+            this.PNL_PauseCover.Location = new System.Drawing.Point(12, 680);
+            this.PNL_PauseCover.Name = "PNL_PauseCover";
+            this.PNL_PauseCover.Size = new System.Drawing.Size(23, 22);
+            this.PNL_PauseCover.TabIndex = 16;
+            this.PNL_PauseCover.Visible = false;
+            // 
+            // TMR_PausePlayCheck
+            // 
+            this.TMR_PausePlayCheck.Enabled = true;
+            this.TMR_PausePlayCheck.Tick += new System.EventHandler(this.TMR_PausePlayCheck_Tick);
+            // 
+            // Shop
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Programming_Internal.Properties.Resources.Background_ArmyCamp;
+            this.ClientSize = new System.Drawing.Size(886, 714);
+            this.Controls.Add(this.PNL_PauseCover);
+            this.Controls.Add(this.PNL_Shop);
+            this.DoubleBuffered = true;
+            this.Name = "Shop";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.Shop_Load);
+            this.PNL_Shop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_ExitBTN)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel PNL_Shop;
+        private System.Windows.Forms.Panel PNL_PauseCover;
+        private System.Windows.Forms.Timer TMR_PausePlayCheck;
+        private System.Windows.Forms.PictureBox PIC_ExitBTN;
+    }
+}
