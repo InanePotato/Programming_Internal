@@ -58,6 +58,7 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="Get_Unit_Info.cs" />
     <Compile Include="GlobalVariables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +67,12 @@
     </Compile>
     <Compile Include="Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopWindow_PurchaseUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopWindow_PurchaseUnits.Designer.cs">
+      <DependentUpon>ShopWindow_PurchaseUnits.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ArmyCamp.resx">
       <DependentUpon>ArmyCamp.cs</DependentUpon>
@@ -85,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopWindow_PurchaseUnits.resx">
+      <DependentUpon>ShopWindow_PurchaseUnits.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -209,6 +219,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shop Panel Background1 %28top gap%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop_Page_Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unit_Settings.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

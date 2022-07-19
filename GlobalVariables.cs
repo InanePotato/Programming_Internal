@@ -39,6 +39,8 @@ namespace Programming_Internal
         private static Image[] v_Gun_Ducks_FR = new Image[3];
         private static Image[] v_Giant_Ducks_FR = new Image[3];
 
+        private static List<Get_Unit_Info> v_Unit_Info = new List<Get_Unit_Info>();
+
         public static int UnitUpgrades_Basic
         {
             get { return v_UnitUpgrades_Basic; }
@@ -171,6 +173,12 @@ namespace Programming_Internal
         {
             get { return v_Giant_Ducks_FR; }
             set { v_Giant_Ducks_FR = value; }
+        }
+
+        public static List<Get_Unit_Info> Unit_Info
+        {
+            get { return v_Unit_Info; }
+            set { v_Unit_Info = value; }
         }
     }
 }

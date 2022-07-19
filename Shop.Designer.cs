@@ -33,6 +33,7 @@
             this.PIC_ExitBTN = new System.Windows.Forms.PictureBox();
             this.PNL_PauseCover = new System.Windows.Forms.Panel();
             this.TMR_PausePlayCheck = new System.Windows.Forms.Timer(this.components);
+            this.PNL_ShopWindow = new System.Windows.Forms.Panel();
             this.PNL_Shop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_ExitBTN)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             this.PNL_Shop.BackColor = System.Drawing.Color.Transparent;
             this.PNL_Shop.BackgroundImage = global::Programming_Internal.Properties.Resources.Shop_Background;
             this.PNL_Shop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PNL_Shop.Controls.Add(this.PNL_ShopWindow);
             this.PNL_Shop.Controls.Add(this.PIC_ExitBTN);
             this.PNL_Shop.Location = new System.Drawing.Point(83, 47);
             this.PNL_Shop.Name = "PNL_Shop";
@@ -78,6 +80,13 @@
             this.TMR_PausePlayCheck.Enabled = true;
             this.TMR_PausePlayCheck.Tick += new System.EventHandler(this.TMR_PausePlayCheck_Tick);
             // 
+            // PNL_ShopWindow
+            // 
+            this.PNL_ShopWindow.Location = new System.Drawing.Point(0, 136);
+            this.PNL_ShopWindow.Name = "PNL_ShopWindow";
+            this.PNL_ShopWindow.Size = new System.Drawing.Size(700, 485);
+            this.PNL_ShopWindow.TabIndex = 18;
+            // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,5 +112,6 @@
         private System.Windows.Forms.Panel PNL_PauseCover;
         private System.Windows.Forms.Timer TMR_PausePlayCheck;
         private System.Windows.Forms.PictureBox PIC_ExitBTN;
+        private System.Windows.Forms.Panel PNL_ShopWindow;
     }
 }

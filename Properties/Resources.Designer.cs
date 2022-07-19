@@ -283,6 +283,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ShopWindow_Background {
+            get {
+                object obj = ResourceManager.GetObject("ShopWindow_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sign_Blank {
             get {
                 object obj = ResourceManager.GetObject("Sign_Blank", resourceCulture);
@@ -307,6 +317,29 @@ namespace Programming_Internal.Properties {
             get {
                 object obj = ResourceManager.GetObject("Strength_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name,Damage,Health,Attack_Speed,Range,Ability
+        ///spear,5,15,10,no,none
+        ///sword,10,20,10,no,none
+        ///axe,20,22,10,no,none
+        ///archer,4,10,10,yes,none
+        ///catapult,10,12,12,yes,100%group_damage
+        ///cannon,20,15,11,yes,100%group_damage 2%decreased_evade
+        ///magician,11,20,10,no,2%stun
+        ///wizard,12,30,11,yes,2%stun 5%fire
+        ///sorcerer,15,30,11,yes,5%stun 10%fire 1%backfire
+        ///agent,10,10,11,yes,5%increase_evade
+        ///gunner,5,15,1,yes,5%bleed 10%decrease_accuracy
+        ///sniper,50,30,13,yes,10%instant_kill 2%bleed
+        ///stacked,25,50,12,no,100%split
+        ///t [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Unit_Settings {
+            get {
+                return ResourceManager.GetString("Unit_Settings", resourceCulture);
             }
         }
     }

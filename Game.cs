@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,22 @@ namespace Programming_Internal
         public Game()
         {
             InitializeComponent();
+
+            //
+            // reads the file Login_info (using the binPath created earler to find the location)
+            //
+
+            StreamReader reader = new StreamReader("C: \Users\mdbur\Desktop\Duck Game\Text Files\Unit_Settings.txt");
+
+            // While the reader still has something to read, this code will execute.
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                // Split into the diffrent things.
+                var values = line.Split(',');
+                GlobalVariables.Unit_Info.Add(new Get_Unit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4], values[6]));
+            }
+            reader.Close();
         }
 
         private void Game_Load(object sender, EventArgs e)

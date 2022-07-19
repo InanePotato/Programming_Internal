@@ -20,6 +20,8 @@ namespace Programming_Internal
         private void Shop_Load(object sender, EventArgs e)
         {
             PNL_Shop.Location = new Point((this.Width - PNL_Shop.Width)/2, (this.Height - PNL_Shop.Height) / 2);
+
+            openShopWindow(new ShopWindow_PurchaseUnits());
         }
 
         private void TMR_PausePlayCheck_Tick(object sender, EventArgs e)
@@ -56,6 +58,23 @@ namespace Programming_Internal
         {
             PIC_ExitBTN.Size = new Size(50, 50);
             PIC_ExitBTN.Location = new Point(657, 13);
+        }
+
+        private Form activeWindowForm = null;
+        private void openShopWindow(Form ShopWindow)
+        {
+            if (activeWindowForm != null)
+            {
+                activeWindowForm.Close();
+            }
+            activeWindowForm = ShopWindow;
+            ShopWindow.TopLevel = false;
+            ShopWindow.FormBorderStyle = FormBorderStyle.None;
+            ShopWindow.Dock = DockStyle.Fill;
+            PNL_ShopWindow.Controls.Add(ShopWindow);
+            PNL_ShopWindow.Tag = ShopWindow;
+            ShopWindow.BringToFront();
+            ShopWindow.Show();
         }
     }
 }
