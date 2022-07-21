@@ -9,7 +9,7 @@ namespace Programming_Internal
     class Get_Unit_Info
     {
         //creates a Constructor with 6 overloads | name, damage, health, attack_speed, range, abilitys
-        public Get_Unit_Info(string name, int damage, int health, int attack_speed, string range, string abilities)
+        public Get_Unit_Info(string name, int damage, int health, int attack_speed, string range, string abilities, int cost)
         {
             Name = name;
             Damage = damage;
@@ -17,6 +17,7 @@ namespace Programming_Internal
             Attack_Speed = attack_speed;
             Range = range;
             Abilities = abilities;
+            Cost = cost;
         }
 
         //set properties so we can access the name and score
@@ -26,5 +27,6 @@ namespace Programming_Internal
         public int Attack_Speed { get; set; }
         public string Range { get; set; }
         public string Abilities { get; set; }
+        public int Cost { get; set; }
     }
 }

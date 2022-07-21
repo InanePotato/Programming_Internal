@@ -21,6 +21,16 @@ namespace Programming_Internal
         {
             PNL_Shop.Location = new Point((this.Width - PNL_Shop.Width)/2, (this.Height - PNL_Shop.Height) / 2);
 
+            BTN_PurchaseUnit_Window.Size = new Size(690 / 3, 40);
+            BTN_UpgradeUnit_Window.Size = new Size(690 / 3, 40);
+            BTN_Commander_Window.Size = new Size(690 / 3, 40);
+            BTN_PurchaseUnit_Window.Location = new Point(5,90);
+            BTN_UpgradeUnit_Window.Location = new Point(BTN_PurchaseUnit_Window.Location.X + BTN_PurchaseUnit_Window.Width, 90);
+            BTN_Commander_Window.Location = new Point(BTN_UpgradeUnit_Window.Location.X + BTN_UpgradeUnit_Window.Width, 90);
+
+            BTN_PurchaseUnit_Window.Enabled = false;
+            BTN_PurchaseUnit_Window.Cursor = Cursors.Default;
+            BTN_PurchaseUnit_Window.BackColor = Color.FromArgb(84, 63, 55);
             openShopWindow(new ShopWindow_PurchaseUnits());
         }
 
@@ -75,6 +85,74 @@ namespace Programming_Internal
             PNL_ShopWindow.Tag = ShopWindow;
             ShopWindow.BringToFront();
             ShopWindow.Show();
+        }
+
+        private void closeShopWindow()
+        {
+            if (activeWindowForm != null)
+            {
+                activeWindowForm.Close();
+            }
+        }
+
+        private void BTN_PurchaseUnit_Window_Click(object sender, EventArgs e)
+        {
+            if (BTN_PurchaseUnit_Window.Cursor == Cursors.Hand)
+            {
+                Reset_Open_Window_Buttons();
+
+                BTN_PurchaseUnit_Window.Enabled = false;
+                BTN_PurchaseUnit_Window.Cursor = Cursors.Default;
+                BTN_PurchaseUnit_Window.BackColor = Color.FromArgb(84, 63, 55);
+                openShopWindow(new ShopWindow_PurchaseUnits());
+            }
+        }
+
+        private void BTN_UpgradeUnit_Window_Click(object sender, EventArgs e)
+        {
+            if (BTN_UpgradeUnit_Window.Cursor == Cursors.Hand)
+            {
+                Reset_Open_Window_Buttons();
+
+                BTN_UpgradeUnit_Window.Enabled = false;
+                BTN_UpgradeUnit_Window.Cursor = Cursors.Default;
+                BTN_UpgradeUnit_Window.BackColor = Color.FromArgb(84, 63, 55);
+                closeShopWindow(); // change to openshop window when the window accualy exists :)
+            }
+        }
+
+        private void BTN_Commander_Window_Click(object sender, EventArgs e)
+        {
+            if (BTN_Commander_Window.Cursor == Cursors.Hand)
+            {
+                Reset_Open_Window_Buttons();
+
+                BTN_Commander_Window.Enabled = false;
+                BTN_Commander_Window.Cursor = Cursors.Default;
+                BTN_Commander_Window.BackColor = Color.FromArgb(84, 63, 55);
+                closeShopWindow(); // change to openshop window when the window accualy exists :)
+            }
+        }
+
+        public void Reset_Open_Window_Buttons()
+        {
+            BTN_PurchaseUnit_Window.BackColor = Color.FromArgb(121, 85, 72);
+            BTN_UpgradeUnit_Window.BackColor = Color.FromArgb(121, 85, 72);
+            BTN_Commander_Window.BackColor = Color.FromArgb(121, 85, 72);
+
+            BTN_PurchaseUnit_Window.Cursor = Cursors.Hand;
+            BTN_UpgradeUnit_Window.Cursor = Cursors.Hand;
+            BTN_Commander_Window.Cursor = Cursors.Hand;
+
+            BTN_PurchaseUnit_Window.Enabled = true;
+            BTN_UpgradeUnit_Window.Enabled = true;
+            BTN_Commander_Window.Enabled = true;
+        }
+
+        private void Shop_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // helps decrease stress on  the device
+            closeShopWindow();
         }
     }
 }

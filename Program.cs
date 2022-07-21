@@ -16,7 +16,8 @@ namespace Programming_Internal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Game());
+            new Load().Show();
+            Application.Run();
         }
     }
 }

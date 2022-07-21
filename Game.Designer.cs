@@ -46,6 +46,7 @@
             this.BTN_Quit = new System.Windows.Forms.Button();
             this.BTN_MainMenu = new System.Windows.Forms.Button();
             this.TMR_ChildFromControl = new System.Windows.Forms.Timer(this.components);
+            this.TMR_TopBarDisplay_Refresh = new System.Windows.Forms.Timer(this.components);
             this.PNL_Game.SuspendLayout();
             this.PNL_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Coins)).BeginInit();
@@ -233,6 +234,11 @@
             this.TMR_ChildFromControl.Enabled = true;
             this.TMR_ChildFromControl.Tick += new System.EventHandler(this.TMR_ChildFromControl_Tick);
             // 
+            // TMR_TopBarDisplay_Refresh
+            // 
+            this.TMR_TopBarDisplay_Refresh.Enabled = true;
+            this.TMR_TopBarDisplay_Refresh.Tick += new System.EventHandler(this.TMR_TopBarDisplay_Refresh_Tick);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +254,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The Duck Song - But It\'s A Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Game_FormClosed);
             this.Load += new System.EventHandler(this.Game_Load);
             this.SizeChanged += new System.EventHandler(this.Game_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);
@@ -279,6 +286,7 @@
         private System.Windows.Forms.Panel Break_Line;
         private System.Windows.Forms.Panel PNL_ChildForm;
         private System.Windows.Forms.Timer TMR_ChildFromControl;
+        private System.Windows.Forms.Timer TMR_TopBarDisplay_Refresh;
     }
 }
 

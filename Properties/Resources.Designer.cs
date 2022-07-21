@@ -321,8 +321,7 @@ namespace Programming_Internal.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name,Damage,Health,Attack_Speed,Range,Ability
-        ///spear,5,15,10,no,none
+        ///   Looks up a localized string similar to spear,5,15,10,no,none
         ///sword,10,20,10,no,none
         ///axe,20,22,10,no,none
         ///archer,4,10,10,yes,none
@@ -335,7 +334,8 @@ namespace Programming_Internal.Properties {
         ///gunner,5,15,1,yes,5%bleed 10%decrease_accuracy
         ///sniper,50,30,13,yes,10%instant_kill 2%bleed
         ///stacked,25,50,12,no,100%split
-        ///t [rest of string was truncated]&quot;;.
+        ///tall,30,80,14,no,2%increase_evade
+        ///buff,30,100,1 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Unit_Settings {
             get {

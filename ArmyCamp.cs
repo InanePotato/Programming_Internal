@@ -43,6 +43,12 @@ namespace Programming_Internal
 
         public void UpdateSlots()
         {
+            PNL_Slot0.Cursor = Cursors.Default;
+            PNL_Slot1.Cursor = Cursors.Default;
+            PNL_Slot2.Cursor = Cursors.Default;
+            PNL_Slot3.Cursor = Cursors.Default;
+            PNL_Slot4.Cursor = Cursors.Default;
+
             SlotRecGap = 10;
             SlotRecHeight = (PNL_Slot0.Height - (6 * SlotRecGap)) / 5;
             SlotRecWidth = SlotRecHeight;
@@ -86,6 +92,7 @@ namespace Programming_Internal
             else
             {
                 PNL_Slot0.BackgroundImage = Properties.Resources.AC_SlotBackground_Plus;
+                PNL_Slot0.Cursor = Cursors.Hand;
                 Slot0Image = Properties.Resources.Blank;
 
                 Slot0[0] = new Rectangle(0, 0, 1, 1);
@@ -137,6 +144,7 @@ namespace Programming_Internal
             else
             {
                 PNL_Slot1.BackgroundImage = Properties.Resources.AC_SlotBackground_Plus;
+                PNL_Slot1.Cursor = Cursors.Hand;
                 Slot1Image = Properties.Resources.Blank;
 
                 Slot1[0] = new Rectangle(0, 0, 1, 1);
@@ -189,6 +197,7 @@ namespace Programming_Internal
             else
             {
                 PNL_Slot2.BackgroundImage = Properties.Resources.AC_SlotBackground_Plus;
+                PNL_Slot2.Cursor = Cursors.Hand;
                 Slot2Image = Properties.Resources.Blank;
 
                 Slot2[0] = new Rectangle(0, 0, 1, 1);
@@ -241,6 +250,7 @@ namespace Programming_Internal
             else
             {
                 PNL_Slot3.BackgroundImage = Properties.Resources.AC_SlotBackground_Plus;
+                PNL_Slot3.Cursor = Cursors.Hand;
                 Slot3Image = Properties.Resources.Blank;
 
                 Slot3[0] = new Rectangle(0, 0, 1, 1);
@@ -293,6 +303,7 @@ namespace Programming_Internal
             else
             {
                 PNL_Slot4.BackgroundImage = Properties.Resources.AC_SlotBackground_Plus;
+                PNL_Slot4.Cursor = Cursors.Hand;
                 Slot4Image = Properties.Resources.Blank;
 
                 Slot4[0] = new Rectangle(0, 0, 1, 1);

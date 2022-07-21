@@ -13,8 +13,8 @@ namespace Programming_Internal
 {
     public partial class Game : Form
     {
-        Graphics g;
         Image IMG_FormBackground = Properties.Resources.Duck_GameFormBackground;
+        string UnitSeting_FilePath = Application.StartupPath + @"\Application_Resources\Unit_Settings.txt";
 
         public Game()
         {
@@ -24,7 +24,7 @@ namespace Programming_Internal
             // reads the file Login_info (using the binPath created earler to find the location)
             //
 
-            StreamReader reader = new StreamReader("C: \Users\mdbur\Desktop\Duck Game\Text Files\Unit_Settings.txt");
+            var reader = new StreamReader(UnitSeting_FilePath);
 
             // While the reader still has something to read, this code will execute.
             while (!reader.EndOfStream)
@@ -32,7 +32,7 @@ namespace Programming_Internal
                 var line = reader.ReadLine();
                 // Split into the diffrent things.
                 var values = line.Split(',');
-                GlobalVariables.Unit_Info.Add(new Get_Unit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4], values[6]));
+                GlobalVariables.Unit_Info.Add(new Get_Unit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4], values[5], Int32.Parse(values[1])));
             }
             reader.Close();
         }
@@ -98,17 +98,25 @@ namespace Programming_Internal
             // ---------  TEMP  ------------
             //
 
-            GlobalVariables.UnitUpgrades_Gun = 0;
+                GlobalVariables.Coins = 1000;
+                
+                GlobalVariables.BasicUnitUnlocked = true;
+                GlobalVariables.RangeUnitUnlocked = true;
+                GlobalVariables.MagicUnitUnlocked = true;
+                GlobalVariables.GunUnitUnlocked = true;
+                GlobalVariables.GiantUnitUnlocked = true;
+
                 GlobalVariables.UnitUpgrades_Basic = 0;
                 GlobalVariables.UnitUpgrades_Range = 0;
                 GlobalVariables.UnitUpgrades_Magic = 0;
+                GlobalVariables.UnitUpgrades_Gun = 0;
                 GlobalVariables.UnitUpgrades_Giant = 2;
 
-                GlobalVariables.SlotContents[0] = "giant";
-                GlobalVariables.SlotContents[1] = "basic";
-                GlobalVariables.SlotContents[2] = "gun";
-                GlobalVariables.SlotContents[3] = "gun";
-                GlobalVariables.SlotContents[4] = "gun";
+                GlobalVariables.SlotContents[0] = "basic";
+                GlobalVariables.SlotContents[1] = "none";
+                GlobalVariables.SlotContents[2] = "none";
+                GlobalVariables.SlotContents[3] = "none";
+                GlobalVariables.SlotContents[4] = "none";
 
             //
             // ------------------------------
@@ -255,21 +263,52 @@ namespace Programming_Internal
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            GlobalVariables.Basic_Ducks_FR[0] = null;
-            GlobalVariables.Basic_Ducks_FR[1] = null;
-            GlobalVariables.Basic_Ducks_FR[2] = null;
-            GlobalVariables.Range_Ducks_FR[0] = null;
-            GlobalVariables.Range_Ducks_FR[1] = null;
-            GlobalVariables.Range_Ducks_FR[2] = null;
-            GlobalVariables.Magic_Ducks_FR[0] = null;
-            GlobalVariables.Magic_Ducks_FR[1] = null;
-            GlobalVariables.Magic_Ducks_FR[2] = null;
-            GlobalVariables.Gun_Ducks_FR[0] = null;
-            GlobalVariables.Gun_Ducks_FR[1] = null;
-            GlobalVariables.Gun_Ducks_FR[2] = null;
-            GlobalVariables.Giant_Ducks_FR[0] = null;
-            GlobalVariables.Giant_Ducks_FR[1] = null;
-            GlobalVariables.Giant_Ducks_FR[2] = null;
+            DialogResult CloseApplication = MessageBox.Show("Do you really want to exit this application?","Exit Appliccation",MessageBoxButtons.YesNo);
+            if (CloseApplication == DialogResult.Yes)
+            {
+                GlobalVariables.Basic_Ducks_FR[0] = null;
+                GlobalVariables.Basic_Ducks_FR[1] = null;
+                GlobalVariables.Basic_Ducks_FR[2] = null;
+                GlobalVariables.Range_Ducks_FR[0] = null;
+                GlobalVariables.Range_Ducks_FR[1] = null;
+                GlobalVariables.Range_Ducks_FR[2] = null;
+                GlobalVariables.Magic_Ducks_FR[0] = null;
+                GlobalVariables.Magic_Ducks_FR[1] = null;
+                GlobalVariables.Magic_Ducks_FR[2] = null;
+                GlobalVariables.Gun_Ducks_FR[0] = null;
+                GlobalVariables.Gun_Ducks_FR[1] = null;
+                GlobalVariables.Gun_Ducks_FR[2] = null;
+                GlobalVariables.Giant_Ducks_FR[0] = null;
+                GlobalVariables.Giant_Ducks_FR[1] = null;
+                GlobalVariables.Giant_Ducks_FR[2] = null;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void TMR_TopBarDisplay_Refresh_Tick(object sender, EventArgs e)
+        {
+            LBL_Coins.Text = GlobalVariables.Coins.ToString();
+            LBL_Health.Text = GlobalVariables.Health.ToString();
+            LBL_Strength.Text = GlobalVariables.Strength.ToString();
+        }
+
+        private void Game_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+
+            int form_count = 0;
+            foreach (Form frm in fc)
+            {
+                form_count++;
+            }
+
+            if (form_count - 1 == 0)
+            {
+                Application.Exit();
+            }
         }
     }
 }

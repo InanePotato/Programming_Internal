@@ -21,8 +21,18 @@ namespace Programming_Internal
         private static int v_Coins;
         private static int v_Strength;
         private static int v_Health;
+        private static int v_BasicUnit_Count;
+        private static int v_RangeUnit_Count;
+        private static int v_MagicUnit_Count;
+        private static int v_GunUnit_Count;
+        private static int v_GiantUnit_Count;
 
         private static bool v_Paused;
+        private static bool v_BasicUnitUnlocked;
+        private static bool v_RangeUnitUnlocked;
+        private static bool v_MagicUnitUnlocked;
+        private static bool v_GunUnitUnlocked;
+        private static bool v_GiantUnitUnlocked;
 
         private static string v_ChildOpen;
         private static string v_ChildToOpen;
@@ -101,11 +111,61 @@ namespace Programming_Internal
             get { return v_Health; }
             set { v_Health = value; }
         }
+        public static int BasicUnit_Count
+        {
+            get { return v_BasicUnit_Count; }
+            set { v_BasicUnit_Count = value; }
+        }
+        public static int RangeUnit_Count
+        {
+            get { return v_RangeUnit_Count; }
+            set { v_RangeUnit_Count = value; }
+        }
+        public static int MagicUnit_Count
+        {
+            get { return v_MagicUnit_Count; }
+            set { v_MagicUnit_Count = value; }
+        }
+        public static int GunUnit_Count
+        {
+            get { return v_GunUnit_Count; }
+            set { v_GunUnit_Count = value; }
+        }
+        public static int GiantUnit_Count
+        {
+            get { return v_GiantUnit_Count; }
+            set { v_GiantUnit_Count = value; }
+        }
 
         public static bool Paused
         {
             get { return v_Paused; }
             set { v_Paused = value; }
+        }
+        public static bool BasicUnitUnlocked
+        {
+            get { return v_BasicUnitUnlocked; }
+            set { v_BasicUnitUnlocked = value; }
+        }
+        public static bool RangeUnitUnlocked
+        {
+            get { return v_RangeUnitUnlocked; }
+            set { v_RangeUnitUnlocked = value; }
+        }
+        public static bool MagicUnitUnlocked
+        {
+            get { return v_MagicUnitUnlocked; }
+            set { v_MagicUnitUnlocked = value; }
+        }
+        public static bool GunUnitUnlocked
+        {
+            get { return v_GunUnitUnlocked; }
+            set { v_GunUnitUnlocked = value; }
+        }
+        public static bool GiantUnitUnlocked
+        {
+            get { return v_GiantUnitUnlocked; }
+            set { v_GiantUnitUnlocked = value; }
         }
 
         public static string ChildOpen
