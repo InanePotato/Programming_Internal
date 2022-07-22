@@ -47,6 +47,8 @@
             this.BTN_MainMenu = new System.Windows.Forms.Button();
             this.TMR_ChildFromControl = new System.Windows.Forms.Timer(this.components);
             this.TMR_TopBarDisplay_Refresh = new System.Windows.Forms.Timer(this.components);
+            this.TMR_AdminChcker = new System.Windows.Forms.Timer(this.components);
+            this.BTN_OpenAdmin = new System.Windows.Forms.Button();
             this.PNL_Game.SuspendLayout();
             this.PNL_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Coins)).BeginInit();
@@ -59,10 +61,10 @@
             // 
             this.PNL_Game.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PNL_Game.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.PNL_Game.Controls.Add(this.PNL_Menu);
             this.PNL_Game.Controls.Add(this.PNL_ChildForm);
             this.PNL_Game.Controls.Add(this.Break_Line);
             this.PNL_Game.Controls.Add(this.PNL_Top);
-            this.PNL_Game.Controls.Add(this.PNL_Menu);
             this.PNL_Game.ForeColor = System.Drawing.SystemColors.ControlText;
             this.PNL_Game.Location = new System.Drawing.Point(0, 0);
             this.PNL_Game.Name = "PNL_Game";
@@ -177,13 +179,14 @@
             // PNL_Menu
             // 
             this.PNL_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(45)))), ((int)(((byte)(34)))));
+            this.PNL_Menu.Controls.Add(this.BTN_OpenAdmin);
             this.PNL_Menu.Controls.Add(this.BTN_Help);
             this.PNL_Menu.Controls.Add(this.BTN_Quit);
             this.PNL_Menu.Controls.Add(this.BTN_MainMenu);
             this.PNL_Menu.Enabled = false;
-            this.PNL_Menu.Location = new System.Drawing.Point(0, 789);
+            this.PNL_Menu.Location = new System.Drawing.Point(16, 788);
             this.PNL_Menu.Name = "PNL_Menu";
-            this.PNL_Menu.Size = new System.Drawing.Size(20, 20);
+            this.PNL_Menu.Size = new System.Drawing.Size(32, 32);
             this.PNL_Menu.TabIndex = 1;
             this.PNL_Menu.Visible = false;
             // 
@@ -200,6 +203,7 @@
             this.BTN_Help.Text = "Help";
             this.BTN_Help.UseMnemonic = false;
             this.BTN_Help.UseVisualStyleBackColor = true;
+            this.BTN_Help.Click += new System.EventHandler(this.BTN_Help_Click);
             // 
             // BTN_Quit
             // 
@@ -214,6 +218,7 @@
             this.BTN_Quit.Text = "Save & Quit";
             this.BTN_Quit.UseMnemonic = false;
             this.BTN_Quit.UseVisualStyleBackColor = true;
+            this.BTN_Quit.Click += new System.EventHandler(this.BTN_Quit_Click);
             // 
             // BTN_MainMenu
             // 
@@ -228,6 +233,7 @@
             this.BTN_MainMenu.Text = "Main Menu";
             this.BTN_MainMenu.UseMnemonic = false;
             this.BTN_MainMenu.UseVisualStyleBackColor = true;
+            this.BTN_MainMenu.Click += new System.EventHandler(this.BTN_MainMenu_Click);
             // 
             // TMR_ChildFromControl
             // 
@@ -238,6 +244,27 @@
             // 
             this.TMR_TopBarDisplay_Refresh.Enabled = true;
             this.TMR_TopBarDisplay_Refresh.Tick += new System.EventHandler(this.TMR_TopBarDisplay_Refresh_Tick);
+            // 
+            // TMR_AdminChcker
+            // 
+            this.TMR_AdminChcker.Enabled = true;
+            this.TMR_AdminChcker.Tick += new System.EventHandler(this.TMR_AdminChcker_Tick);
+            // 
+            // BTN_OpenAdmin
+            // 
+            this.BTN_OpenAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_OpenAdmin.FlatAppearance.BorderSize = 0;
+            this.BTN_OpenAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_OpenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_OpenAdmin.Location = new System.Drawing.Point(0, 192);
+            this.BTN_OpenAdmin.Name = "BTN_OpenAdmin";
+            this.BTN_OpenAdmin.Size = new System.Drawing.Size(200, 56);
+            this.BTN_OpenAdmin.TabIndex = 3;
+            this.BTN_OpenAdmin.Text = "Open Admin";
+            this.BTN_OpenAdmin.UseMnemonic = false;
+            this.BTN_OpenAdmin.UseVisualStyleBackColor = true;
+            this.BTN_OpenAdmin.Visible = false;
+            this.BTN_OpenAdmin.Click += new System.EventHandler(this.BTN_OpenAdmin_Click);
             // 
             // Game
             // 
@@ -287,6 +314,8 @@
         private System.Windows.Forms.Panel PNL_ChildForm;
         private System.Windows.Forms.Timer TMR_ChildFromControl;
         private System.Windows.Forms.Timer TMR_TopBarDisplay_Refresh;
+        private System.Windows.Forms.Timer TMR_AdminChcker;
+        private System.Windows.Forms.Button BTN_OpenAdmin;
     }
 }
 

@@ -15,14 +15,30 @@ namespace Programming_Internal
         List<Get_LiveVars> LiveVars = new List<Get_LiveVars>();
         bool VarSelected = false;
         string SelectedVariableType;
+        bool WindowSnapped;
 
-        public Admin_LiveVariables()
+        public Admin_LiveVariables(bool SnappedWindow)
         {
             InitializeComponent();
+            WindowSnapped = SnappedWindow;
         }
 
         private void Admin_LiveVariables_Load(object sender, EventArgs e)
         {
+            if (WindowSnapped == true)
+            {
+                this.TopMost = true;
+
+                this.Size = new Size(278, Screen.FromHandle(this.Handle).WorkingArea.Height);
+                this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width - this.Width, 0);
+
+                PNL_List.Size = new Size(278, this.Height - PNL_Info.Height);
+                PNL_List.Location = new Point(0, 0);
+                PNL_Info.Location = new Point(0, this.Height - PNL_Info.Height);
+
+                LIST_Variables.Size = new Size(278, PNL_List.Height - label1.Height);
+            }
+
             Get_Vars();
         }
 
@@ -146,6 +162,16 @@ namespace Programming_Internal
                 txt_Value.Enabled = false;
                 BTN_Submit.Cursor = Cursors.Default;
                 BTN_Refresh.Cursor = Cursors.Default;
+            }
+
+            if (GlobalVariables.AdminSnap == true && GlobalVariables.SnappedAdminWindowOpen != "live_vars")
+            {
+                this.Close();
+            }
+
+            if (GlobalVariables.CloseAdmin == true)
+            {
+                this.Close();
             }
         }
 

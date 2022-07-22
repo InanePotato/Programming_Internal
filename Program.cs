@@ -17,7 +17,6 @@ namespace Programming_Internal
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             new Load().Show();
-            new Admin().Show();
             Application.Run();
         }
     }

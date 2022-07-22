@@ -64,6 +64,12 @@
     <Compile Include="Admin_LiveVariables.Designer.cs">
       <DependentUpon>Admin_LiveVariables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_UnitSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_UnitSettings.Designer.cs">
+      <DependentUpon>Admin_UnitSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="ArmyCamp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_LiveVariables.resx">
       <DependentUpon>Admin_LiveVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_UnitSettings.resx">
+      <DependentUpon>Admin_UnitSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArmyCamp.resx">
       <DependentUpon>ArmyCamp.cs</DependentUpon>

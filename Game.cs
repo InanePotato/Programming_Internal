@@ -98,7 +98,7 @@ namespace Programming_Internal
             // ---------  TEMP  ------------
             //
 
-                GlobalVariables.Coins = 1000;
+                GlobalVariables.AdminAccount = true;
                 
                 GlobalVariables.BasicUnitUnlocked = true;
                 GlobalVariables.RangeUnitUnlocked = true;
@@ -195,15 +195,17 @@ namespace Programming_Internal
 
         private void Game_Paint(object sender, PaintEventArgs e)
         {
-            if (PNL_Game.BorderStyle == BorderStyle.FixedSingle)
-            {
-                int thickness = 4;//it's up to you
-                int halfThickness = thickness / 2;
-                using (Pen p = new Pen(Color.Black, thickness))
-                {
-                    e.Graphics.DrawRectangle(p, new Rectangle(PNL_Game.Location.X - halfThickness, PNL_Game.Location.Y - halfThickness, PNL_Game.Width + thickness, PNL_Game.Height + thickness));
-                }
-            }
+            // draws a black border aroud the panel <--- turned off :)
+
+            //if (PNL_Game.BorderStyle == BorderStyle.FixedSingle)
+            //{
+            //    int thickness = 4;//it's up to you
+            //    int halfThickness = thickness / 2;
+            //    using (Pen p = new Pen(Color.Black, thickness))
+            //    {
+            //        e.Graphics.DrawRectangle(p, new Rectangle(PNL_Game.Location.X - halfThickness, PNL_Game.Location.Y - halfThickness, PNL_Game.Width + thickness, PNL_Game.Height + thickness));
+            //    }
+            //}
         }
 
         private Form activeForm = null;
@@ -297,21 +299,65 @@ namespace Programming_Internal
 
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FormCollection fc = Application.OpenForms;
+            Application.Exit();
+        }
 
-            int form_count = 0;
-            foreach (Form frm in fc)
+        private void TMR_AdminChcker_Tick(object sender, EventArgs e)
+        {
+            if (GlobalVariables.AdminAccount == true)
             {
-                if (frm.Name == "Load" || frm.Name == "Home")
+                BTN_OpenAdmin.Visible = true;
+            }
+            else
+            {
+                BTN_OpenAdmin.Visible = false;
+            }
+
+            if (GlobalVariables.AdminMode == true && GlobalVariables.AdminSnap == true)
+            {
+                if (GlobalVariables.SnappedAdminWindowOpen == "" || GlobalVariables.SnappedAdminWindowOpen == null)
                 {
-                    form_count++;
+                    this.MaximizedBounds = new Rectangle(186, 0, Screen.FromHandle(this.Handle).WorkingArea.Width - 186, Screen.FromHandle(this.Handle).WorkingArea.Height);
+
+                }
+                else
+                {
+                    this.MaximizedBounds = new Rectangle(186, 0, Screen.FromHandle(this.Handle).WorkingArea.Width - 464, Screen.FromHandle(this.Handle).WorkingArea.Height);
+                }
+
+                if (this.WindowState == FormWindowState.Maximized)
+                {
+                    PNL_Game.Location = new Point((this.Width - PNL_Game.Width) / 2, (this.Height - PNL_Game.Height) / 2);
                 }
             }
-
-            if (form_count - 1 == 0)
+            else
             {
-                Application.Exit();
+                this.MaximizedBounds = new Rectangle(0, 0, Screen.FromHandle(this.Handle).WorkingArea.Width, Screen.FromHandle(this.Handle).WorkingArea.Height);
             }
+        }
+
+        private void BTN_Quit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_OpenAdmin_Click(object sender, EventArgs e)
+        {
+            if (GlobalVariables.AdminMode == false)
+            {
+                GlobalVariables.AdminMode = true;
+                new Admin().Show();
+            }
+        }
+
+        private void BTN_MainMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Help_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,8 @@ namespace Programming_Internal
 {
     public partial class Admin : Form
     {
+        bool showingSnap = false;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -33,13 +35,15 @@ namespace Programming_Internal
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            BTN_Home.BackColor = Color.FromArgb(46, 51, 73);
-            BTN_Home.Cursor = Cursors.Default;
-            openChildAdminForm(new Admin_Home());
+            GlobalVariables.AdminSnap = true;
 
-            BTN_LiveVariables.BackColor = Color.FromArgb(24, 30, 54);
-            BTN_UnitSettings.BackColor = Color.FromArgb(24, 30, 54);
-            BTN_Users.BackColor = Color.FromArgb(24, 30, 54);
+            //BTN_Home.BackColor = Color.FromArgb(46, 51, 73);
+            //BTN_Home.Cursor = Cursors.Default;
+            //openChildAdminForm(new Admin_Home(GlobalVariables.AdminSnap));
+
+            //BTN_LiveVariables.BackColor = Color.FromArgb(24, 30, 54);
+            //BTN_UnitSettings.BackColor = Color.FromArgb(24, 30, 54);
+            //BTN_Users.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void BTN_Home_Click(object sender, EventArgs e)
@@ -56,7 +60,10 @@ namespace Programming_Internal
                 BTN_UnitSettings.Cursor = Cursors.Hand;
                 BTN_Users.Cursor = Cursors.Hand;
 
-                openChildAdminForm(new Admin_Home());
+                openChildAdminForm(new Admin_Home(GlobalVariables.AdminSnap));
+                GlobalVariables.SnappedAdminWindowOpen = "home";
+
+                lbl_Title.Text = "Home";
             }
         }
 
@@ -74,7 +81,10 @@ namespace Programming_Internal
                 BTN_UnitSettings.Cursor = Cursors.Hand;
                 BTN_Users.Cursor = Cursors.Hand;
 
-                openChildAdminForm(new Admin_LiveVariables());
+                openChildAdminForm(new Admin_LiveVariables(GlobalVariables.AdminSnap));
+                GlobalVariables.SnappedAdminWindowOpen = "live_vars";
+
+                lbl_Title.Text = "Live Variables";
             }
         }
 
@@ -91,6 +101,11 @@ namespace Programming_Internal
                 BTN_Home.Cursor = Cursors.Hand;
                 BTN_LiveVariables.Cursor = Cursors.Hand;
                 BTN_Users.Cursor = Cursors.Hand;
+
+                openChildAdminForm(new Admin_UnitSettings(GlobalVariables.AdminSnap));
+                GlobalVariables.SnappedAdminWindowOpen = "unit_settings";
+
+                lbl_Title.Text = "Unit Settings";
             }
         }
 
@@ -112,6 +127,10 @@ namespace Programming_Internal
 
         private void BTN_Exit_Click(object sender, EventArgs e)
         {
+            GlobalVariables.CloseAdmin = true;
+            GlobalVariables.AdminMode = false;
+            GlobalVariables.AdminSnap = false;
+
             this.Close();
         }
 
@@ -122,14 +141,22 @@ namespace Programming_Internal
             {
                 activeAdminForm.Close();
             }
-            activeAdminForm = childAdminForm;
-            childAdminForm.TopLevel = false;
-            childAdminForm.FormBorderStyle = FormBorderStyle.None;
-            childAdminForm.Dock = DockStyle.Fill;
-            PNL_Body.Controls.Add(childAdminForm);
-            PNL_Body.Tag = childAdminForm;
-            childAdminForm.BringToFront();
-            childAdminForm.Show();
+
+            if (GlobalVariables.AdminSnap == true)
+            {
+                childAdminForm.Show();
+            }
+            else
+            {
+                activeAdminForm = childAdminForm;
+                childAdminForm.TopLevel = false;
+                childAdminForm.FormBorderStyle = FormBorderStyle.None;
+                childAdminForm.Dock = DockStyle.Fill;
+                PNL_Body.Controls.Add(childAdminForm);
+                PNL_Body.Tag = childAdminForm;
+                childAdminForm.BringToFront();
+                childAdminForm.Show();
+            }
         }
 
         private void closeChildForm()
@@ -137,6 +164,73 @@ namespace Programming_Internal
             if (activeAdminForm != null)
             {
                 activeAdminForm.Close();
+            }
+        }
+
+        private void TMR_Checker_Tick(object sender, EventArgs e)
+        {
+            if (GlobalVariables.AdminSnap == true)
+            {
+                if (showingSnap == false)
+                {
+                    showingSnap = true;
+
+                    closeChildForm();
+                }
+            }
+            else if (GlobalVariables.AdminSnap == false && showingSnap == true)
+            {
+                showingSnap = false;
+
+                GlobalVariables.SnappedAdminWindowOpen = null;
+
+                if (BTN_LiveVariables.Cursor == Cursors.Default) { openChildAdminForm(new Admin_LiveVariables(GlobalVariables.AdminSnap)); }
+                else if (BTN_UnitSettings.Cursor == Cursors.Default) { }
+                else if (BTN_Users.Cursor == Cursors.Default) { }
+                else // home window should be opened
+                {
+                    openChildAdminForm(new Admin_Home(GlobalVariables.AdminSnap));
+                }
+            }
+
+            if (GlobalVariables.AdminSnap == true)
+            {
+                Size snappedsize = new Size(186, Screen.FromHandle(this.Handle).WorkingArea.Height);
+
+                if (this.Size != snappedsize)
+                {
+                    this.Size = new Size(186, Screen.FromHandle(this.Handle).WorkingArea.Height);
+                    this.Location = new Point(0, 0);
+
+                    Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 0, 0));
+
+                    this.TopMost = true;
+                }
+            }
+            else if (GlobalVariables.AdminSnap == false)
+            {
+                Size normsize = new Size(935, 538);
+
+                if (this.Size != normsize)
+                { 
+                    this.Size = new Size(935, 538);
+
+                    Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+
+                    this.TopMost = false;
+                }
+            }
+
+            if (activeAdminForm == null)
+            {
+                BTN_Home.BackColor = Color.FromArgb(24, 30, 54);
+                BTN_LiveVariables.BackColor = Color.FromArgb(24, 30, 54);
+                BTN_UnitSettings.BackColor = Color.FromArgb(24, 30, 54);
+                BTN_Users.BackColor = Color.FromArgb(24, 30, 54);
+                BTN_Home.Cursor = Cursors.Hand;
+                BTN_LiveVariables.Cursor = Cursors.Hand;
+                BTN_UnitSettings.Cursor = Cursors.Hand;
+                BTN_Users.Cursor = Cursors.Hand;
             }
         }
     }

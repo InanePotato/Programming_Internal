@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PNL_Settings = new System.Windows.Forms.Panel();
+            this.BTN_Submit = new System.Windows.Forms.Button();
+            this.toggle_Snap = new Programming_Internal.ToggleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PIC_Duck = new System.Windows.Forms.PictureBox();
-            this.toggle_Snap = new Programming_Internal.ToggleButton();
+            this.TMR_Checker = new System.Windows.Forms.Timer(this.components);
             this.PNL_Settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Duck)).BeginInit();
             this.SuspendLayout();
@@ -42,15 +45,41 @@
             // PNL_Settings
             // 
             this.PNL_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.PNL_Settings.Controls.Add(this.BTN_Submit);
             this.PNL_Settings.Controls.Add(this.toggle_Snap);
             this.PNL_Settings.Controls.Add(this.label1);
             this.PNL_Settings.Controls.Add(this.label4);
             this.PNL_Settings.Controls.Add(this.label3);
             this.PNL_Settings.Controls.Add(this.label2);
-            this.PNL_Settings.Location = new System.Drawing.Point(475, 20);
+            this.PNL_Settings.Location = new System.Drawing.Point(447, 20);
             this.PNL_Settings.Name = "PNL_Settings";
-            this.PNL_Settings.Size = new System.Drawing.Size(250, 428);
+            this.PNL_Settings.Size = new System.Drawing.Size(278, 428);
             this.PNL_Settings.TabIndex = 0;
+            // 
+            // BTN_Submit
+            // 
+            this.BTN_Submit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.BTN_Submit.FlatAppearance.BorderSize = 0;
+            this.BTN_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Submit.Location = new System.Drawing.Point(24, 360);
+            this.BTN_Submit.Name = "BTN_Submit";
+            this.BTN_Submit.Size = new System.Drawing.Size(233, 48);
+            this.BTN_Submit.TabIndex = 9;
+            this.BTN_Submit.Text = "Submit";
+            this.BTN_Submit.UseVisualStyleBackColor = true;
+            this.BTN_Submit.Click += new System.EventHandler(this.BTN_Submit_Click);
+            // 
+            // toggle_Snap
+            // 
+            this.toggle_Snap.AutoSize = true;
+            this.toggle_Snap.Location = new System.Drawing.Point(54, 92);
+            this.toggle_Snap.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggle_Snap.Name = "toggle_Snap";
+            this.toggle_Snap.Size = new System.Drawing.Size(92, 22);
+            this.toggle_Snap.TabIndex = 8;
+            this.toggle_Snap.Text = "toggleButton1";
+            this.toggle_Snap.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -88,7 +117,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 40);
+            this.label2.Size = new System.Drawing.Size(278, 40);
             this.label2.TabIndex = 3;
             this.label2.Text = "Settings";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,16 +132,10 @@
             this.PIC_Duck.TabIndex = 1;
             this.PIC_Duck.TabStop = false;
             // 
-            // toggle_Snap
+            // TMR_Checker
             // 
-            this.toggle_Snap.AutoSize = true;
-            this.toggle_Snap.Location = new System.Drawing.Point(54, 92);
-            this.toggle_Snap.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggle_Snap.Name = "toggle_Snap";
-            this.toggle_Snap.Size = new System.Drawing.Size(92, 22);
-            this.toggle_Snap.TabIndex = 8;
-            this.toggle_Snap.Text = "toggleButton1";
-            this.toggle_Snap.UseVisualStyleBackColor = true;
+            this.TMR_Checker.Enabled = true;
+            this.TMR_Checker.Tick += new System.EventHandler(this.TMR_Checker_Tick);
             // 
             // Admin_Home
             // 
@@ -125,6 +148,8 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin_Home";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Admin_Home";
             this.Load += new System.EventHandler(this.Admin_Home_Load);
             this.PNL_Settings.ResumeLayout(false);
@@ -143,5 +168,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private ToggleButton toggle_Snap;
+        private System.Windows.Forms.Timer TMR_Checker;
+        private System.Windows.Forms.Button BTN_Submit;
     }
 }

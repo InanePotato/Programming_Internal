@@ -33,9 +33,14 @@ namespace Programming_Internal
         private static bool v_MagicUnitUnlocked;
         private static bool v_GunUnitUnlocked;
         private static bool v_GiantUnitUnlocked;
+        private static bool v_AdminMode;
+        private static bool v_AdminSnap;
+        private static bool v_CloseAdmin;
+        private static bool v_AdminAccount;
 
         private static string v_ChildOpen;
         private static string v_ChildToOpen;
+        private static string v_SnappedAdminWindowOpen;
         private static string[] v_SlotContents = new string[5];
 
         private static Image[] v_Basic_Ducks = new Image[3];
@@ -167,6 +172,26 @@ namespace Programming_Internal
             get { return v_GiantUnitUnlocked; }
             set { v_GiantUnitUnlocked = value; }
         }
+        public static bool AdminMode
+        {
+            get { return v_AdminMode; }
+            set { v_AdminMode = value; }
+        }
+        public static bool AdminSnap
+        {
+            get { return v_AdminSnap; }
+            set { v_AdminSnap = value; }
+        }
+        public static bool CloseAdmin
+        {
+            get { return v_CloseAdmin; }
+            set { v_CloseAdmin = value; }
+        }
+        public static bool AdminAccount
+        {
+            get { return v_AdminAccount; }
+            set { v_AdminAccount = value; }
+        }
 
         public static string ChildOpen
         {
@@ -177,6 +202,11 @@ namespace Programming_Internal
         {
             get { return v_ChildToOpen; }
             set { v_ChildToOpen = value; }
+        }
+        public static string SnappedAdminWindowOpen
+        {
+            get { return v_SnappedAdminWindowOpen; }
+            set { v_SnappedAdminWindowOpen = value; }
         }
         public static string[] SlotContents
         {

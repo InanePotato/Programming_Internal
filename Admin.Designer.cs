@@ -42,9 +42,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.PNL_TopBar = new System.Windows.Forms.Panel();
+            this.TMR_Checker = new System.Windows.Forms.Timer(this.components);
             this.PNL_Body = new System.Windows.Forms.Panel();
             this.dragControl1 = new Programming_Internal.DragControl(this.components);
-            this.TMR_Checker = new System.Windows.Forms.Timer(this.components);
             this.PNL_Menu.SuspendLayout();
             this.PNL_MenuTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -215,21 +215,22 @@
             this.PNL_TopBar.Size = new System.Drawing.Size(749, 70);
             this.PNL_TopBar.TabIndex = 4;
             // 
+            // TMR_Checker
+            // 
+            this.TMR_Checker.Enabled = true;
+            this.TMR_Checker.Tick += new System.EventHandler(this.TMR_Checker_Tick);
+            // 
             // PNL_Body
             // 
             this.PNL_Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PNL_Body.Location = new System.Drawing.Point(186, 70);
             this.PNL_Body.Name = "PNL_Body";
             this.PNL_Body.Size = new System.Drawing.Size(749, 468);
-            this.PNL_Body.TabIndex = 5;
+            this.PNL_Body.TabIndex = 6;
             // 
             // dragControl1
             // 
             this.dragControl1.SelectControl = this.PNL_TopBar;
-            // 
-            // TMR_Checker
-            // 
-            this.TMR_Checker.Enabled = true;
             // 
             // Admin
             // 
@@ -270,8 +271,8 @@
         private System.Windows.Forms.Button button1;
         private DragControl dragControl1;
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.Panel PNL_Body;
         private System.Windows.Forms.Panel PNL_TopBar;
         private System.Windows.Forms.Timer TMR_Checker;
+        private System.Windows.Forms.Panel PNL_Body;
     }
 }

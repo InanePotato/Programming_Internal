@@ -35,18 +35,18 @@
             this.PNL_Info = new System.Windows.Forms.Panel();
             this.BTN_Refresh = new System.Windows.Forms.Button();
             this.BTN_Submit = new System.Windows.Forms.Button();
-            this.txt_Value = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_Type = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.LB_Value = new System.Windows.Forms.ListBox();
+            this.Toggle_Value = new Programming_Internal.ToggleButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txt_Value = new System.Windows.Forms.TextBox();
+            this.LB_Value = new System.Windows.Forms.ListBox();
             this.TMR_Checker = new System.Windows.Forms.Timer(this.components);
-            this.Toggle_Value = new Programming_Internal.ToggleButton();
             this.PNL_List.SuspendLayout();
             this.PNL_Info.SuspendLayout();
             this.SuspendLayout();
@@ -136,15 +136,6 @@
             this.BTN_Submit.UseVisualStyleBackColor = true;
             this.BTN_Submit.Click += new System.EventHandler(this.BTN_Submit_Click);
             // 
-            // txt_Value
-            // 
-            this.txt_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Value.Location = new System.Drawing.Point(22, 217);
-            this.txt_Value.Name = "txt_Value";
-            this.txt_Value.Size = new System.Drawing.Size(236, 26);
-            this.txt_Value.TabIndex = 8;
-            this.txt_Value.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Value_KeyPress);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -206,16 +197,17 @@
             this.label2.Text = "Variable Details";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LB_Value
+            // Toggle_Value
             // 
-            this.LB_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Value.FormattingEnabled = true;
-            this.LB_Value.ItemHeight = 20;
-            this.LB_Value.Location = new System.Drawing.Point(20, 217);
-            this.LB_Value.Name = "LB_Value";
-            this.LB_Value.Size = new System.Drawing.Size(238, 144);
-            this.LB_Value.TabIndex = 13;
-            this.LB_Value.Visible = false;
+            this.Toggle_Value.AutoSize = true;
+            this.Toggle_Value.Location = new System.Drawing.Point(93, 218);
+            this.Toggle_Value.MinimumSize = new System.Drawing.Size(45, 22);
+            this.Toggle_Value.Name = "Toggle_Value";
+            this.Toggle_Value.Size = new System.Drawing.Size(92, 22);
+            this.Toggle_Value.TabIndex = 12;
+            this.Toggle_Value.Text = "toggleButton1";
+            this.Toggle_Value.UseVisualStyleBackColor = true;
+            this.Toggle_Value.Visible = false;
             // 
             // label7
             // 
@@ -239,22 +231,30 @@
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Visible = false;
             // 
+            // txt_Value
+            // 
+            this.txt_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Value.Location = new System.Drawing.Point(22, 217);
+            this.txt_Value.Name = "txt_Value";
+            this.txt_Value.Size = new System.Drawing.Size(236, 26);
+            this.txt_Value.TabIndex = 8;
+            this.txt_Value.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Value_KeyPress);
+            // 
+            // LB_Value
+            // 
+            this.LB_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Value.FormattingEnabled = true;
+            this.LB_Value.ItemHeight = 20;
+            this.LB_Value.Location = new System.Drawing.Point(20, 217);
+            this.LB_Value.Name = "LB_Value";
+            this.LB_Value.Size = new System.Drawing.Size(238, 144);
+            this.LB_Value.TabIndex = 13;
+            this.LB_Value.Visible = false;
+            // 
             // TMR_Checker
             // 
             this.TMR_Checker.Enabled = true;
             this.TMR_Checker.Tick += new System.EventHandler(this.TMR_Checker_Tick);
-            // 
-            // Toggle_Value
-            // 
-            this.Toggle_Value.AutoSize = true;
-            this.Toggle_Value.Location = new System.Drawing.Point(93, 218);
-            this.Toggle_Value.MinimumSize = new System.Drawing.Size(45, 22);
-            this.Toggle_Value.Name = "Toggle_Value";
-            this.Toggle_Value.Size = new System.Drawing.Size(92, 22);
-            this.Toggle_Value.TabIndex = 12;
-            this.Toggle_Value.Text = "toggleButton1";
-            this.Toggle_Value.UseVisualStyleBackColor = true;
-            this.Toggle_Value.Visible = false;
             // 
             // Admin_LiveVariables
             // 
@@ -267,6 +267,8 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin_LiveVariables";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Admin_LiveVariables";
             this.Load += new System.EventHandler(this.Admin_LiveVariables_Load);
             this.PNL_List.ResumeLayout(false);
