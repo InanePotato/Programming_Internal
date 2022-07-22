@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.PNL_Menu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -36,12 +37,18 @@
             this.BTN_UnitSettings = new System.Windows.Forms.Button();
             this.BTN_LiveVariables = new System.Windows.Forms.Button();
             this.BTN_Home = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PNL_MenuTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_Title = new System.Windows.Forms.Label();
+            this.PNL_TopBar = new System.Windows.Forms.Panel();
+            this.PNL_Body = new System.Windows.Forms.Panel();
+            this.dragControl1 = new Programming_Internal.DragControl(this.components);
+            this.TMR_Checker = new System.Windows.Forms.Timer(this.components);
             this.PNL_Menu.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.PNL_MenuTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PNL_TopBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_Menu
@@ -53,7 +60,7 @@
             this.PNL_Menu.Controls.Add(this.BTN_UnitSettings);
             this.PNL_Menu.Controls.Add(this.BTN_LiveVariables);
             this.PNL_Menu.Controls.Add(this.BTN_Home);
-            this.PNL_Menu.Controls.Add(this.panel1);
+            this.PNL_Menu.Controls.Add(this.PNL_MenuTop);
             this.PNL_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PNL_Menu.Location = new System.Drawing.Point(0, 0);
             this.PNL_Menu.Name = "PNL_Menu";
@@ -87,7 +94,7 @@
             this.BTN_Exit.Location = new System.Drawing.Point(0, 496);
             this.BTN_Exit.Name = "BTN_Exit";
             this.BTN_Exit.Size = new System.Drawing.Size(186, 42);
-            this.BTN_Exit.TabIndex = 5;
+            this.BTN_Exit.TabIndex = 7;
             this.BTN_Exit.Text = "Exit Admin";
             this.BTN_Exit.UseVisualStyleBackColor = true;
             this.BTN_Exit.Click += new System.EventHandler(this.BTN_Exit_Click);
@@ -103,7 +110,7 @@
             this.BTN_Users.Location = new System.Drawing.Point(0, 270);
             this.BTN_Users.Name = "BTN_Users";
             this.BTN_Users.Size = new System.Drawing.Size(186, 42);
-            this.BTN_Users.TabIndex = 4;
+            this.BTN_Users.TabIndex = 5;
             this.BTN_Users.Text = "Users";
             this.BTN_Users.UseVisualStyleBackColor = true;
             this.BTN_Users.Click += new System.EventHandler(this.BTN_Users_Click);
@@ -119,7 +126,7 @@
             this.BTN_UnitSettings.Location = new System.Drawing.Point(0, 228);
             this.BTN_UnitSettings.Name = "BTN_UnitSettings";
             this.BTN_UnitSettings.Size = new System.Drawing.Size(186, 42);
-            this.BTN_UnitSettings.TabIndex = 3;
+            this.BTN_UnitSettings.TabIndex = 4;
             this.BTN_UnitSettings.Text = "Unit Settings";
             this.BTN_UnitSettings.UseVisualStyleBackColor = true;
             this.BTN_UnitSettings.Click += new System.EventHandler(this.BTN_UnitSettings_Click);
@@ -135,7 +142,7 @@
             this.BTN_LiveVariables.Location = new System.Drawing.Point(0, 186);
             this.BTN_LiveVariables.Name = "BTN_LiveVariables";
             this.BTN_LiveVariables.Size = new System.Drawing.Size(186, 42);
-            this.BTN_LiveVariables.TabIndex = 2;
+            this.BTN_LiveVariables.TabIndex = 3;
             this.BTN_LiveVariables.Text = "Live Variables";
             this.BTN_LiveVariables.UseVisualStyleBackColor = true;
             this.BTN_LiveVariables.Click += new System.EventHandler(this.BTN_LiveVariables_Click);
@@ -151,20 +158,20 @@
             this.BTN_Home.Location = new System.Drawing.Point(0, 144);
             this.BTN_Home.Name = "BTN_Home";
             this.BTN_Home.Size = new System.Drawing.Size(186, 42);
-            this.BTN_Home.TabIndex = 1;
+            this.BTN_Home.TabIndex = 2;
             this.BTN_Home.Text = "Home";
             this.BTN_Home.UseVisualStyleBackColor = true;
             this.BTN_Home.Click += new System.EventHandler(this.BTN_Home_Click);
             // 
-            // panel1
+            // PNL_MenuTop
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 144);
-            this.panel1.TabIndex = 0;
+            this.PNL_MenuTop.Controls.Add(this.label1);
+            this.PNL_MenuTop.Controls.Add(this.pictureBox1);
+            this.PNL_MenuTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PNL_MenuTop.Location = new System.Drawing.Point(0, 0);
+            this.PNL_MenuTop.Name = "PNL_MenuTop";
+            this.PNL_MenuTop.Size = new System.Drawing.Size(186, 144);
+            this.PNL_MenuTop.TabIndex = 0;
             // 
             // label1
             // 
@@ -187,23 +194,64 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lbl_Title
+            // 
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lbl_Title.Location = new System.Drawing.Point(20, 17);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(93, 32);
+            this.lbl_Title.TabIndex = 2;
+            this.lbl_Title.Text = "Home";
+            // 
+            // PNL_TopBar
+            // 
+            this.PNL_TopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
+            this.PNL_TopBar.Controls.Add(this.lbl_Title);
+            this.PNL_TopBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PNL_TopBar.Location = new System.Drawing.Point(186, 0);
+            this.PNL_TopBar.Name = "PNL_TopBar";
+            this.PNL_TopBar.Size = new System.Drawing.Size(749, 70);
+            this.PNL_TopBar.TabIndex = 4;
+            // 
+            // PNL_Body
+            // 
+            this.PNL_Body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PNL_Body.Location = new System.Drawing.Point(186, 70);
+            this.PNL_Body.Name = "PNL_Body";
+            this.PNL_Body.Size = new System.Drawing.Size(749, 468);
+            this.PNL_Body.TabIndex = 5;
+            // 
+            // dragControl1
+            // 
+            this.dragControl1.SelectControl = this.PNL_TopBar;
+            // 
+            // TMR_Checker
+            // 
+            this.TMR_Checker.Enabled = true;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(935, 538);
+            this.Controls.Add(this.PNL_Body);
+            this.Controls.Add(this.PNL_TopBar);
             this.Controls.Add(this.PNL_Menu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.PNL_Menu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PNL_MenuTop.ResumeLayout(false);
+            this.PNL_MenuTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PNL_TopBar.ResumeLayout(false);
+            this.PNL_TopBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -215,10 +263,15 @@
         private System.Windows.Forms.Button BTN_UnitSettings;
         private System.Windows.Forms.Button BTN_LiveVariables;
         private System.Windows.Forms.Button BTN_Home;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PNL_MenuTop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BTN_Exit;
         private System.Windows.Forms.Button button1;
+        private DragControl dragControl1;
+        private System.Windows.Forms.Label lbl_Title;
+        private System.Windows.Forms.Panel PNL_Body;
+        private System.Windows.Forms.Panel PNL_TopBar;
+        private System.Windows.Forms.Timer TMR_Checker;
     }
 }

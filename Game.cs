@@ -302,7 +302,10 @@ namespace Programming_Internal
             int form_count = 0;
             foreach (Form frm in fc)
             {
-                form_count++;
+                if (frm.Name == "Load" || frm.Name == "Home")
+                {
+                    form_count++;
+                }
             }
 
             if (form_count - 1 == 0)
