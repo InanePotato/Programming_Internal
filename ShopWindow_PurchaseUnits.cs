@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,8 @@ namespace Programming_Internal
         public ShopWindow_PurchaseUnits()
         {
             InitializeComponent();
+
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PNL_UnitDisplay, new object[] { true });
         }
 
         private void ShopWindow_PurchaseUnits_Load(object sender, EventArgs e)

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,6 +33,8 @@ namespace Programming_Internal
         public ArmyCamp()
         {
             InitializeComponent();
+
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PNL_ArmyCamp, new object[] { true });
         }
 
         private void ArmyCamp_Load(object sender, EventArgs e)
@@ -402,6 +405,67 @@ namespace Programming_Internal
                 PNL_PauseCover.Visible = false;
                 PNL_PauseCover.SendToBack();
             }
+        }
+
+        private void TMR_Update_Tick(object sender, EventArgs e)
+        {
+            if (GlobalVariables.SlotContents[0] == "basic") { LBL_Slot0Units.Text = GlobalVariables.BasicUnit_Count.ToString() +" Units"; }
+            else if (GlobalVariables.SlotContents[0] == "range") { LBL_Slot0Units.Text = GlobalVariables.RangeUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[0] == "magic") { LBL_Slot0Units.Text = GlobalVariables.MagicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[0] == "gun") { LBL_Slot0Units.Text = GlobalVariables.GunUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[0] == "giant") { LBL_Slot0Units.Text = GlobalVariables.GiantUnit_Count.ToString() + " Units"; }
+
+            if (GlobalVariables.SlotContents[1] == "basic") { LBL_Slot1Units.Text = GlobalVariables.BasicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[1] == "range") { LBL_Slot1Units.Text = GlobalVariables.RangeUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[1] == "magic") { LBL_Slot1Units.Text = GlobalVariables.MagicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[1] == "gun") { LBL_Slot1Units.Text = GlobalVariables.GunUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[1] == "giant") { LBL_Slot1Units.Text = GlobalVariables.GiantUnit_Count.ToString() + " Units"; }
+
+            if (GlobalVariables.SlotContents[2] == "basic") { LBL_Slot2Units.Text = GlobalVariables.BasicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[2] == "range") { LBL_Slot2Units.Text = GlobalVariables.RangeUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[2] == "magic") { LBL_Slot2Units.Text = GlobalVariables.MagicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[2] == "gun") { LBL_Slot2Units.Text = GlobalVariables.GunUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[2] == "giant") { LBL_Slot2Units.Text = GlobalVariables.GiantUnit_Count.ToString() + " Units"; }
+
+            if (GlobalVariables.SlotContents[3] == "basic") { LBL_Slot3Units.Text = GlobalVariables.BasicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[3] == "range") { LBL_Slot3Units.Text = GlobalVariables.RangeUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[3] == "magic") { LBL_Slot3Units.Text = GlobalVariables.MagicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[3] == "gun") { LBL_Slot3Units.Text = GlobalVariables.GunUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[3] == "giant") { LBL_Slot3Units.Text = GlobalVariables.GiantUnit_Count.ToString() + " Units"; }
+
+            if (GlobalVariables.SlotContents[4] == "basic") { LBL_Slot4Units.Text = GlobalVariables.BasicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[4] == "range") { LBL_Slot4Units.Text = GlobalVariables.RangeUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[4] == "magic") { LBL_Slot4Units.Text = GlobalVariables.MagicUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[4] == "gun") { LBL_Slot4Units.Text = GlobalVariables.GunUnit_Count.ToString() + " Units"; }
+            else if (GlobalVariables.SlotContents[4] == "giant") { LBL_Slot4Units.Text = GlobalVariables.GiantUnit_Count.ToString() + " Units"; }
+        }
+
+        private void PNL_Slot0_Click(object sender, EventArgs e)
+        {
+            if (PNL_Slot0.Cursor == Cursors.Hand)
+            {
+
+            }
+        }
+
+        private void PNL_Slot1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PNL_Slot2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PNL_Slot3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PNL_Slot4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

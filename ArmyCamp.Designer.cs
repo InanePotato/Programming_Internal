@@ -45,6 +45,7 @@
             this.PIC_KingDuck = new System.Windows.Forms.PictureBox();
             this.PNL_ACPausedCover = new System.Windows.Forms.Panel();
             this.TMR_PausePlayCheck = new System.Windows.Forms.Timer(this.components);
+            this.TMR_Update = new System.Windows.Forms.Timer(this.components);
             this.PNL_ArmyCamp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_ShopButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).BeginInit();
@@ -166,6 +167,7 @@
             this.PNL_Slot4.Name = "PNL_Slot4";
             this.PNL_Slot4.Size = new System.Drawing.Size(130, 380);
             this.PNL_Slot4.TabIndex = 8;
+            this.PNL_Slot4.Click += new System.EventHandler(this.PNL_Slot4_Click);
             this.PNL_Slot4.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Slot4_Paint);
             // 
             // PNL_Slot3
@@ -176,6 +178,7 @@
             this.PNL_Slot3.Name = "PNL_Slot3";
             this.PNL_Slot3.Size = new System.Drawing.Size(130, 380);
             this.PNL_Slot3.TabIndex = 8;
+            this.PNL_Slot3.Click += new System.EventHandler(this.PNL_Slot3_Click);
             this.PNL_Slot3.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Slot3_Paint);
             // 
             // PNL_Slot2
@@ -186,6 +189,7 @@
             this.PNL_Slot2.Name = "PNL_Slot2";
             this.PNL_Slot2.Size = new System.Drawing.Size(130, 380);
             this.PNL_Slot2.TabIndex = 8;
+            this.PNL_Slot2.Click += new System.EventHandler(this.PNL_Slot2_Click);
             this.PNL_Slot2.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Slot2_Paint);
             // 
             // PNL_Slot1
@@ -196,6 +200,7 @@
             this.PNL_Slot1.Name = "PNL_Slot1";
             this.PNL_Slot1.Size = new System.Drawing.Size(130, 380);
             this.PNL_Slot1.TabIndex = 8;
+            this.PNL_Slot1.Click += new System.EventHandler(this.PNL_Slot1_Click);
             this.PNL_Slot1.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Slot1_Paint);
             // 
             // PNL_Slot0
@@ -206,6 +211,7 @@
             this.PNL_Slot0.Name = "PNL_Slot0";
             this.PNL_Slot0.Size = new System.Drawing.Size(130, 380);
             this.PNL_Slot0.TabIndex = 7;
+            this.PNL_Slot0.Click += new System.EventHandler(this.PNL_Slot0_Click);
             this.PNL_Slot0.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Slot0_Paint);
             // 
             // PIC_KingDuck
@@ -233,6 +239,11 @@
             // 
             this.TMR_PausePlayCheck.Enabled = true;
             this.TMR_PausePlayCheck.Tick += new System.EventHandler(this.TMR_PausePlayCheck_Tick);
+            // 
+            // TMR_Update
+            // 
+            this.TMR_Update.Enabled = true;
+            this.TMR_Update.Tick += new System.EventHandler(this.TMR_Update_Tick);
             // 
             // ArmyCamp
             // 
@@ -271,5 +282,6 @@
         private System.Windows.Forms.Panel PNL_ArmyCamp;
         private System.Windows.Forms.Timer TMR_PausePlayCheck;
         private System.Windows.Forms.Panel PNL_PauseCover;
+        private System.Windows.Forms.Timer TMR_Update;
     }
 }

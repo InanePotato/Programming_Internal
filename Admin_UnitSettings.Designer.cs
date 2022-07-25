@@ -109,6 +109,7 @@
             this.txt_Cost.Name = "txt_Cost";
             this.txt_Cost.Size = new System.Drawing.Size(149, 26);
             this.txt_Cost.TabIndex = 22;
+            this.txt_Cost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cost_KeyPress);
             // 
             // label9
             // 
@@ -147,6 +148,7 @@
             this.txt_AttackSpeed.Name = "txt_AttackSpeed";
             this.txt_AttackSpeed.Size = new System.Drawing.Size(149, 26);
             this.txt_AttackSpeed.TabIndex = 18;
+            this.txt_AttackSpeed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_AttackSpeed_KeyPress);
             // 
             // txt_Health
             // 
@@ -155,6 +157,7 @@
             this.txt_Health.Name = "txt_Health";
             this.txt_Health.Size = new System.Drawing.Size(149, 26);
             this.txt_Health.TabIndex = 18;
+            this.txt_Health.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Health_KeyPress);
             // 
             // label6
             // 
@@ -183,6 +186,7 @@
             this.txt_Damage.Name = "txt_Damage";
             this.txt_Damage.Size = new System.Drawing.Size(149, 26);
             this.txt_Damage.TabIndex = 16;
+            this.txt_Damage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Damage_KeyPress);
             // 
             // BTN_Refresh
             // 

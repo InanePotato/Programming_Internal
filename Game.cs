@@ -98,6 +98,8 @@ namespace Programming_Internal
             // ---------  TEMP  ------------
             //
 
+                GlobalVariables.BasicUnit_Count = 10;
+
                 GlobalVariables.AdminAccount = true;
                 
                 GlobalVariables.BasicUnitUnlocked = true;
@@ -110,7 +112,7 @@ namespace Programming_Internal
                 GlobalVariables.UnitUpgrades_Range = 0;
                 GlobalVariables.UnitUpgrades_Magic = 0;
                 GlobalVariables.UnitUpgrades_Gun = 0;
-                GlobalVariables.UnitUpgrades_Giant = 2;
+                GlobalVariables.UnitUpgrades_Giant = 0;
 
                 GlobalVariables.SlotContents[0] = "basic";
                 GlobalVariables.SlotContents[1] = "none";
