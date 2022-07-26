@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Select_Unit));
             this.PIC_Basic = new System.Windows.Forms.PictureBox();
             this.PIC_Range = new System.Windows.Forms.PictureBox();
             this.PIC_Magic = new System.Windows.Forms.PictureBox();
@@ -48,6 +50,7 @@
             this.BTN_SelectMagic = new System.Windows.Forms.Button();
             this.BTN_SelectGun = new System.Windows.Forms.Button();
             this.BTN_SelectGiant = new System.Windows.Forms.Button();
+            this.TMR_Checker = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Basic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Range)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Magic)).BeginInit();
@@ -60,6 +63,7 @@
             this.PIC_Basic.Location = new System.Drawing.Point(13, 13);
             this.PIC_Basic.Name = "PIC_Basic";
             this.PIC_Basic.Size = new System.Drawing.Size(100, 100);
+            this.PIC_Basic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PIC_Basic.TabIndex = 0;
             this.PIC_Basic.TabStop = false;
             // 
@@ -68,6 +72,7 @@
             this.PIC_Range.Location = new System.Drawing.Point(119, 13);
             this.PIC_Range.Name = "PIC_Range";
             this.PIC_Range.Size = new System.Drawing.Size(100, 100);
+            this.PIC_Range.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PIC_Range.TabIndex = 1;
             this.PIC_Range.TabStop = false;
             // 
@@ -76,6 +81,7 @@
             this.PIC_Magic.Location = new System.Drawing.Point(225, 13);
             this.PIC_Magic.Name = "PIC_Magic";
             this.PIC_Magic.Size = new System.Drawing.Size(100, 100);
+            this.PIC_Magic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PIC_Magic.TabIndex = 2;
             this.PIC_Magic.TabStop = false;
             // 
@@ -84,6 +90,7 @@
             this.PIC_Gun.Location = new System.Drawing.Point(331, 13);
             this.PIC_Gun.Name = "PIC_Gun";
             this.PIC_Gun.Size = new System.Drawing.Size(100, 100);
+            this.PIC_Gun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PIC_Gun.TabIndex = 3;
             this.PIC_Gun.TabStop = false;
             // 
@@ -92,6 +99,7 @@
             this.PIC_Giant.Location = new System.Drawing.Point(437, 13);
             this.PIC_Giant.Name = "PIC_Giant";
             this.PIC_Giant.Size = new System.Drawing.Size(100, 100);
+            this.PIC_Giant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PIC_Giant.TabIndex = 4;
             this.PIC_Giant.TabStop = false;
             // 
@@ -250,6 +258,11 @@
             this.BTN_SelectGiant.UseVisualStyleBackColor = true;
             this.BTN_SelectGiant.Click += new System.EventHandler(this.BTN_SelectGiant_Click);
             // 
+            // TMR_Checker
+            // 
+            this.TMR_Checker.Enabled = true;
+            this.TMR_Checker.Tick += new System.EventHandler(this.TMR_Checker_Tick);
+            // 
             // Select_Unit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,7 +289,10 @@
             this.Controls.Add(this.PIC_Range);
             this.Controls.Add(this.PIC_Basic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Select_Unit";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Unit";
             this.Load += new System.EventHandler(this.Select_Unit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Basic)).EndInit();
@@ -310,5 +326,6 @@
         private System.Windows.Forms.Button BTN_SelectMagic;
         private System.Windows.Forms.Button BTN_SelectGun;
         private System.Windows.Forms.Button BTN_SelectGiant;
+        private System.Windows.Forms.Timer TMR_Checker;
     }
 }

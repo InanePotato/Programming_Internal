@@ -37,6 +37,7 @@ namespace Programming_Internal
         private static bool v_AdminSnap;
         private static bool v_CloseAdmin;
         private static bool v_AdminAccount;
+        private static bool v_SlotChange;
 
         private static string v_ChildOpen;
         private static string v_ChildToOpen;
@@ -191,6 +192,11 @@ namespace Programming_Internal
         {
             get { return v_AdminAccount; }
             set { v_AdminAccount = value; }
+        }
+        public static bool SlotChange
+        {
+            get { return v_SlotChange; }
+            set { v_SlotChange = value; }
         }
 
         public static string ChildOpen
