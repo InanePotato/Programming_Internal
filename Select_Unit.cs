@@ -25,9 +25,9 @@ namespace Programming_Internal
             PIC_Gun.Image = GlobalVariables.Gun_Ducks[GlobalVariables.UnitUpgrades_Gun];
             PIC_Giant.Image = GlobalVariables.Giant_Ducks[GlobalVariables.UnitUpgrades_Giant];
 
-            if (GlobalVariables.UnitUpgrades_Basic == 2) { }
-            else if (GlobalVariables.UnitUpgrades_Basic == 1) { }
-            else { }
+            if (GlobalVariables.UnitUpgrades_Basic == 2) { lbl_BasicName.Text = "Axe Duck"; }
+            else if (GlobalVariables.UnitUpgrades_Basic == 1) { lbl_BasicName.Text = "Sword Duck"; }
+            else { lbl_BasicName.Text = "Spear Duck"; }
 
             BTN_SelectBasic.Enabled = GlobalVariables.BasicUnitUnlocked;
             BTN_SelectRange.Enabled = GlobalVariables.RangeUnitUnlocked;
