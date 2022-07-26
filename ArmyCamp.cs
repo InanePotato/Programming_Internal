@@ -444,28 +444,40 @@ namespace Programming_Internal
         {
             if (PNL_Slot0.Cursor == Cursors.Hand)
             {
-
+                new Select_Unit(0).Show();
             }
         }
 
         private void PNL_Slot1_Click(object sender, EventArgs e)
         {
-
+            if (PNL_Slot1.Cursor == Cursors.Hand)
+            {
+                new Select_Unit(1).Show();
+            }
         }
 
         private void PNL_Slot2_Click(object sender, EventArgs e)
         {
-
+            if (PNL_Slot2.Cursor == Cursors.Hand)
+            {
+                new Select_Unit(2).Show();
+            }
         }
 
         private void PNL_Slot3_Click(object sender, EventArgs e)
         {
-
+            if (PNL_Slot3.Cursor == Cursors.Hand)
+            {
+                new Select_Unit(3).Show();
+            }
         }
 
         private void PNL_Slot4_Click(object sender, EventArgs e)
         {
-
+            if (PNL_Slot4.Cursor == Cursors.Hand)
+            {
+                new Select_Unit(4).Show();
+            }
         }
     }
 }
