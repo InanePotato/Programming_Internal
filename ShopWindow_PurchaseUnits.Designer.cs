@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PNL_UnitDisplay = new System.Windows.Forms.Panel();
             this.GB_GiantUnit = new System.Windows.Forms.GroupBox();
             this.BTN_GiantUnit_Purchase10 = new System.Windows.Forms.Button();
@@ -99,6 +100,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_BasicUnit_Health = new System.Windows.Forms.Label();
             this.PIC_BasicUnit = new System.Windows.Forms.PictureBox();
+            this.TMR_Update = new System.Windows.Forms.Timer(this.components);
             this.PNL_UnitDisplay.SuspendLayout();
             this.GB_GiantUnit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -881,6 +883,11 @@
             this.PIC_BasicUnit.TabIndex = 0;
             this.PIC_BasicUnit.TabStop = false;
             // 
+            // TMR_Update
+            // 
+            this.TMR_Update.Enabled = true;
+            this.TMR_Update.Tick += new System.EventHandler(this.TMR_Update_Tick);
+            // 
             // ShopWindow_PurchaseUnits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1001,5 +1008,6 @@
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Label lbl_GiantUnit_Health;
         private System.Windows.Forms.PictureBox PIC_GiantUnit;
+        private System.Windows.Forms.Timer TMR_Update;
     }
 }

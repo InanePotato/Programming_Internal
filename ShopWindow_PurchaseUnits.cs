@@ -15,6 +15,7 @@ namespace Programming_Internal
     {
         int BasicUnit_Cost, RangeUnit_Cost, MagicUnit_Cost, GunUnit_Cost, GiantUnit_Cost;
         string BasicUnit_Name, RangeUnit_Name, MagicUnit_Name, GunUnit_Name, GiantUnit_Name;
+        string currently_selected = "basic";
 
         public ShopWindow_PurchaseUnits()
         {
@@ -408,6 +409,18 @@ namespace Programming_Internal
             else
             {
                 MessageBox.Show("Sorry, you do not have enough coins to purchase this item", "Insufficient funds");
+            }
+        }
+
+        private void TMR_Update_Tick(object sender, EventArgs e)
+        {
+            if (currently_selected == "basic")
+            {
+
+            }
+            else if (currently_selected == "range")
+            {
+
             }
         }
 
