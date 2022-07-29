@@ -117,6 +117,12 @@
     <Compile Include="ShopWindow_PurchaseUnits.Designer.cs">
       <DependentUpon>ShopWindow_PurchaseUnits.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShopWindow_UpgradeUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopWindow_UpgradeUnits.Designer.cs">
+      <DependentUpon>ShopWindow_UpgradeUnits.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShopWindow_PurchaseUnits.resx">
       <DependentUpon>ShopWindow_PurchaseUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopWindow_UpgradeUnits.resx">
+      <DependentUpon>ShopWindow_UpgradeUnits.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -32,7 +32,7 @@ namespace Programming_Internal
                 var line = reader.ReadLine();
                 // Split into the diffrent things.
                 var values = line.Split(',');
-                GlobalVariables.Unit_Info.Add(new Get_Unit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4], values[5], Int32.Parse(values[1])));
+                GlobalVariables.Unit_Info.Add(new Get_Unit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4], values[5], Int32.Parse(values[6])));
             }
             reader.Close();
         }
@@ -98,15 +98,13 @@ namespace Programming_Internal
             // ---------  TEMP  ------------
             //
 
-                GlobalVariables.BasicUnit_Count = 10;
-
                 GlobalVariables.AdminAccount = true;
                 
-                GlobalVariables.BasicUnitUnlocked = true;
-                GlobalVariables.RangeUnitUnlocked = true;
-                GlobalVariables.MagicUnitUnlocked = true;
-                GlobalVariables.GunUnitUnlocked = true;
-                GlobalVariables.GiantUnitUnlocked = true;
+                GlobalVariables.BasicUnitUnlocked = false;
+                GlobalVariables.RangeUnitUnlocked = false;
+                GlobalVariables.MagicUnitUnlocked = false;
+                GlobalVariables.GunUnitUnlocked = false;
+                GlobalVariables.GiantUnitUnlocked = false;
 
                 GlobalVariables.UnitUpgrades_Basic = 0;
                 GlobalVariables.UnitUpgrades_Range = 0;
@@ -114,7 +112,7 @@ namespace Programming_Internal
                 GlobalVariables.UnitUpgrades_Gun = 0;
                 GlobalVariables.UnitUpgrades_Giant = 0;
 
-                GlobalVariables.SlotContents[0] = "basic";
+                GlobalVariables.SlotContents[0] = "none";
                 GlobalVariables.SlotContents[1] = "none";
                 GlobalVariables.SlotContents[2] = "none";
                 GlobalVariables.SlotContents[3] = "none";
@@ -126,6 +124,11 @@ namespace Programming_Internal
 
             GlobalVariables.ChildOpen = "army_camp";
             openChildForm(new ArmyCamp());
+
+            foreach(Get_Unit_Info i in GlobalVariables.Unit_Info)
+            {
+                Console.WriteLine(i.Name + ": " + i.Cost);
+            }
         }
 
         private void Game_SizeChanged(object sender, EventArgs e)
@@ -285,6 +288,8 @@ namespace Programming_Internal
                 GlobalVariables.Giant_Ducks_FR[0] = null;
                 GlobalVariables.Giant_Ducks_FR[1] = null;
                 GlobalVariables.Giant_Ducks_FR[2] = null;
+
+                Application.Exit();
             }
             else
             {
@@ -301,7 +306,7 @@ namespace Programming_Internal
 
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void TMR_AdminChcker_Tick(object sender, EventArgs e)

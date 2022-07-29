@@ -28,18 +28,19 @@ namespace Programming_Internal
         {
             // x = 11    width = 677    height = 182
             int location_x = 5;
+            int location_y = (PNL_UnitDisplay.Height - 182) / 2;
             int size_width = 677;
             int size_height = 182;
             GB_BasicUnit.Size = new Size(677, 182);
-            GB_BasicUnit.Location = new Point(location_x, 5);
+            GB_BasicUnit.Location = new Point(location_x, location_y);
             GB_RangeUnit.Size = new Size(size_width, size_height);
-            GB_RangeUnit.Location = new Point(location_x, GB_BasicUnit.Location.Y + GB_BasicUnit.Height + 10);
+            GB_RangeUnit.Location = new Point(location_x, location_y);
             GB_MagicUnit.Size = new Size(size_width, size_height);
-            GB_MagicUnit.Location = new Point(location_x, GB_RangeUnit.Location.Y + GB_RangeUnit.Height + 10);
+            GB_MagicUnit.Location = new Point(location_x, location_y);
             GB_GunUnit.Size = new Size(size_width, size_height);
-            GB_GunUnit.Location = new Point(location_x, GB_MagicUnit.Location.Y + GB_MagicUnit.Height + 10);
+            GB_GunUnit.Location = new Point(location_x, location_y);
             GB_GiantUnit.Size = new Size(size_width, size_height);
-            GB_GiantUnit.Location = new Point(location_x, GB_GunUnit.Location.Y + GB_GunUnit.Height + 10);
+            GB_GiantUnit.Location = new Point(location_x, location_y);
 
             if (GlobalVariables.BasicUnitUnlocked == false) { GB_BasicUnit.Enabled = false; }
             if (GlobalVariables.RangeUnitUnlocked == false) { GB_RangeUnit.Enabled = false; }
@@ -380,6 +381,8 @@ namespace Programming_Internal
                     }
                 }
             }
+
+            UpdateDisplay();
         }
 
         private void BTN_BasicUnit_Purchase1_Click(object sender, EventArgs e)
@@ -412,15 +415,89 @@ namespace Programming_Internal
             }
         }
 
-        private void TMR_Update_Tick(object sender, EventArgs e)
+        private void BTN_Next_Click(object sender, EventArgs e)
+        {
+            if (currently_selected == "basic") { currently_selected = "range"; }
+            else if (currently_selected == "range") { currently_selected = "magic"; }
+            else if (currently_selected == "magic") { currently_selected = "gun"; }
+            else if (currently_selected == "gun") { currently_selected = "giant"; }
+            else if (currently_selected == "giant") { currently_selected = "basic"; }
+
+            UpdateDisplay();
+        }
+
+        private void BTN_Previous_Click(object sender, EventArgs e)
+        {
+            if (currently_selected == "basic") { currently_selected = "giant"; }
+            else if (currently_selected == "range") { currently_selected = "basic"; }
+            else if (currently_selected == "magic") { currently_selected = "range"; }
+            else if (currently_selected == "gun") { currently_selected = "magic"; }
+            else if (currently_selected == "giant") { currently_selected = "gun"; }
+
+            UpdateDisplay();
+        }
+
+        public void UpdateDisplay()
         {
             if (currently_selected == "basic")
             {
+                GB_BasicUnit.Visible = true;
+                GB_RangeUnit.Visible = true;
+                GB_MagicUnit.Visible = false;
+                GB_GunUnit.Visible = false;
+                GB_GiantUnit.Visible = false;
 
+                int spacing = (PNL_UnitDisplay.Height - (GB_BasicUnit.Height * 2)) / 3;
+                GB_BasicUnit.Location = new Point(5, spacing);
+                GB_RangeUnit.Location = new Point(5, GB_BasicUnit.Location.Y + GB_BasicUnit.Height + spacing);
             }
             else if (currently_selected == "range")
             {
+                GB_BasicUnit.Visible = false;
+                GB_RangeUnit.Visible = true;
+                GB_MagicUnit.Visible = true;
+                GB_GunUnit.Visible = false;
+                GB_GiantUnit.Visible = false;
 
+                int spacing = (PNL_UnitDisplay.Height - (GB_RangeUnit.Height * 2)) / 3;
+                GB_RangeUnit.Location = new Point(5, spacing);
+                GB_MagicUnit.Location = new Point(5, GB_RangeUnit.Location.Y + GB_RangeUnit.Height + spacing);
+            }
+            else if (currently_selected == "magic")
+            {
+                GB_BasicUnit.Visible = false;
+                GB_RangeUnit.Visible = false;
+                GB_MagicUnit.Visible = true;
+                GB_GunUnit.Visible = true;
+                GB_GiantUnit.Visible = false;
+
+                int spacing = (PNL_UnitDisplay.Height - (GB_MagicUnit.Height * 2)) / 3;
+                GB_MagicUnit.Location = new Point(5, spacing);
+                GB_GunUnit.Location = new Point(5, GB_MagicUnit.Location.Y + GB_MagicUnit.Height + spacing);
+            }
+            else if (currently_selected == "gun")
+            {
+                GB_BasicUnit.Visible = false;
+                GB_RangeUnit.Visible = false;
+                GB_MagicUnit.Visible = false;
+                GB_GunUnit.Visible = true;
+                GB_GiantUnit.Visible = true;
+
+                int spacing = (PNL_UnitDisplay.Height - (GB_GunUnit.Height * 2)) / 3;
+                GB_GunUnit.Location = new Point(5, spacing);
+                GB_GiantUnit.Location = new Point(5, GB_GunUnit.Location.Y + GB_GunUnit.Height + spacing);
+            }
+            else if (currently_selected == "giant")
+            {
+                GB_BasicUnit.Visible = true;
+                GB_RangeUnit.Visible = false;
+                GB_MagicUnit.Visible = false;
+                GB_GunUnit.Visible = false;
+                GB_GiantUnit.Visible = true;
+
+                int spacing = (PNL_UnitDisplay.Height - (GB_GiantUnit.Height * 2)) / 3;
+                GB_GiantUnit.Location = new Point(5, spacing);
+                GB_BasicUnit.Location = new Point(5, GB_GiantUnit.Location.Y + GB_GiantUnit.Height + spacing);
             }
         }
 

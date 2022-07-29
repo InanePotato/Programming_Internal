@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.PNL_UnitDisplay = new System.Windows.Forms.Panel();
             this.GB_GiantUnit = new System.Windows.Forms.GroupBox();
             this.BTN_GiantUnit_Purchase10 = new System.Windows.Forms.Button();
@@ -100,7 +99,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_BasicUnit_Health = new System.Windows.Forms.Label();
             this.PIC_BasicUnit = new System.Windows.Forms.PictureBox();
-            this.TMR_Update = new System.Windows.Forms.Timer(this.components);
+            this.BTN_Next = new System.Windows.Forms.Button();
+            this.BTN_Previous = new System.Windows.Forms.Button();
             this.PNL_UnitDisplay.SuspendLayout();
             this.GB_GiantUnit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -145,7 +145,7 @@
             this.PNL_UnitDisplay.Controls.Add(this.GB_BasicUnit);
             this.PNL_UnitDisplay.Location = new System.Drawing.Point(0, 0);
             this.PNL_UnitDisplay.Name = "PNL_UnitDisplay";
-            this.PNL_UnitDisplay.Size = new System.Drawing.Size(700, 445);
+            this.PNL_UnitDisplay.Size = new System.Drawing.Size(700, 417);
             this.PNL_UnitDisplay.TabIndex = 0;
             // 
             // GB_GiantUnit
@@ -166,7 +166,7 @@
             this.GB_GiantUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GB_GiantUnit.Location = new System.Drawing.Point(13, 195);
             this.GB_GiantUnit.Name = "GB_GiantUnit";
-            this.GB_GiantUnit.Size = new System.Drawing.Size(677, 37);
+            this.GB_GiantUnit.Size = new System.Drawing.Size(677, 185);
             this.GB_GiantUnit.TabIndex = 18;
             this.GB_GiantUnit.TabStop = false;
             this.GB_GiantUnit.Text = "Giant Unit - OOOOOOOOOO";
@@ -883,10 +883,35 @@
             this.PIC_BasicUnit.TabIndex = 0;
             this.PIC_BasicUnit.TabStop = false;
             // 
-            // TMR_Update
+            // BTN_Next
             // 
-            this.TMR_Update.Enabled = true;
-            this.TMR_Update.Tick += new System.EventHandler(this.TMR_Update_Tick);
+            this.BTN_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(85)))), ((int)(((byte)(72)))));
+            this.BTN_Next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Next.FlatAppearance.BorderSize = 0;
+            this.BTN_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Next.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Next.Location = new System.Drawing.Point(348, 423);
+            this.BTN_Next.Name = "BTN_Next";
+            this.BTN_Next.Size = new System.Drawing.Size(320, 40);
+            this.BTN_Next.TabIndex = 1;
+            this.BTN_Next.Text = "Next";
+            this.BTN_Next.UseVisualStyleBackColor = false;
+            this.BTN_Next.Click += new System.EventHandler(this.BTN_Next_Click);
+            // 
+            // BTN_Previous
+            // 
+            this.BTN_Previous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(85)))), ((int)(((byte)(72)))));
+            this.BTN_Previous.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Previous.FlatAppearance.BorderSize = 0;
+            this.BTN_Previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Previous.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Previous.Location = new System.Drawing.Point(22, 423);
+            this.BTN_Previous.Name = "BTN_Previous";
+            this.BTN_Previous.Size = new System.Drawing.Size(320, 40);
+            this.BTN_Previous.TabIndex = 2;
+            this.BTN_Previous.Text = "Previous";
+            this.BTN_Previous.UseVisualStyleBackColor = false;
+            this.BTN_Previous.Click += new System.EventHandler(this.BTN_Previous_Click);
             // 
             // ShopWindow_PurchaseUnits
             // 
@@ -894,6 +919,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Programming_Internal.Properties.Resources.ShopWindow_Background;
             this.ClientSize = new System.Drawing.Size(700, 485);
+            this.Controls.Add(this.BTN_Previous);
+            this.Controls.Add(this.BTN_Next);
             this.Controls.Add(this.PNL_UnitDisplay);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1008,6 +1035,7 @@
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Label lbl_GiantUnit_Health;
         private System.Windows.Forms.PictureBox PIC_GiantUnit;
-        private System.Windows.Forms.Timer TMR_Update;
+        private System.Windows.Forms.Button BTN_Next;
+        private System.Windows.Forms.Button BTN_Previous;
     }
 }

@@ -120,7 +120,7 @@ namespace Programming_Internal
                 BTN_UpgradeUnit_Window.Enabled = false;
                 BTN_UpgradeUnit_Window.Cursor = Cursors.Default;
                 BTN_UpgradeUnit_Window.BackColor = Color.FromArgb(84, 63, 55);
-                closeShopWindow(); // change to openshop window when the window accualy exists :)
+                openShopWindow(new ShopWindow_UpgradeUnits());
             }
         }
 
