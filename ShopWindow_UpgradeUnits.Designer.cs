@@ -125,7 +125,7 @@
             this.GB_UnlockUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GB_UnlockUnit.Location = new System.Drawing.Point(11, 3);
             this.GB_UnlockUnit.Name = "GB_UnlockUnit";
-            this.GB_UnlockUnit.Size = new System.Drawing.Size(677, 32);
+            this.GB_UnlockUnit.Size = new System.Drawing.Size(677, 33);
             this.GB_UnlockUnit.TabIndex = 1;
             this.GB_UnlockUnit.TabStop = false;
             this.GB_UnlockUnit.Text = "Unlock - Basic Unit";
@@ -164,7 +164,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox4.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox4.Location = new System.Drawing.Point(364, 154);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 31);
@@ -183,7 +183,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox3.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox3.Location = new System.Drawing.Point(364, 117);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 31);
@@ -302,9 +302,9 @@
             this.GB_FinalUnit.Controls.Add(this.lbl_FinalUnit_Health);
             this.GB_FinalUnit.Controls.Add(this.PIC_FinalUnit);
             this.GB_FinalUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_FinalUnit.Location = new System.Drawing.Point(11, 80);
+            this.GB_FinalUnit.Location = new System.Drawing.Point(11, 91);
             this.GB_FinalUnit.Name = "GB_FinalUnit";
-            this.GB_FinalUnit.Size = new System.Drawing.Size(677, 34);
+            this.GB_FinalUnit.Size = new System.Drawing.Size(677, 37);
             this.GB_FinalUnit.TabIndex = 13;
             this.GB_FinalUnit.TabStop = false;
             this.GB_FinalUnit.Text = "Upgrade - Basic Unit";
@@ -329,7 +329,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox9.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox9.Location = new System.Drawing.Point(364, 154);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(31, 31);
@@ -348,7 +348,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox14.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox14.Location = new System.Drawing.Point(364, 117);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(31, 31);
@@ -439,9 +439,9 @@
             this.GB_UpgradeUnit.Controls.Add(this.lbl_UpgradeUnit2_Health);
             this.GB_UpgradeUnit.Controls.Add(this.PIC_UpgradeUnit2);
             this.GB_UpgradeUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_UpgradeUnit.Location = new System.Drawing.Point(11, 41);
+            this.GB_UpgradeUnit.Location = new System.Drawing.Point(11, 46);
             this.GB_UpgradeUnit.Name = "GB_UpgradeUnit";
-            this.GB_UpgradeUnit.Size = new System.Drawing.Size(677, 36);
+            this.GB_UpgradeUnit.Size = new System.Drawing.Size(677, 39);
             this.GB_UpgradeUnit.TabIndex = 13;
             this.GB_UpgradeUnit.TabStop = false;
             this.GB_UpgradeUnit.Text = "Upgrade - Basic Unit";
@@ -476,7 +476,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox10.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox10.Location = new System.Drawing.Point(194, 153);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(31, 31);
@@ -495,7 +495,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox11.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox11.Location = new System.Drawing.Point(194, 116);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(31, 31);
@@ -592,7 +592,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox5.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox5.Location = new System.Drawing.Point(558, 153);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(31, 31);
@@ -611,7 +611,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox6.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox6.Location = new System.Drawing.Point(558, 116);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(31, 31);

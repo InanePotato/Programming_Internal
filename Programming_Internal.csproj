@@ -299,5 +299,11 @@
   <ItemGroup>
     <None Include="Resources\Unit_Settings.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attack_Speed_Icon %2832x32%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rage_Icon %2842x42%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

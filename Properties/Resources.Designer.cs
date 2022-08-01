@@ -83,6 +83,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Attack_Speed_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Attack_Speed_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background_ArmyCamp {
             get {
                 object obj = ResourceManager.GetObject("Background_ArmyCamp", resourceCulture);
@@ -256,6 +266,16 @@ namespace Programming_Internal.Properties {
         internal static System.Drawing.Bitmap Menu_Icon {
             get {
                 object obj = ResourceManager.GetObject("Menu_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rage_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Rage_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

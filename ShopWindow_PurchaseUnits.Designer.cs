@@ -164,9 +164,9 @@
             this.GB_GiantUnit.Controls.Add(this.lbl_GiantUnit_Health);
             this.GB_GiantUnit.Controls.Add(this.PIC_GiantUnit);
             this.GB_GiantUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_GiantUnit.Location = new System.Drawing.Point(13, 195);
+            this.GB_GiantUnit.Location = new System.Drawing.Point(12, 170);
             this.GB_GiantUnit.Name = "GB_GiantUnit";
-            this.GB_GiantUnit.Size = new System.Drawing.Size(677, 185);
+            this.GB_GiantUnit.Size = new System.Drawing.Size(677, 186);
             this.GB_GiantUnit.TabIndex = 18;
             this.GB_GiantUnit.TabStop = false;
             this.GB_GiantUnit.Text = "Giant Unit - OOOOOOOOOO";
@@ -213,7 +213,7 @@
             // 
             // pictureBox19
             // 
-            this.pictureBox19.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox19.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox19.Location = new System.Drawing.Point(187, 140);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(31, 31);
@@ -232,7 +232,7 @@
             // 
             // pictureBox20
             // 
-            this.pictureBox20.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox20.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox20.Location = new System.Drawing.Point(187, 103);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(31, 31);
@@ -311,7 +311,7 @@
             this.GB_GunUnit.Controls.Add(this.lbl_GunUnit_Health);
             this.GB_GunUnit.Controls.Add(this.PIC_GunUnit);
             this.GB_GunUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_GunUnit.Location = new System.Drawing.Point(11, 154);
+            this.GB_GunUnit.Location = new System.Drawing.Point(11, 129);
             this.GB_GunUnit.Name = "GB_GunUnit";
             this.GB_GunUnit.Size = new System.Drawing.Size(677, 35);
             this.GB_GunUnit.TabIndex = 17;
@@ -360,7 +360,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox14.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox14.Location = new System.Drawing.Point(187, 140);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(31, 31);
@@ -379,7 +379,7 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox15.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox15.Location = new System.Drawing.Point(187, 103);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(31, 31);
@@ -458,9 +458,9 @@
             this.GB_MagicUnit.Controls.Add(this.lbl_MagicUnit_Health);
             this.GB_MagicUnit.Controls.Add(this.PIC_MagicUnit);
             this.GB_MagicUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_MagicUnit.Location = new System.Drawing.Point(7, 102);
+            this.GB_MagicUnit.Location = new System.Drawing.Point(11, 85);
             this.GB_MagicUnit.Name = "GB_MagicUnit";
-            this.GB_MagicUnit.Size = new System.Drawing.Size(677, 41);
+            this.GB_MagicUnit.Size = new System.Drawing.Size(677, 38);
             this.GB_MagicUnit.TabIndex = 12;
             this.GB_MagicUnit.TabStop = false;
             this.GB_MagicUnit.Text = "Magic Unit - OOOOOOOOOO";
@@ -507,7 +507,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox9.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox9.Location = new System.Drawing.Point(187, 140);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(31, 31);
@@ -526,7 +526,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox10.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox10.Location = new System.Drawing.Point(187, 103);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(31, 31);
@@ -605,7 +605,7 @@
             this.GB_RangeUnit.Controls.Add(this.lbl_RangeUnit_Health);
             this.GB_RangeUnit.Controls.Add(this.PIC_RangeUnit);
             this.GB_RangeUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_RangeUnit.Location = new System.Drawing.Point(7, 58);
+            this.GB_RangeUnit.Location = new System.Drawing.Point(11, 46);
             this.GB_RangeUnit.Name = "GB_RangeUnit";
             this.GB_RangeUnit.Size = new System.Drawing.Size(677, 33);
             this.GB_RangeUnit.TabIndex = 11;
@@ -654,7 +654,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox5.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox5.Location = new System.Drawing.Point(187, 140);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(31, 31);
@@ -673,7 +673,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox6.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox6.Location = new System.Drawing.Point(187, 103);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(31, 31);
@@ -754,7 +754,7 @@
             this.GB_BasicUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GB_BasicUnit.Location = new System.Drawing.Point(11, 6);
             this.GB_BasicUnit.Name = "GB_BasicUnit";
-            this.GB_BasicUnit.Size = new System.Drawing.Size(677, 38);
+            this.GB_BasicUnit.Size = new System.Drawing.Size(677, 34);
             this.GB_BasicUnit.TabIndex = 0;
             this.GB_BasicUnit.TabStop = false;
             this.GB_BasicUnit.Text = "Basic Unit - OOOOOOOOOO";
@@ -801,7 +801,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox4.Image = global::Programming_Internal.Properties.Resources.Rage_Icon;
             this.pictureBox4.Location = new System.Drawing.Point(187, 140);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 31);
@@ -820,7 +820,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Programming_Internal.Properties.Resources.Strength_Icon;
+            this.pictureBox3.Image = global::Programming_Internal.Properties.Resources.Attack_Speed_Icon;
             this.pictureBox3.Location = new System.Drawing.Point(187, 103);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 31);
