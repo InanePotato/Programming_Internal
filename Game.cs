@@ -270,31 +270,33 @@ namespace Programming_Internal
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult CloseApplication = MessageBox.Show("Do you really want to exit this application?","Exit Appliccation",MessageBoxButtons.YesNo);
-            if (CloseApplication == DialogResult.Yes)
-            {
-                GlobalVariables.Basic_Ducks_FR[0] = null;
-                GlobalVariables.Basic_Ducks_FR[1] = null;
-                GlobalVariables.Basic_Ducks_FR[2] = null;
-                GlobalVariables.Range_Ducks_FR[0] = null;
-                GlobalVariables.Range_Ducks_FR[1] = null;
-                GlobalVariables.Range_Ducks_FR[2] = null;
-                GlobalVariables.Magic_Ducks_FR[0] = null;
-                GlobalVariables.Magic_Ducks_FR[1] = null;
-                GlobalVariables.Magic_Ducks_FR[2] = null;
-                GlobalVariables.Gun_Ducks_FR[0] = null;
-                GlobalVariables.Gun_Ducks_FR[1] = null;
-                GlobalVariables.Gun_Ducks_FR[2] = null;
-                GlobalVariables.Giant_Ducks_FR[0] = null;
-                GlobalVariables.Giant_Ducks_FR[1] = null;
-                GlobalVariables.Giant_Ducks_FR[2] = null;
+            Application.Exit();
 
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+            //DialogResult CloseApplication = MessageBox.Show("Do you really want to exit this application?","Exit Appliccation",MessageBoxButtons.YesNo);
+            //if (CloseApplication == DialogResult.Yes)
+            //{
+            //    GlobalVariables.Basic_Ducks_FR[0] = null;
+            //    GlobalVariables.Basic_Ducks_FR[1] = null;
+            //    GlobalVariables.Basic_Ducks_FR[2] = null;
+            //    GlobalVariables.Range_Ducks_FR[0] = null;
+            //    GlobalVariables.Range_Ducks_FR[1] = null;
+            //    GlobalVariables.Range_Ducks_FR[2] = null;
+            //    GlobalVariables.Magic_Ducks_FR[0] = null;
+            //    GlobalVariables.Magic_Ducks_FR[1] = null;
+            //    GlobalVariables.Magic_Ducks_FR[2] = null;
+            //    GlobalVariables.Gun_Ducks_FR[0] = null;
+            //    GlobalVariables.Gun_Ducks_FR[1] = null;
+            //    GlobalVariables.Gun_Ducks_FR[2] = null;
+            //    GlobalVariables.Giant_Ducks_FR[0] = null;
+            //    GlobalVariables.Giant_Ducks_FR[1] = null;
+            //    GlobalVariables.Giant_Ducks_FR[2] = null;
+
+            //    Application.Exit();
+            //}
+            //else
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void TMR_TopBarDisplay_Refresh_Tick(object sender, EventArgs e)
