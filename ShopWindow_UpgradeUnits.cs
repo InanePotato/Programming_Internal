@@ -38,6 +38,13 @@ namespace Programming_Internal
             CurrentUnitType = "basic";
 
             DisplayUpdate();
+
+            foreach (Get_Unit_Info i in GlobalVariables.Unit_Info)
+            {
+                Console.WriteLine(i.Name + ": " +i.Cost);
+            }
+
+            Console.WriteLine("-------------------------------------");
         }
 
         public void DisplayUpdate()
@@ -71,9 +78,9 @@ namespace Programming_Internal
             }
             else if (CurrentUnitType == "range")
             {
-                if (GlobalVariables.UnitUpgrades_Range == 2) { CurrentUnitName = "archer"; }
+                if (GlobalVariables.UnitUpgrades_Range == 2) { CurrentUnitName = "cannon"; }
                 else if (GlobalVariables.UnitUpgrades_Range == 1) { CurrentUnitName = "catapult"; }
-                else { CurrentUnitName = "cannon"; }
+                else { CurrentUnitName = "archer"; }
 
                 CurrentUnitUnlocked = GlobalVariables.RangeUnitUnlocked;
                 CurrentUnitLevel = GlobalVariables.UnitUpgrades_Range;
@@ -116,7 +123,7 @@ namespace Programming_Internal
                 {
                     lbl_UnlockUnit_Health.Text = i.Health.ToString();
                     lbl_UnlockUnit_Damage.Text = i.Damage.ToString();
-                    lbl_UnlockUnit_AttackSpeed.Text = i.Range.ToString();
+                    lbl_UnlockUnit_AttackSpeed.Text = i.Attack_Speed.ToString();
                     lbl_UnlockUnit_Range.Text = i.Range;
                     Cost = i.Cost * 15;
 
@@ -213,7 +220,7 @@ namespace Programming_Internal
                 {
                     lbl_UpgradeUnit_Health.Text = i.Health.ToString();
                     lbl_UpgradeUnit_Damage.Text = i.Damage.ToString();
-                    lbl_UpgradeUnit_AttackSpeed.Text = i.Range.ToString();
+                    lbl_UpgradeUnit_AttackSpeed.Text = i.Attack_Speed.ToString();
                     lbl_UpgradeUnit_Range.Text = i.Range;
 
                     if (i.Abilities == "none")
@@ -270,7 +277,7 @@ namespace Programming_Internal
                 {
                     lbl_UpgradeUnit2_Health.Text = i.Health.ToString();
                     lbl_UpgradeUnit2_Damage.Text = i.Damage.ToString();
-                    lbl_UpgradeUnit2_AttackSpeed.Text = i.Range.ToString();
+                    lbl_UpgradeUnit2_AttackSpeed.Text = i.Attack_Speed.ToString();
                     lbl_UpgradeUnit2_Range.Text = i.Range;
 
                     Cost = i.Cost * 20;
@@ -349,7 +356,7 @@ namespace Programming_Internal
                 {
                     lbl_FinalUnit_Health.Text = i.Health.ToString();
                     lbl_FinalUnit_Damage.Text = i.Damage.ToString();
-                    lbl_FinalUnit_AttackSpeed.Text = i.Range.ToString();
+                    lbl_FinalUnit_AttackSpeed.Text = i.Attack_Speed.ToString();
                     lbl_FinalUnit_Range.Text = i.Range;
 
                     if (i.Abilities == "none")
