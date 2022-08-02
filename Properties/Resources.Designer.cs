@@ -103,6 +103,26 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Battleground_Background1 {
+            get {
+                object obj = ResourceManager.GetObject("Battleground_Background1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Battleground_Background2 {
+            get {
+                object obj = ResourceManager.GetObject("Battleground_Background2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blank {
             get {
                 object obj = ResourceManager.GetObject("Blank", resourceCulture);
