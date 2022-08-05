@@ -320,5 +320,14 @@
   <ItemGroup>
     <None Include="Resources\Battleground_Background2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Magician %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Sorcerer %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duck - Wizard %28Enlarged x4%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

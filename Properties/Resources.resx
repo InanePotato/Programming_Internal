@@ -211,4 +211,13 @@
   <data name="Battleground_Background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Battleground_Background2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Duck_Magician" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Magician (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Duck_Sorcerer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Sorcerer (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Duck_Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Wizard (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

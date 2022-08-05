@@ -64,14 +64,14 @@ namespace Programming_Internal
             GlobalVariables.Range_Ducks_FR[2] = Properties.Resources.Blank;
             GlobalVariables.Range_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
-            GlobalVariables.Magic_Ducks[0] = Properties.Resources.Blank;
-            GlobalVariables.Magic_Ducks[1] = Properties.Resources.Blank;
-            GlobalVariables.Magic_Ducks[2] = Properties.Resources.Blank;
-            GlobalVariables.Magic_Ducks_FR[0] = Properties.Resources.Blank;
+            GlobalVariables.Magic_Ducks[0] = Properties.Resources.Duck_Magician;
+            GlobalVariables.Magic_Ducks[1] = Properties.Resources.Duck_Wizard;
+            GlobalVariables.Magic_Ducks[2] = Properties.Resources.Duck_Sorcerer;
+            GlobalVariables.Magic_Ducks_FR[0] = Properties.Resources.Duck_Magician;
             GlobalVariables.Magic_Ducks_FR[0].RotateFlip(RotateFlipType.RotateNoneFlipX);
-            GlobalVariables.Magic_Ducks_FR[1] = Properties.Resources.Blank;
+            GlobalVariables.Magic_Ducks_FR[1] = Properties.Resources.Duck_Wizard;
             GlobalVariables.Magic_Ducks_FR[1].RotateFlip(RotateFlipType.RotateNoneFlipX);
-            GlobalVariables.Magic_Ducks_FR[2] = Properties.Resources.Blank;
+            GlobalVariables.Magic_Ducks_FR[2] = Properties.Resources.Duck_Sorcerer;
             GlobalVariables.Magic_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             GlobalVariables.Gun_Ducks[0] = Properties.Resources.Duck_Agent;

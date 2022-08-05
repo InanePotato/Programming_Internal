@@ -223,9 +223,29 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Duck_Magician {
+            get {
+                object obj = ResourceManager.GetObject("Duck_Magician", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Duck_Sniper {
             get {
                 object obj = ResourceManager.GetObject("Duck_Sniper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Duck_Sorcerer {
+            get {
+                object obj = ResourceManager.GetObject("Duck_Sorcerer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +286,16 @@ namespace Programming_Internal.Properties {
         internal static System.Drawing.Bitmap Duck_Tall {
             get {
                 object obj = ResourceManager.GetObject("Duck_Tall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Duck_Wizard {
+            get {
+                object obj = ResourceManager.GetObject("Duck_Wizard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
