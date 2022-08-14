@@ -16,5 +16,10 @@ namespace Programming_Internal
         {
             InitializeComponent();
         }
+
+        private void Battleground_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

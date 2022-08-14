@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities.cs" />
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +133,7 @@
     <Compile Include="ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Unit.cs" />
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +330,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Duck - Wizard %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lemon - Big %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lemon - Small %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lemonade - Bottle %28Enlarged x4%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lemonade - Glass %28Enlarged x4%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

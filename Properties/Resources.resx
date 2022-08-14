@@ -220,4 +220,16 @@
   <data name="Duck_Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - Wizard (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Lemon_Big" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lemon - Big (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lemon_Bottle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lemonade - Bottle (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lemon_Glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lemonade - Glass (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lemon_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lemon - Small (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

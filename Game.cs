@@ -94,6 +94,11 @@ namespace Programming_Internal
             GlobalVariables.Giant_Ducks_FR[2] = Properties.Resources.Duck_Buff;
             GlobalVariables.Giant_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
+            GlobalVariables.Enemy_Lemons[0] = Properties.Resources.Lemon_Small;
+            GlobalVariables.Enemy_Lemons[1] = Properties.Resources.Lemon_Big;
+            GlobalVariables.Enemy_Lemons[2] = Properties.Resources.Lemon_Glass;
+            GlobalVariables.Enemy_Lemons[3] = Properties.Resources.Lemon_Bottle;
+
             //
             // ---------  TEMP  ------------
             //

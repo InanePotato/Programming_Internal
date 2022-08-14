@@ -48,6 +48,7 @@
             this.Name = "Battleground";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.Battleground_Load);
             this.ResumeLayout(false);
 
         }

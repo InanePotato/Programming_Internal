@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Programming_Internal
+{
+    internal class Unit
+    {
+        public int x, y;
+        public int width, height = 100;
+        public Image Unit_Image;
+        public Rectangle UnitRec;
+        public string Unit_Type, Unit_Name;
+        public int Health, Damage, Attack_Speed, Unit_Level;
+        public bool Range;
+        public List<Abilities>abilities = new List<Abilities>();
+
+        public Unit(int X, int Y, string Type, string Name, int Level)
+        {
+            x = X;
+            y = Y;
+            Unit_Type = Type;
+            Unit_Name = Name;
+            Unit_Level = Level;
+
+            if (Unit_Type == "basic") { Unit_Image = GlobalVariables.Basic_Ducks[Unit_Level]; }
+            if (Unit_Type == "range") { Unit_Image = GlobalVariables.Range_Ducks[Unit_Level]; }
+            if (Unit_Type == "magic") { Unit_Image = GlobalVariables.Magic_Ducks[Unit_Level]; }
+            if (Unit_Type == "gun") { Unit_Image = GlobalVariables.Gun_Ducks[Unit_Level]; }
+            if (Unit_Type == "giant") { Unit_Image = GlobalVariables.Giant_Ducks[Unit_Level]; }
+
+            foreach (Get_Unit_Info i in GlobalVariables.Unit_Info)
+            {
+                if (i.Name == Unit_Name)
+                {
+                    Health = i.Health;
+                    Damage = i.Damage;
+                    Attack_Speed = i.Attack_Speed;
+
+                    if (i.Range == "yes") { Range = true; }
+                    else { Range = false; }
+
+                    if (i.Abilities == "none" || i.Abilities == "none none none")
+                    {
+                        abilities = null;
+                    }
+                    else
+                    {
+                        string[] Abilities_Split = i.Abilities.Split(' ');
+                        foreach (string s in Abilities_Split)
+                        {
+                            if (s != "none")
+                            {
+                                string[] Ability = s.Split('%');
+                                abilities.Add(new Abilities(Ability[0], int.Parse(Ability[1])));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void Unit_Draw(Graphics g)
+        {
+            UnitRec = new Rectangle(x, y, width, height);
+            g.DrawImage(Unit_Image, UnitRec);
+        }
+    }
+}
