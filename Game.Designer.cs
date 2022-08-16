@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.PNL_Game = new System.Windows.Forms.Panel();
+            this.PNL_Menu = new System.Windows.Forms.Panel();
+            this.BTN_OpenAdmin = new System.Windows.Forms.Button();
+            this.BTN_Help = new System.Windows.Forms.Button();
+            this.BTN_Quit = new System.Windows.Forms.Button();
+            this.BTN_MainMenu = new System.Windows.Forms.Button();
             this.PNL_ChildForm = new System.Windows.Forms.Panel();
             this.Break_Line = new System.Windows.Forms.Panel();
             this.PNL_Top = new System.Windows.Forms.Panel();
@@ -41,20 +46,15 @@
             this.PIC_Strength = new System.Windows.Forms.PictureBox();
             this.LBL_Health = new System.Windows.Forms.Label();
             this.PIC_Health = new System.Windows.Forms.PictureBox();
-            this.PNL_Menu = new System.Windows.Forms.Panel();
-            this.BTN_Help = new System.Windows.Forms.Button();
-            this.BTN_Quit = new System.Windows.Forms.Button();
-            this.BTN_MainMenu = new System.Windows.Forms.Button();
             this.TMR_ChildFromControl = new System.Windows.Forms.Timer(this.components);
             this.TMR_TopBarDisplay_Refresh = new System.Windows.Forms.Timer(this.components);
             this.TMR_AdminChcker = new System.Windows.Forms.Timer(this.components);
-            this.BTN_OpenAdmin = new System.Windows.Forms.Button();
             this.PNL_Game.SuspendLayout();
+            this.PNL_Menu.SuspendLayout();
             this.PNL_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Coins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Strength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Health)).BeginInit();
-            this.PNL_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_Game
@@ -70,6 +70,81 @@
             this.PNL_Game.Name = "PNL_Game";
             this.PNL_Game.Size = new System.Drawing.Size(886, 867);
             this.PNL_Game.TabIndex = 0;
+            // 
+            // PNL_Menu
+            // 
+            this.PNL_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(45)))), ((int)(((byte)(34)))));
+            this.PNL_Menu.Controls.Add(this.BTN_OpenAdmin);
+            this.PNL_Menu.Controls.Add(this.BTN_Help);
+            this.PNL_Menu.Controls.Add(this.BTN_Quit);
+            this.PNL_Menu.Controls.Add(this.BTN_MainMenu);
+            this.PNL_Menu.Enabled = false;
+            this.PNL_Menu.Location = new System.Drawing.Point(16, 788);
+            this.PNL_Menu.Name = "PNL_Menu";
+            this.PNL_Menu.Size = new System.Drawing.Size(32, 32);
+            this.PNL_Menu.TabIndex = 1;
+            this.PNL_Menu.Visible = false;
+            // 
+            // BTN_OpenAdmin
+            // 
+            this.BTN_OpenAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_OpenAdmin.FlatAppearance.BorderSize = 0;
+            this.BTN_OpenAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_OpenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_OpenAdmin.Location = new System.Drawing.Point(0, 192);
+            this.BTN_OpenAdmin.Name = "BTN_OpenAdmin";
+            this.BTN_OpenAdmin.Size = new System.Drawing.Size(200, 56);
+            this.BTN_OpenAdmin.TabIndex = 3;
+            this.BTN_OpenAdmin.Text = "Open Admin";
+            this.BTN_OpenAdmin.UseMnemonic = false;
+            this.BTN_OpenAdmin.UseVisualStyleBackColor = true;
+            this.BTN_OpenAdmin.Visible = false;
+            this.BTN_OpenAdmin.Click += new System.EventHandler(this.BTN_OpenAdmin_Click);
+            // 
+            // BTN_Help
+            // 
+            this.BTN_Help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Help.FlatAppearance.BorderSize = 0;
+            this.BTN_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Help.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Help.Location = new System.Drawing.Point(0, 6);
+            this.BTN_Help.Name = "BTN_Help";
+            this.BTN_Help.Size = new System.Drawing.Size(200, 56);
+            this.BTN_Help.TabIndex = 2;
+            this.BTN_Help.Text = "Help";
+            this.BTN_Help.UseMnemonic = false;
+            this.BTN_Help.UseVisualStyleBackColor = true;
+            this.BTN_Help.Click += new System.EventHandler(this.BTN_Help_Click);
+            // 
+            // BTN_Quit
+            // 
+            this.BTN_Quit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Quit.FlatAppearance.BorderSize = 0;
+            this.BTN_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Quit.Location = new System.Drawing.Point(0, 130);
+            this.BTN_Quit.Name = "BTN_Quit";
+            this.BTN_Quit.Size = new System.Drawing.Size(200, 56);
+            this.BTN_Quit.TabIndex = 1;
+            this.BTN_Quit.Text = "Save & Quit";
+            this.BTN_Quit.UseMnemonic = false;
+            this.BTN_Quit.UseVisualStyleBackColor = true;
+            this.BTN_Quit.Click += new System.EventHandler(this.BTN_Quit_Click);
+            // 
+            // BTN_MainMenu
+            // 
+            this.BTN_MainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_MainMenu.FlatAppearance.BorderSize = 0;
+            this.BTN_MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_MainMenu.Location = new System.Drawing.Point(0, 68);
+            this.BTN_MainMenu.Name = "BTN_MainMenu";
+            this.BTN_MainMenu.Size = new System.Drawing.Size(200, 56);
+            this.BTN_MainMenu.TabIndex = 0;
+            this.BTN_MainMenu.Text = "Main Menu";
+            this.BTN_MainMenu.UseMnemonic = false;
+            this.BTN_MainMenu.UseVisualStyleBackColor = true;
+            this.BTN_MainMenu.Click += new System.EventHandler(this.BTN_MainMenu_Click);
             // 
             // PNL_ChildForm
             // 
@@ -176,65 +251,6 @@
             this.PIC_Health.TabIndex = 1;
             this.PIC_Health.TabStop = false;
             // 
-            // PNL_Menu
-            // 
-            this.PNL_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(45)))), ((int)(((byte)(34)))));
-            this.PNL_Menu.Controls.Add(this.BTN_OpenAdmin);
-            this.PNL_Menu.Controls.Add(this.BTN_Help);
-            this.PNL_Menu.Controls.Add(this.BTN_Quit);
-            this.PNL_Menu.Controls.Add(this.BTN_MainMenu);
-            this.PNL_Menu.Enabled = false;
-            this.PNL_Menu.Location = new System.Drawing.Point(16, 788);
-            this.PNL_Menu.Name = "PNL_Menu";
-            this.PNL_Menu.Size = new System.Drawing.Size(32, 32);
-            this.PNL_Menu.TabIndex = 1;
-            this.PNL_Menu.Visible = false;
-            // 
-            // BTN_Help
-            // 
-            this.BTN_Help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Help.FlatAppearance.BorderSize = 0;
-            this.BTN_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Help.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Help.Location = new System.Drawing.Point(0, 6);
-            this.BTN_Help.Name = "BTN_Help";
-            this.BTN_Help.Size = new System.Drawing.Size(200, 56);
-            this.BTN_Help.TabIndex = 2;
-            this.BTN_Help.Text = "Help";
-            this.BTN_Help.UseMnemonic = false;
-            this.BTN_Help.UseVisualStyleBackColor = true;
-            this.BTN_Help.Click += new System.EventHandler(this.BTN_Help_Click);
-            // 
-            // BTN_Quit
-            // 
-            this.BTN_Quit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Quit.FlatAppearance.BorderSize = 0;
-            this.BTN_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Quit.Location = new System.Drawing.Point(0, 130);
-            this.BTN_Quit.Name = "BTN_Quit";
-            this.BTN_Quit.Size = new System.Drawing.Size(200, 56);
-            this.BTN_Quit.TabIndex = 1;
-            this.BTN_Quit.Text = "Save & Quit";
-            this.BTN_Quit.UseMnemonic = false;
-            this.BTN_Quit.UseVisualStyleBackColor = true;
-            this.BTN_Quit.Click += new System.EventHandler(this.BTN_Quit_Click);
-            // 
-            // BTN_MainMenu
-            // 
-            this.BTN_MainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_MainMenu.FlatAppearance.BorderSize = 0;
-            this.BTN_MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_MainMenu.Location = new System.Drawing.Point(0, 68);
-            this.BTN_MainMenu.Name = "BTN_MainMenu";
-            this.BTN_MainMenu.Size = new System.Drawing.Size(200, 56);
-            this.BTN_MainMenu.TabIndex = 0;
-            this.BTN_MainMenu.Text = "Main Menu";
-            this.BTN_MainMenu.UseMnemonic = false;
-            this.BTN_MainMenu.UseVisualStyleBackColor = true;
-            this.BTN_MainMenu.Click += new System.EventHandler(this.BTN_MainMenu_Click);
-            // 
             // TMR_ChildFromControl
             // 
             this.TMR_ChildFromControl.Enabled = true;
@@ -250,22 +266,6 @@
             this.TMR_AdminChcker.Enabled = true;
             this.TMR_AdminChcker.Tick += new System.EventHandler(this.TMR_AdminChcker_Tick);
             // 
-            // BTN_OpenAdmin
-            // 
-            this.BTN_OpenAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_OpenAdmin.FlatAppearance.BorderSize = 0;
-            this.BTN_OpenAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_OpenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_OpenAdmin.Location = new System.Drawing.Point(0, 192);
-            this.BTN_OpenAdmin.Name = "BTN_OpenAdmin";
-            this.BTN_OpenAdmin.Size = new System.Drawing.Size(200, 56);
-            this.BTN_OpenAdmin.TabIndex = 3;
-            this.BTN_OpenAdmin.Text = "Open Admin";
-            this.BTN_OpenAdmin.UseMnemonic = false;
-            this.BTN_OpenAdmin.UseVisualStyleBackColor = true;
-            this.BTN_OpenAdmin.Visible = false;
-            this.BTN_OpenAdmin.Click += new System.EventHandler(this.BTN_OpenAdmin_Click);
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,18 +279,18 @@
             this.MinimumSize = new System.Drawing.Size(900, 800);
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "The Duck Song - But It\'s A Game";
+            this.Text = "The Duck Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Game_FormClosed);
             this.Load += new System.EventHandler(this.Game_Load);
             this.SizeChanged += new System.EventHandler(this.Game_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);
             this.PNL_Game.ResumeLayout(false);
+            this.PNL_Menu.ResumeLayout(false);
             this.PNL_Top.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Coins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Strength)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_Health)).EndInit();
-            this.PNL_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

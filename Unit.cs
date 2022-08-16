@@ -13,9 +13,12 @@ namespace Programming_Internal
         public int width, height = 100;
         public Image Unit_Image;
         public Rectangle UnitRec;
+        public Enemy_Unit UnitTarget;
         public string Unit_Type, Unit_Name;
         public int Health, Damage, Attack_Speed, Unit_Level;
         public bool Range;
+        public int Range_Distance = 200;
+        public int Speed = 10;
         public List<Abilities>abilities = new List<Abilities>();
 
         public Unit(int X, int Y, string Type, string Name, int Level)
@@ -67,6 +70,76 @@ namespace Programming_Internal
         {
             UnitRec = new Rectangle(x, y, width, height);
             g.DrawImage(Unit_Image, UnitRec);
+        }
+
+        public void Move_Unit(Graphics g)
+        {
+            if (Range == true)
+            {
+                bool move = true;
+                foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+                {
+                    if (x + width + Range_Distance + (Speed / 2) >= Eunit.x)
+                    {
+                        move = false;
+                    }
+                }
+
+                if (move == true)
+                {
+                    x = x + Speed;
+                    Unit_Draw(g);
+                }
+            }
+            else
+            {
+                bool move = true;
+                foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+                {
+                    if (x + width + (Speed / 2) >= Eunit.x)
+                    {
+                        move = false;
+                    }
+                }
+
+                if (move == true)
+                {
+                    x = x + Speed;
+                    Unit_Draw(g);
+                }
+            }
+        }
+
+        public void Unit_Attack()
+        {
+            foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+            {
+                if (UnitTarget == null) { UnitTarget.UnitRec = Eunit.UnitRec; }
+                else
+                {
+                    if (x - Eunit.UnitRec.Location.X < x - UnitTarget.UnitRec.Location.X)
+                    {
+                        UnitTarget = Eunit;
+                    }
+                }
+            }
+
+            UnitTarget.Damage_Enemy_Unit(Damage);
+        }
+
+        public void Unit_Damage(int damage)
+        {
+            Health = Health - damage;
+
+            if (Health <= 0)
+            {
+                Unit_Destroy();
+            }
+        }
+
+        public void Unit_Destroy()
+        {
+            GlobalVariables.Units.Remove(this);
         }
     }
 }

@@ -89,6 +89,7 @@
     <Compile Include="DragControl.Designer.cs">
       <DependentUpon>DragControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enemy_Unit.cs" />
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>

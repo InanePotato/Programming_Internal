@@ -57,6 +57,8 @@ namespace Programming_Internal
         private static Image[] v_Enemy_Lemons = new Image[4];
 
         private static List<Get_Unit_Info> v_Unit_Info = new List<Get_Unit_Info>();
+        private static List<Unit> v_Units = new List<Unit>();
+        private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
 
         public static int UnitUpgrades_Basic
         {
@@ -281,6 +283,16 @@ namespace Programming_Internal
         {
             get { return v_Unit_Info; }
             set { v_Unit_Info = value; }
+        }
+        public static List<Unit> Units
+        {
+            get { return v_Units; }
+            set { v_Units = value; }
+        }
+        public static List<Enemy_Unit> Enemy_Units
+        {
+            get { return v_Enemy_Units; }
+            set { v_Enemy_Units = value; }
         }
     }
 }
