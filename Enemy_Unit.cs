@@ -17,6 +17,7 @@ namespace Programming_Internal
         public int Health, Damage, Attack_Speed, Unit_Level;
         public bool Range;
         public int Range_Distance = 200;
+        public Unit UnitTarget;
 
         public Enemy_Unit(int X, int Y, string Name)
         {
@@ -49,7 +50,19 @@ namespace Programming_Internal
 
         public void Attack_Unit()
         {
+            foreach (Unit Unit in GlobalVariables.Units)
+            {
+                if (UnitTarget == null) { UnitTarget.UnitRec = Unit.UnitRec; }
+                else
+                {
+                    if (Unit.UnitRec.Location.X - x < UnitTarget.UnitRec.Location.X - x)
+                    {
+                        UnitTarget = Unit;
+                    }
+                }
+            }
 
+            UnitTarget.Unit_Damage(Damage);
         }
 
         public void Enemy_Unit_Destroy()

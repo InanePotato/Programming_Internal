@@ -29,15 +29,26 @@
         private void InitializeComponent()
         {
             this.PNL_Battleground = new System.Windows.Forms.Panel();
+            this.PNL_Battle = new System.Windows.Forms.Panel();
+            this.PNL_Battleground.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_Battleground
             // 
             this.PNL_Battleground.BackgroundImage = global::Programming_Internal.Properties.Resources.Battleground_Background2;
+            this.PNL_Battleground.Controls.Add(this.PNL_Battle);
             this.PNL_Battleground.Location = new System.Drawing.Point(0, 0);
             this.PNL_Battleground.Name = "PNL_Battleground";
             this.PNL_Battleground.Size = new System.Drawing.Size(886, 714);
             this.PNL_Battleground.TabIndex = 0;
+            // 
+            // PNL_Battle
+            // 
+            this.PNL_Battle.BackColor = System.Drawing.Color.Transparent;
+            this.PNL_Battle.Location = new System.Drawing.Point(0, 350);
+            this.PNL_Battle.Name = "PNL_Battle";
+            this.PNL_Battle.Size = new System.Drawing.Size(886, 364);
+            this.PNL_Battle.TabIndex = 0;
             // 
             // Battleground
             // 
@@ -49,6 +60,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.Battleground_Load);
+            this.PNL_Battleground.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PNL_Battleground;
+        private System.Windows.Forms.Panel PNL_Battle;
     }
 }
