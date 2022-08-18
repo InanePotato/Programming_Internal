@@ -18,8 +18,9 @@ namespace Programming_Internal
         public bool Range;
         public int Range_Distance = 200;
         public Unit UnitTarget;
+        public int Multiplier;
 
-        public Enemy_Unit(int X, int Y, string Name)
+        public Enemy_Unit(int X, int Y, string Name, int Multiplier)
         {
             x = X;
             y = Y;

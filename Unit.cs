@@ -19,9 +19,10 @@ namespace Programming_Internal
         public bool Range;
         public int Range_Distance = 200;
         public int Speed = 10;
+        public int Multiplier;
         public List<Abilities>abilities = new List<Abilities>();
 
-        public Unit(int X, int Y, string Type, string Name, int Level)
+        public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier)
         {
             x = X;
             y = Y;
@@ -39,8 +40,8 @@ namespace Programming_Internal
             {
                 if (i.Name == Unit_Name)
                 {
-                    Health = i.Health;
-                    Damage = i.Damage;
+                    Health = i.Health * Multiplier;
+                    Damage = i.Damage * Multiplier;
                     Attack_Speed = i.Attack_Speed;
 
                     if (i.Range == "yes") { Range = true; }
