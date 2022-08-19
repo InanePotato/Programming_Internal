@@ -46,15 +46,18 @@
             this.PNL_ACPausedCover = new System.Windows.Forms.Panel();
             this.TMR_PausePlayCheck = new System.Windows.Forms.Timer(this.components);
             this.TMR_Update = new System.Windows.Forms.Timer(this.components);
+            this.PIC_MapButton = new System.Windows.Forms.PictureBox();
             this.PNL_ArmyCamp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_ShopButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_MapButton)).BeginInit();
             this.SuspendLayout();
             // 
             // PNL_ArmyCamp
             // 
             this.PNL_ArmyCamp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(168)))), ((int)(((byte)(61)))));
             this.PNL_ArmyCamp.BackgroundImage = global::Programming_Internal.Properties.Resources.Background_ArmyCamp;
+            this.PNL_ArmyCamp.Controls.Add(this.PIC_MapButton);
             this.PNL_ArmyCamp.Controls.Add(this.PNL_PauseCover);
             this.PNL_ArmyCamp.Controls.Add(this.PIC_ShopButton);
             this.PNL_ArmyCamp.Controls.Add(this.LBL_Slot4Units);
@@ -245,6 +248,19 @@
             this.TMR_Update.Enabled = true;
             this.TMR_Update.Tick += new System.EventHandler(this.TMR_Update_Tick);
             // 
+            // PIC_MapButton
+            // 
+            this.PIC_MapButton.BackColor = System.Drawing.Color.Transparent;
+            this.PIC_MapButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PIC_MapButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PIC_MapButton.Location = new System.Drawing.Point(338, 103);
+            this.PIC_MapButton.Name = "PIC_MapButton";
+            this.PIC_MapButton.Size = new System.Drawing.Size(128, 128);
+            this.PIC_MapButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PIC_MapButton.TabIndex = 16;
+            this.PIC_MapButton.TabStop = false;
+            this.PIC_MapButton.Click += new System.EventHandler(this.PIC_MapButton_Click);
+            // 
             // ArmyCamp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +276,7 @@
             this.PNL_ArmyCamp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_ShopButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_MapButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,5 +300,6 @@
         private System.Windows.Forms.Timer TMR_PausePlayCheck;
         private System.Windows.Forms.Panel PNL_PauseCover;
         private System.Windows.Forms.Timer TMR_Update;
+        private System.Windows.Forms.PictureBox PIC_MapButton;
     }
 }

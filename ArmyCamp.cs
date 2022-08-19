@@ -492,5 +492,10 @@ namespace Programming_Internal
                 new Select_Unit(4).Show();
             }
         }
+
+        private void PIC_MapButton_Click(object sender, EventArgs e)
+        {
+            GlobalVariables.ChildToOpen = "battleground";
+        }
     }
 }

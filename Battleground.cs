@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,9 @@ namespace Programming_Internal
         public Battleground()
         {
             InitializeComponent();
+
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PNL_Battleground, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PNL_Battle, new object[] { true });
         }
 
         private void Battleground_Load(object sender, EventArgs e)
@@ -26,17 +30,17 @@ namespace Programming_Internal
                     if (GlobalVariables.UnitUpgrades_Basic == 2)
                     {
                         if (GlobalVariables.BasicUnit_Count >= 10) { for (int i = 0; i < GlobalVariables.BasicUnit_Count; i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "axe", GlobalVariables.UnitUpgrades_Basic, 1)); } }
-                        else { for (int i = 0; i < (GlobalVariables.BasicUnit_Count / 10); i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "axe", GlobalVariables.UnitUpgrades_Basic, 10)); } }
+                        else { for (int i = 0; i < GlobalVariables.BasicUnit_Count; i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "axe", GlobalVariables.UnitUpgrades_Basic, 10)); } }
                     }
                     if (GlobalVariables.UnitUpgrades_Basic == 1)
                     {
                         if (GlobalVariables.BasicUnit_Count >= 10) { for (int i = 0; i < GlobalVariables.BasicUnit_Count; i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "sword", GlobalVariables.UnitUpgrades_Basic, 1)); } }
-                        else { for (int i = 0; i < (GlobalVariables.BasicUnit_Count / 10); i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "sword", GlobalVariables.UnitUpgrades_Basic, 10)); } }
+                        else { for (int i = 0; i < GlobalVariables.BasicUnit_Count; i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "sword", GlobalVariables.UnitUpgrades_Basic, 10)); } }
                     }
                     else
                     {
                         if (GlobalVariables.BasicUnit_Count >= 10) { for (int i = 0; i < GlobalVariables.BasicUnit_Count; i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "spear", GlobalVariables.UnitUpgrades_Basic, 1)); } }
-                        else { for (int i = 0; i < (GlobalVariables.BasicUnit_Count / 10); i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "spear", GlobalVariables.UnitUpgrades_Basic, 10)); } }
+                        else { for (int i = 0; i < GlobalVariables.BasicUnit_Count; i++) { GlobalVariables.Units.Add(new Unit(0, 50, slot, "spear", GlobalVariables.UnitUpgrades_Basic, 10)); } }
                     }
                 }
                 else if (slot == "range")
@@ -112,6 +116,9 @@ namespace Programming_Internal
                     }
                 }
             }
+
+            //Start_Battle();
+            PNL_Battle.Invalidate();
         }
 
         private void Destroy_All_Units()
@@ -124,6 +131,35 @@ namespace Programming_Internal
             foreach (Enemy_Unit unit in GlobalVariables.Enemy_Units)
             {
                 unit.Enemy_Unit_Destroy();
+            }
+        }
+
+        private void Start_Battle()
+        {
+            TMR_Battle.Enabled = true;
+        }
+
+        private void TMR_Battle_Tick(object sender, EventArgs e)
+        {
+            foreach(Unit unit in GlobalVariables.Units)
+            {
+                unit.Move_Unit();
+            }
+
+            PNL_Battle.Invalidate();
+        }
+
+        private void TMR_Controls_Tick(object sender, EventArgs e)
+        {
+            if (GlobalVariables.Paused == true) { TMR_Battle.Enabled = false; }
+            else { TMR_Battle.Enabled = true; }
+        }
+
+        private void PNL_Battle_Paint(object sender, PaintEventArgs e)
+        {
+            foreach(Unit unit in GlobalVariables.Units)
+            {
+                unit.Unit_Draw(e.Graphics);
             }
         }
     }

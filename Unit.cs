@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Programming_Internal
 {
@@ -19,7 +20,6 @@ namespace Programming_Internal
         public bool Range;
         public int Range_Distance = 200;
         public int Speed = 10;
-        public int Multiplier;
         public List<Abilities>abilities = new List<Abilities>();
 
         public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier)
@@ -47,22 +47,22 @@ namespace Programming_Internal
                     if (i.Range == "yes") { Range = true; }
                     else { Range = false; }
 
-                    if (i.Abilities == "none" || i.Abilities == "none none none")
-                    {
-                        abilities = null;
-                    }
-                    else
-                    {
-                        string[] Abilities_Split = i.Abilities.Split(' ');
-                        foreach (string s in Abilities_Split)
-                        {
-                            if (s != "none")
-                            {
-                                string[] Ability = s.Split('%');
-                                abilities.Add(new Abilities(Ability[0], int.Parse(Ability[1])));
-                            }
-                        }
-                    }
+                    //if (i.Abilities == "none" || i.Abilities == "none none none")
+                    //{
+                    //    abilities = null;
+                    //}
+                    //else
+                    //{
+                    //    string[] Abilities_Split = i.Abilities.Split(' ');
+                    //    foreach (string s in Abilities_Split)
+                    //    {
+                    //        if (s != "none")
+                    //        {
+                    //            string[] Ability = s.Split('%');
+                    //            abilities.Add(new Abilities(Ability[0], int.Parse(Ability[1])));
+                    //        }
+                    //    }
+                    //}
                 }
             }
         }
@@ -73,7 +73,7 @@ namespace Programming_Internal
             g.DrawImage(Unit_Image, UnitRec);
         }
 
-        public void Move_Unit(Graphics g)
+        public void Move_Unit()
         {
             if (Range == true)
             {
@@ -89,7 +89,6 @@ namespace Programming_Internal
                 if (move == true)
                 {
                     x = x + Speed;
-                    Unit_Draw(g);
                 }
             }
             else
@@ -106,7 +105,6 @@ namespace Programming_Internal
                 if (move == true)
                 {
                     x = x + Speed;
-                    Unit_Draw(g);
                 }
             }
         }

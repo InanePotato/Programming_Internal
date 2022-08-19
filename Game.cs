@@ -102,10 +102,11 @@ namespace Programming_Internal
             //
             // ---------  TEMP  ------------
             //
+                GlobalVariables.BasicUnit_Count = 1;
 
                 GlobalVariables.AdminAccount = true;
                 
-                GlobalVariables.BasicUnitUnlocked = false;
+                GlobalVariables.BasicUnitUnlocked = true;
                 GlobalVariables.RangeUnitUnlocked = false;
                 GlobalVariables.MagicUnitUnlocked = false;
                 GlobalVariables.GunUnitUnlocked = false;
@@ -117,7 +118,7 @@ namespace Programming_Internal
                 GlobalVariables.UnitUpgrades_Gun = 0;
                 GlobalVariables.UnitUpgrades_Giant = 0;
 
-                GlobalVariables.SlotContents[0] = "none";
+                GlobalVariables.SlotContents[0] = "basic";
                 GlobalVariables.SlotContents[1] = "none";
                 GlobalVariables.SlotContents[2] = "none";
                 GlobalVariables.SlotContents[3] = "none";
@@ -262,7 +263,8 @@ namespace Programming_Internal
             {
                 GlobalVariables.ChildToOpen = null;
 
-                // ----- Open Child Code Here -----
+                GlobalVariables.ChildOpen = "battleground";
+                openChildForm(new Battleground());
             }
             else if (GlobalVariables.ChildToOpen == "shop")
             {

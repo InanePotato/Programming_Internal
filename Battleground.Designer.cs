@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PNL_Battleground = new System.Windows.Forms.Panel();
             this.PNL_Battle = new System.Windows.Forms.Panel();
+            this.TMR_Battle = new System.Windows.Forms.Timer(this.components);
+            this.TMR_Controls = new System.Windows.Forms.Timer(this.components);
             this.PNL_Battleground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +52,16 @@
             this.PNL_Battle.Name = "PNL_Battle";
             this.PNL_Battle.Size = new System.Drawing.Size(886, 364);
             this.PNL_Battle.TabIndex = 0;
+            this.PNL_Battle.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Battle_Paint);
+            // 
+            // TMR_Battle
+            // 
+            this.TMR_Battle.Tick += new System.EventHandler(this.TMR_Battle_Tick);
+            // 
+            // TMR_Controls
+            // 
+            this.TMR_Controls.Enabled = true;
+            this.TMR_Controls.Tick += new System.EventHandler(this.TMR_Controls_Tick);
             // 
             // Battleground
             // 
@@ -69,5 +82,7 @@
 
         private System.Windows.Forms.Panel PNL_Battleground;
         private System.Windows.Forms.Panel PNL_Battle;
+        private System.Windows.Forms.Timer TMR_Battle;
+        private System.Windows.Forms.Timer TMR_Controls;
     }
 }
