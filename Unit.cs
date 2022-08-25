@@ -21,15 +21,17 @@ namespace Programming_Internal
         public bool Range;
         public int Range_Distance = 200;
         public int Speed = 10;
+        public int Max_X;
         public List<Abilities>abilities = new List<Abilities>();
 
-        public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier)
+        public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier, int maxX)
         {
             x = X;
             y = Y;
             Unit_Type = Type;
             Unit_Name = Name;
             Unit_Level = Level;
+            Max_X = maxX;
 
             if (Unit_Type == "basic") { Unit_Image = GlobalVariables.Basic_Ducks[Unit_Level]; }
             if (Unit_Type == "range") { Unit_Image = GlobalVariables.Range_Ducks[Unit_Level]; }
@@ -87,6 +89,11 @@ namespace Programming_Internal
                     }
                 }
 
+                if (x + (Speed / 2) >= Max_X)
+                {
+                    move = false;
+                }
+
                 if (move == true)
                 {
                     x = x + Speed;
@@ -101,6 +108,11 @@ namespace Programming_Internal
                     {
                         move = false;
                     }
+                }
+
+                if (x + (Speed / 2) >= Max_X)
+                {
+                    move = false;
                 }
 
                 if (move == true)

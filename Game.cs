@@ -15,6 +15,7 @@ namespace Programming_Internal
     {
         Image IMG_FormBackground = Properties.Resources.Duck_GameFormBackground;
         string UnitSeting_FilePath = Application.StartupPath + @"\Application_Resources\Unit_Settings.txt";
+        string EUnitSeting_FilePath = Application.StartupPath + @"\Application_Resources\EUnit_Settings.txt";
 
         public Game()
         {
@@ -35,6 +36,18 @@ namespace Programming_Internal
                 GlobalVariables.Unit_Info.Add(new Get_Unit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4], values[5], Int32.Parse(values[6])));
             }
             reader.Close();
+
+            var reader2 = new StreamReader(EUnitSeting_FilePath);
+
+            // While the reader still has something to read, this code will execute.
+            while (!reader2.EndOfStream)
+            {
+                var line = reader2.ReadLine();
+                // Split into the diffrent things.
+                var values = line.Split(',');
+                GlobalVariables.EUnit_Info.Add(new Get_EUnit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4]));
+            }
+            reader2.Close();
         }
 
         private void Game_Load(object sender, EventArgs e)
@@ -102,7 +115,10 @@ namespace Programming_Internal
             //
             // ---------  TEMP  ------------
             //
-                GlobalVariables.BasicUnit_Count = 1;
+                GlobalVariables.BasicUnit_Count = 5;
+                GlobalVariables.MagicUnit_Count = 5;
+                GlobalVariables.GunUnit_Count = 5;
+                GlobalVariables.GiantUnit_Count = 5;
 
                 GlobalVariables.AdminAccount = true;
                 
@@ -119,9 +135,9 @@ namespace Programming_Internal
                 GlobalVariables.UnitUpgrades_Giant = 0;
 
                 GlobalVariables.SlotContents[0] = "basic";
-                GlobalVariables.SlotContents[1] = "none";
-                GlobalVariables.SlotContents[2] = "none";
-                GlobalVariables.SlotContents[3] = "none";
+                GlobalVariables.SlotContents[1] = "magic";
+                GlobalVariables.SlotContents[2] = "gun";
+                GlobalVariables.SlotContents[3] = "giant";
                 GlobalVariables.SlotContents[4] = "none";
 
             //

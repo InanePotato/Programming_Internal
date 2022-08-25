@@ -16,6 +16,9 @@ namespace Programming_Internal
         string filepath = Application.StartupPath + @"\Application_Resources\Unit_Settings.txt";
         List<Get_Unit_Info> Origonal_Unit_Info = new List<Get_Unit_Info>();
 
+        string filepath2 = Application.StartupPath + @"\Application_Resources\EUnit_Settings.txt";
+        List<Get_EUnit_Info> Origonal_EUnit_Info = new List<Get_EUnit_Info>();
+
         public Load()
         {
             InitializeComponent();
@@ -23,12 +26,7 @@ namespace Programming_Internal
 
         private void Load_Load(object sender, EventArgs e)
         {
-            if (File.Exists(filepath))
-            {                
-                new Game().Show();
-                this.Close();
-            }
-            else
+            if (!File.Exists(filepath))
             {
                 Origonal_Unit_Info.Clear();
 
@@ -60,10 +58,34 @@ namespace Programming_Internal
                     builder.Append(string.Format("{0},{1},{2},{3},{4},{5},{6}{7}", i.Name, i.Damage, i.Health, i.Attack_Speed, i.Range, i.Abilities, i.Cost, Environment.NewLine));
                 }
                 File.WriteAllText(filepath, builder.ToString());
-
-                new Game().Show();
-                this.Close();
             }
+
+            if (!File.Exists(filepath2))
+            {
+                Origonal_EUnit_Info.Clear();
+
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("small", 10, 15, 10, "no"));
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("big", 15, 20, 11, "no"));
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("glass", 25, 30, 13, "no"));
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("bottle", 30, 40, 13, "yes"));
+
+
+                if (!File.Exists(Application.StartupPath + @"\Application_Resources"))
+                {
+                    System.IO.Directory.CreateDirectory(Application.StartupPath + @"\Application_Resources");
+                }
+
+                StringBuilder builder2 = new StringBuilder();
+                foreach (Get_EUnit_Info i in Origonal_EUnit_Info)
+                {
+                    //{0} is for the Name, {1} is for the Score and {2} is for a new line
+                    builder2.Append(string.Format("{0},{1},{2},{3},{4}{5}", i.Name, i.Damage, i.Health, i.Attack_Speed, i.Range, Environment.NewLine));
+                }
+                File.WriteAllText(filepath2, builder2.ToString());
+            }
+
+            new Game().Show();
+            this.Close();
         }
     }
 }

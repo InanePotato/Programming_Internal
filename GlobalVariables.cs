@@ -57,6 +57,7 @@ namespace Programming_Internal
         private static Image[] v_Enemy_Lemons = new Image[4];
 
         private static List<Get_Unit_Info> v_Unit_Info = new List<Get_Unit_Info>();
+        private static List<Get_EUnit_Info> v_EUnit_Info = new List<Get_EUnit_Info>();
         private static List<Unit> v_Units = new List<Unit>();
         private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
 
@@ -283,6 +284,11 @@ namespace Programming_Internal
         {
             get { return v_Unit_Info; }
             set { v_Unit_Info = value; }
+        }
+        public static List<Get_EUnit_Info> EUnit_Info
+        {
+            get { return v_EUnit_Info; }
+            set { v_EUnit_Info = value; }
         }
         public static List<Unit> Units
         {

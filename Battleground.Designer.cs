@@ -60,7 +60,6 @@
             // 
             // TMR_Controls
             // 
-            this.TMR_Controls.Enabled = true;
             this.TMR_Controls.Tick += new System.EventHandler(this.TMR_Controls_Tick);
             // 
             // Battleground
