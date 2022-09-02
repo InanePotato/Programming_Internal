@@ -36,7 +36,7 @@ namespace Programming_Internal
             SlotGap = 100;
 
             SpawnX = 0;
-            SpawnY = 50;
+            SpawnY = 0;
             MaxX = 10000;
 
             for (int slot = 4; slot >= 0; slot--)
@@ -133,6 +133,8 @@ namespace Programming_Internal
                 }
 
                 SpawnX = SpawnX + SlotGap;
+
+                SpawnY = SpawnY + 20;
             }
 
             PNL_Battle.Size = new Size(PNL_Battle.Width + SpawnX, PNL_Battle.Height);
@@ -145,40 +147,13 @@ namespace Programming_Internal
 
             GlobalVariables.Enemy_Units.Clear();
 
-            ESpawnX = PNL_Battle.Width - 100;
-            ESpawnY = 50;
+            ESpawnX = PNL_Battle.Width - 150;
+            ESpawnY = 80;
             ESpawnGap = 20;
             ETypeGap = 100;
             EMinX = PNL_Battle.Width - this.Width;
 
             GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "small", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "small", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "small", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //ESpawnX = ESpawnX + ETypeGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "big", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "big", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //ESpawnX = ESpawnX + ETypeGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "glass", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "glass", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //ESpawnX = ESpawnX + ETypeGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "bottle", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "bottle", 1, EMinX));
-            //ESpawnX = ESpawnX + ESpawnGap;
-            //GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, "bottle", 1, EMinX));
-
-            Console.Write(GlobalVariables.Enemy_Units.Count());
-            foreach(Enemy_Unit unit in GlobalVariables.Enemy_Units)
-            {
-                Console.Write(unit.x + ", " + unit.y);
-            }
 
             //------------------------------------------------------------//
             //------------------------ Start Game ------------------------//

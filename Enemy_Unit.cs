@@ -10,7 +10,8 @@ namespace Programming_Internal
     internal class Enemy_Unit
     {
         public int x, y;
-        public int width, height = 100;
+        public int width = 100;
+        public int height = 100;
         public Image Unit_Image;
         public Rectangle UnitRec;
         public string Unit_Name;
@@ -61,7 +62,7 @@ namespace Programming_Internal
                 bool move = true;
                 foreach (Unit unit in GlobalVariables.Units)
                 {
-                    if (x - Range_Distance - (Speed / 2) <= unit.x)
+                    if (x - Range_Distance - (Speed / 2) <= unit.x + unit.width)
                     {
                         move = false;
                     }
@@ -82,7 +83,7 @@ namespace Programming_Internal
                 bool move = true;
                 foreach (Unit unit in GlobalVariables.Units)
                 {
-                    if (x - (Speed / 2) <= unit.x)
+                    if (x - (Speed / 2) <= unit.x + unit.width)
                     {
                         move = false;
                     }

@@ -16,6 +16,7 @@ namespace Programming_Internal
         Image IMG_FormBackground = Properties.Resources.Duck_GameFormBackground;
         string UnitSeting_FilePath = Application.StartupPath + @"\Application_Resources\Unit_Settings.txt";
         string EUnitSeting_FilePath = Application.StartupPath + @"\Application_Resources\EUnit_Settings.txt";
+        string LevelSeting_FilePath = Application.StartupPath + @"\Application_Resources\Level_Settings.txt";
 
         public Game()
         {
@@ -48,6 +49,18 @@ namespace Programming_Internal
                 GlobalVariables.EUnit_Info.Add(new Get_EUnit_Info(values[0], Int32.Parse(values[1]), Int32.Parse(values[2]), Int32.Parse(values[3]), values[4]));
             }
             reader2.Close();
+
+            var reader3 = new StreamReader(LevelSeting_FilePath);
+
+            // While the reader still has something to read, this code will execute.
+            while (!reader3.EndOfStream)
+            {
+                var line = reader3.ReadLine();
+                // Split into the diffrent things.
+                var values = line.Split(',');
+                GlobalVariables.Level_Info.Add(new Get_Level_Info(Int32.Parse(values[0]), values[1], values[2], values[3], values[4], values[5], int.Parse(values[6]), int.Parse(values[7])));
+            }
+            reader3.Close();
         }
 
         private void Game_Load(object sender, EventArgs e)

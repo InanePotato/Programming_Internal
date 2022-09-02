@@ -19,6 +19,9 @@ namespace Programming_Internal
         string filepath2 = Application.StartupPath + @"\Application_Resources\EUnit_Settings.txt";
         List<Get_EUnit_Info> Origonal_EUnit_Info = new List<Get_EUnit_Info>();
 
+        string filepath3 = Application.StartupPath + @"\Application_Resources\Level_Settings.txt";
+        List<Get_Level_Info> Origonal_Level_Info = new List<Get_Level_Info>();
+
         public Load()
         {
             InitializeComponent();
@@ -82,6 +85,46 @@ namespace Programming_Internal
                     builder2.Append(string.Format("{0},{1},{2},{3},{4}{5}", i.Name, i.Damage, i.Health, i.Attack_Speed, i.Range, Environment.NewLine));
                 }
                 File.WriteAllText(filepath2, builder2.ToString());
+            }
+
+            if (!File.Exists(filepath3))
+            {
+                Origonal_Level_Info.Clear();
+
+                Origonal_Level_Info.Add(new Get_Level_Info(1, "yes", "no", "no", "no", "no", 5, 2));
+                Origonal_Level_Info.Add(new Get_Level_Info(2, "yes", "no", "no", "no", "no", 5, 5));
+                Origonal_Level_Info.Add(new Get_Level_Info(3, "yes", "yes", "no", "no", "no", 5, 10));
+                Origonal_Level_Info.Add(new Get_Level_Info(4, "yes", "yes", "no", "no", "no", 5, 15));
+                Origonal_Level_Info.Add(new Get_Level_Info(5, "yes", "yes", "no", "no", "yes", 5, 20));
+                Origonal_Level_Info.Add(new Get_Level_Info(6, "yes", "yes", "no", "no", "no", 5, 25));
+                Origonal_Level_Info.Add(new Get_Level_Info(7, "yes", "yes", "yes", "no", "no", 5, 30));
+                Origonal_Level_Info.Add(new Get_Level_Info(8, "yes", "yes", "yes", "no", "no", 5, 35));
+                Origonal_Level_Info.Add(new Get_Level_Info(9, "yes", "yes", "yes", "no", "no", 5, 40));
+                Origonal_Level_Info.Add(new Get_Level_Info(10, "yes", "yes", "yes", "no", "yes", 5, 45));
+                Origonal_Level_Info.Add(new Get_Level_Info(11, "yes", "yes", "yes", "no", "no", 5, 50));
+                Origonal_Level_Info.Add(new Get_Level_Info(12, "yes", "yes", "yes", "no", "no", 5, 55));
+                Origonal_Level_Info.Add(new Get_Level_Info(13, "yes", "yes", "yes", "yes", "no", 5, 60));
+                Origonal_Level_Info.Add(new Get_Level_Info(14, "yes", "yes", "yes", "no", "no", 5, 65));
+                Origonal_Level_Info.Add(new Get_Level_Info(15, "yes", "yes", "yes", "yes", "yes", 5, 70));
+                Origonal_Level_Info.Add(new Get_Level_Info(16, "yes", "yes", "yes", "yes", "no", 5, 75));
+                Origonal_Level_Info.Add(new Get_Level_Info(17, "yes", "yes", "yes", "yes", "no", 5, 80));
+                Origonal_Level_Info.Add(new Get_Level_Info(18, "yes", "yes", "yes", "yes", "no", 5, 85));
+                Origonal_Level_Info.Add(new Get_Level_Info(19, "yes", "yes", "yes", "yes", "no", 5, 90));
+                Origonal_Level_Info.Add(new Get_Level_Info(20, "yes", "yes", "yes", "yes", "yes", 5, 100));
+
+
+                if (!File.Exists(Application.StartupPath + @"\Application_Resources"))
+                {
+                    System.IO.Directory.CreateDirectory(Application.StartupPath + @"\Application_Resources");
+                }
+
+                StringBuilder builder3 = new StringBuilder();
+                foreach (Get_Level_Info i in Origonal_Level_Info)
+                {
+                    //{0} is for the Name, {1} is for the Score and {2} is for a new line
+                    builder3.Append(string.Format("{0},{1},{2},{3},{4},{5},{6},{7}{8}", i.Level, i.AllowSmall, i.AllowBig, i.AllowGlass, i.AllowBottle, i.BossLevel, i.MaxEUnits, i.MinEUnits, Environment.NewLine));
+                }
+                File.WriteAllText(filepath3, builder3.ToString());
             }
 
             new Game().Show();

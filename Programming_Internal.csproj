@@ -97,9 +97,11 @@
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
     <Compile Include="Get_EUnit_Info.cs" />
+    <Compile Include="Get_Level_Info.cs" />
     <Compile Include="Get_LiveVars.cs" />
     <Compile Include="Get_Unit_Info.cs" />
     <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Level.cs" />
     <Compile Include="Load.cs">
       <SubType>Form</SubType>
     </Compile>

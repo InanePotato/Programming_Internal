@@ -26,6 +26,7 @@ namespace Programming_Internal
         private static int v_MagicUnit_Count;
         private static int v_GunUnit_Count;
         private static int v_GiantUnit_Count;
+        private static int v_Level;
 
         private static bool v_Paused;
         private static bool v_BasicUnitUnlocked;
@@ -60,6 +61,7 @@ namespace Programming_Internal
         private static List<Get_EUnit_Info> v_EUnit_Info = new List<Get_EUnit_Info>();
         private static List<Unit> v_Units = new List<Unit>();
         private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
+        private static List<Get_Level_Info> v_Level_Info = new List<Get_Level_Info>();
 
         public static int UnitUpgrades_Basic
         {
@@ -145,6 +147,11 @@ namespace Programming_Internal
         {
             get { return v_GiantUnit_Count; }
             set { v_GiantUnit_Count = value; }
+        }
+        public static int Level
+        {
+            get { return v_Level; }
+            set { v_Level = value; }
         }
 
         public static bool Paused
@@ -299,6 +306,11 @@ namespace Programming_Internal
         {
             get { return v_Enemy_Units; }
             set { v_Enemy_Units = value; }
+        }
+        public static List<Get_Level_Info> Level_Info
+        {
+            get { return v_Level_Info; }
+            set { v_Level_Info = value; }
         }
     }
 }
