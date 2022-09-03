@@ -45,8 +45,7 @@ namespace Programming_Internal
 
             PNL_Battle.Invalidate();
 
-            //TMR_Battle.Enabled = true;
-            //TMR_Controls.Enabled = true;
+            TMR_Controls.Enabled = true;
         }
 
         private void TMR_Battle_Tick(object sender, EventArgs e)
@@ -66,12 +65,14 @@ namespace Programming_Internal
 
         private void TMR_Controls_Tick(object sender, EventArgs e)
         {
-            if (GlobalVariables.Paused == true) { TMR_Battle.Enabled = false; }
-            else { TMR_Battle.Enabled = true; }
+            if (GlobalVariables.Paused == true) { TMR_Battle.Enabled = false; TMR_Attack.Enabled = false; }
+            else { TMR_Battle.Enabled = true; TMR_Attack.Enabled = true; }
         }
 
         private void PNL_Battle_Paint(object sender, PaintEventArgs e)
         {
+            GlobalVariables.ExplosionGraphics = e.Graphics;
+
             foreach(Unit unit in GlobalVariables.Units)
             {
                 unit.Unit_Draw(e.Graphics);
@@ -80,6 +81,24 @@ namespace Programming_Internal
             foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
             {
                 Eunit.Draw_Enemy_Unit(e.Graphics);
+            }
+        }
+
+        private void TMR_Attack_Tick(object sender, EventArgs e)
+        {
+            foreach(Unit unit in GlobalVariables.Units)
+            {
+                unit.Unit_Attack();
+            }
+
+            foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+            {
+                Eunit.Attack_Unit();
+            }
+
+            foreach (Explosion explosion in GlobalVariables.Explosions)
+            {
+                explosion.ExplosionTick();
             }
         }
     }

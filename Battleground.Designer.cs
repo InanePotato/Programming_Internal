@@ -33,6 +33,7 @@
             this.PNL_Battle = new System.Windows.Forms.Panel();
             this.TMR_Battle = new System.Windows.Forms.Timer(this.components);
             this.TMR_Controls = new System.Windows.Forms.Timer(this.components);
+            this.TMR_Attack = new System.Windows.Forms.Timer(this.components);
             this.PNL_Battleground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,12 +57,15 @@
             // 
             // TMR_Battle
             // 
-            this.TMR_Battle.Enabled = true;
             this.TMR_Battle.Tick += new System.EventHandler(this.TMR_Battle_Tick);
             // 
             // TMR_Controls
             // 
             this.TMR_Controls.Tick += new System.EventHandler(this.TMR_Controls_Tick);
+            // 
+            // TMR_Attack
+            // 
+            this.TMR_Attack.Tick += new System.EventHandler(this.TMR_Attack_Tick);
             // 
             // Battleground
             // 
@@ -84,5 +88,6 @@
         private System.Windows.Forms.Panel PNL_Battle;
         private System.Windows.Forms.Timer TMR_Battle;
         private System.Windows.Forms.Timer TMR_Controls;
+        private System.Windows.Forms.Timer TMR_Attack;
     }
 }

@@ -71,6 +71,10 @@ namespace Programming_Internal
                 Origonal_EUnit_Info.Add(new Get_EUnit_Info("big", 15, 20, 11, "no"));
                 Origonal_EUnit_Info.Add(new Get_EUnit_Info("glass", 25, 30, 13, "no"));
                 Origonal_EUnit_Info.Add(new Get_EUnit_Info("bottle", 30, 40, 13, "yes"));
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("boss1", 15, 60, 14, "no"));
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("boss2", 25, 90, 14, "no"));
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("boss3", 30, 120, 14, "no"));
+                Origonal_EUnit_Info.Add(new Get_EUnit_Info("finalboss", 35, 150, 15, "yes"));
 
 
                 if (!File.Exists(Application.StartupPath + @"\Application_Resources"))

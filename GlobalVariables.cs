@@ -56,12 +56,16 @@ namespace Programming_Internal
         private static Image[] v_Gun_Ducks_FR = new Image[3];
         private static Image[] v_Giant_Ducks_FR = new Image[3];
         private static Image[] v_Enemy_Lemons = new Image[4];
+        private static Image[] v_BossPics = new Image[4];
 
         private static List<Get_Unit_Info> v_Unit_Info = new List<Get_Unit_Info>();
         private static List<Get_EUnit_Info> v_EUnit_Info = new List<Get_EUnit_Info>();
         private static List<Unit> v_Units = new List<Unit>();
         private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
         private static List<Get_Level_Info> v_Level_Info = new List<Get_Level_Info>();
+        private static List<Explosion> v_Explosion = new List<Explosion>();
+
+        private static Graphics v_ExplosionGraphics;
 
         public static int UnitUpgrades_Basic
         {
@@ -286,6 +290,11 @@ namespace Programming_Internal
             get { return v_Enemy_Lemons; }
             set { v_Enemy_Lemons = value; }
         }
+        public static Image[] BossPics
+        {
+            get { return v_BossPics; }
+            set { v_BossPics = value; }
+        }
 
         public static List<Get_Unit_Info> Unit_Info
         {
@@ -311,6 +320,17 @@ namespace Programming_Internal
         {
             get { return v_Level_Info; }
             set { v_Level_Info = value; }
+        }
+        public static List<Explosion> Explosions
+        {
+            get { return v_Explosion; }
+            set { v_Explosion = value; }
+        }
+
+        public static Graphics ExplosionGraphics
+        {
+            get { return v_ExplosionGraphics; }
+            set { v_ExplosionGraphics = value; }
         }
     }
 }

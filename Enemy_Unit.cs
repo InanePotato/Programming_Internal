@@ -22,6 +22,8 @@ namespace Programming_Internal
         public int Speed = 10;
         public int Min_X;
         public bool Boss;
+        public int AttackCounter = 0;
+        public int AttackWaitTicks;
 
         public Enemy_Unit(int X, int Y, string Name, int Multiplier, int minX)
         {
@@ -34,6 +36,10 @@ namespace Programming_Internal
             if (Name == "big") { Unit_Image = GlobalVariables.Enemy_Lemons[1]; }
             else if (Name == "glass") { Unit_Image = GlobalVariables.Enemy_Lemons[2]; }
             else if (Name == "bottle") { Unit_Image = GlobalVariables.Enemy_Lemons[3]; }
+            else if (Name == "boss1") { Unit_Image = GlobalVariables.BossPics[0]; Boss = true; }
+            else if (Name == "boss2") { Unit_Image = GlobalVariables.BossPics[1]; Boss = true; }
+            else if (Name == "boss3") { Unit_Image = GlobalVariables.BossPics[2]; Boss = true; }
+            else if (Name == "finalboss") { Unit_Image = GlobalVariables.BossPics[3]; Boss = true; }
 
             foreach (Get_EUnit_Info i in GlobalVariables.EUnit_Info)
             {
@@ -104,28 +110,45 @@ namespace Programming_Internal
         public void Damage_Enemy_Unit(int damage)
         {
             Health = Health - damage;
+            //GlobalVariables.Explosions.Add(new Explosion(x, y + (width / 2)));
 
             if (Health <= 0)
             {
                 Enemy_Unit_Destroy();
+                Console.WriteLine(Unit_Name + " has died. Remaining EUnits: " + GlobalVariables.Enemy_Units.Count);
             }
         }
 
         public void Attack_Unit()
         {
-            foreach (Unit Unit in GlobalVariables.Units)
+            AttackWaitTicks++;
+
+            if (AttackWaitTicks >= Attack_Speed)
             {
-                if (UnitTarget == null) { UnitTarget.UnitRec = Unit.UnitRec; }
-                else
+                AttackWaitTicks = 0;
+
+                foreach (Unit Unit in GlobalVariables.Units)
                 {
-                    if (Unit.UnitRec.Location.X - x < UnitTarget.UnitRec.Location.X - x)
+                    if (UnitTarget == null) { UnitTarget = Unit; }
+                    else
                     {
-                        UnitTarget = Unit;
+                        if (Unit.UnitRec.Location.X - x < UnitTarget.UnitRec.Location.X - x)
+                        {
+                            UnitTarget = Unit;
+                        }
                     }
                 }
-            }
 
-            UnitTarget.Unit_Damage(Damage);
+                if (Range == true)
+                {
+
+                }
+                else
+                {
+                    UnitTarget.Unit_Damage(Damage);
+                }
+
+            }
         }
 
         public void Enemy_Unit_Destroy()

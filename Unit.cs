@@ -23,6 +23,7 @@ namespace Programming_Internal
         public int Speed = 10;
         public int Max_X;
         public List<Abilities>abilities = new List<Abilities>();
+        public int AttackWaitTicks = 0;
 
         public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier, int maxX)
         {
@@ -124,28 +125,44 @@ namespace Programming_Internal
 
         public void Unit_Attack()
         {
-            foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+            AttackWaitTicks++;
+
+            if (AttackWaitTicks >= Attack_Speed)
             {
-                if (UnitTarget == null) { UnitTarget.UnitRec = Eunit.UnitRec; }
-                else
+                AttackWaitTicks = 0;
+
+                foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
                 {
-                    if (x - Eunit.UnitRec.Location.X < x - UnitTarget.UnitRec.Location.X)
+                    if (UnitTarget == null) { UnitTarget = Eunit; }
+                    else
                     {
-                        UnitTarget = Eunit;
+                        if (x - Eunit.UnitRec.Location.X < x - UnitTarget.UnitRec.Location.X)
+                        {
+                            UnitTarget = Eunit;
+                        }
                     }
                 }
-            }
 
-            UnitTarget.Damage_Enemy_Unit(Damage);
+                if (Range == true)
+                {
+
+                }
+                else
+                {
+                    UnitTarget.Damage_Enemy_Unit(Damage);
+                }
+            }
         }
 
         public void Unit_Damage(int damage)
         {
             Health = Health - damage;
+            //GlobalVariables.Explosions.Add(new Explosion(x, y + (width / 2)));
 
             if (Health <= 0)
             {
                 Unit_Destroy();
+                Console.WriteLine(Unit_Name + " has died. Remaining Units: " + GlobalVariables.Units.Count);
             }
         }
 

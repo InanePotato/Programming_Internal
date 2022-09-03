@@ -15,8 +15,9 @@ namespace Programming_Internal
         public int[] GlassRange = new int[2];
         public int[] BottleRange = new int[2];
         public bool BossLevel;
+        public string BossName;
 
-        public int ESpawnX, ESpawnY, ESpawnGap, ETypeGap, EMinX;
+        public int ESpawnX, ESpawnY, ESpawnGap, ETypeGap, ETypeGapY, EMinX;
         public int SpawnX, SpawnY, SpawnGap, SlotGap, MaxX;
 
         Random random = new Random();
@@ -42,7 +43,7 @@ namespace Programming_Internal
                     else { AllowBottle = false; }
 
                     if (i.Boss == "none" || i.Boss == "") { BossLevel = false; }
-                    else { BossLevel = true; }
+                    else { BossLevel = true; BossName = i.Boss; }
 
                     var Values1 = i.SmallRange.Split('-');
                     SmallRange[0] = int.Parse(Values1[0]);
@@ -178,6 +179,7 @@ namespace Programming_Internal
             ESpawnY = StartY;
             ESpawnGap = SpawnGap;
             ETypeGap = TypeGap;
+            ETypeGapY = 20;
             EMinX = MinX;
 
             GlobalVariables.Enemy_Units.Clear();
@@ -204,6 +206,7 @@ namespace Programming_Internal
                 }
 
                 ESpawnX = ESpawnX + ETypeGap;
+                ESpawnY = ESpawnY - ETypeGapY;
             }
 
             if (AllowBig == true)
@@ -228,6 +231,7 @@ namespace Programming_Internal
                 }
 
                 ESpawnX = ESpawnX + ETypeGap;
+                ESpawnY = ESpawnY - (ETypeGapY * 2);
             }
 
             if (AllowGlass == true)
@@ -252,6 +256,7 @@ namespace Programming_Internal
                 }
 
                 ESpawnX = ESpawnX + ETypeGap;
+                ESpawnY = ESpawnY + ETypeGapY;
             }
 
             if (AllowBottle == true)
@@ -276,11 +281,14 @@ namespace Programming_Internal
                 }
 
                 ESpawnX = ESpawnX + ETypeGap;
+                ESpawnY = ESpawnY + (ETypeGapY * 2);
             }
+
+            GlobalVariables.Enemy_Units.Reverse();
 
             if (BossLevel == true)
             {
-
+                GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, BossName, 1, EMinX));
             }
         }
 

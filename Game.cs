@@ -125,10 +125,15 @@ namespace Programming_Internal
             GlobalVariables.Enemy_Lemons[2] = Properties.Resources.Lemon_Glass;
             GlobalVariables.Enemy_Lemons[3] = Properties.Resources.Lemon_Bottle;
 
+            GlobalVariables.BossPics[0] = Properties.Resources.Boss1;
+            GlobalVariables.BossPics[1] = Properties.Resources.Boss2;
+            GlobalVariables.BossPics[2] = Properties.Resources.Blank;
+            GlobalVariables.BossPics[3] = Properties.Resources.Boss_Final;
+
             //
             // ---------  TEMP  ------------
             //
-                GlobalVariables.Level = 1;
+                GlobalVariables.Level = 20;
 
                 GlobalVariables.BasicUnit_Count = 5;
                 GlobalVariables.MagicUnit_Count = 5;
