@@ -41,8 +41,8 @@ namespace Programming_Internal
                     if (i.AllowBottle == "yes") { AllowBottle = true; }
                     else { AllowBottle = false; }
 
-                    if (i.BossLevel == "yes") { BossLevel = true; }
-                    else { BossLevel = false; }
+                    if (i.Boss == "none" || i.Boss == "") { BossLevel = false; }
+                    else { BossLevel = true; }
 
                     var Values1 = i.SmallRange.Split('-');
                     SmallRange[0] = int.Parse(Values1[0]);
@@ -282,8 +282,6 @@ namespace Programming_Internal
             {
 
             }
-
-            Console.WriteLine(GlobalVariables.Enemy_Units.Count());
         }
 
         public void ReAjust_Unit_MinXMaxX(int Unit_MaxX, int EUnit_MinX)

@@ -10,8 +10,8 @@ namespace Programming_Internal
     internal class Enemy_Unit
     {
         public int x, y;
-        public int width = 100;
-        public int height = 100;
+        public int width = 120;
+        public int height = 120;
         public Image Unit_Image;
         public Rectangle UnitRec;
         public string Unit_Name;

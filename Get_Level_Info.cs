@@ -8,7 +8,7 @@ namespace Programming_Internal
 {
     internal class Get_Level_Info
     {
-        public Get_Level_Info(int level, string allowSmall, string smallRange, string allowBig, string bigRange, string allowGlass, string glassRange, string allowBottle, string bottleRange, string bossLevel)
+        public Get_Level_Info(int level, string allowSmall, string smallRange, string allowBig, string bigRange, string allowGlass, string glassRange, string allowBottle, string bottleRange, string boss)
         {
             Level = level;
             AllowSmall = allowSmall;
@@ -19,7 +19,7 @@ namespace Programming_Internal
             GlassRange = glassRange;
             AllowBottle = allowBottle;
             BottleRange = bottleRange;
-            BossLevel = bossLevel;
+            Boss = boss;
         }
 
         public int Level { get; set; }
@@ -31,6 +31,6 @@ namespace Programming_Internal
         public string GlassRange { get; set; }
         public string AllowBottle { get; set; }
         public string BottleRange { get; set; }
-        public string BossLevel { get; set; }
+        public string Boss { get; set; }
     }
 }
