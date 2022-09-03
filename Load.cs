@@ -91,26 +91,26 @@ namespace Programming_Internal
             {
                 Origonal_Level_Info.Clear();
 
-                Origonal_Level_Info.Add(new Get_Level_Info(1, "yes", "no", "no", "no", "no", 5, 2));
-                Origonal_Level_Info.Add(new Get_Level_Info(2, "yes", "no", "no", "no", "no", 5, 5));
-                Origonal_Level_Info.Add(new Get_Level_Info(3, "yes", "yes", "no", "no", "no", 5, 10));
-                Origonal_Level_Info.Add(new Get_Level_Info(4, "yes", "yes", "no", "no", "no", 5, 15));
-                Origonal_Level_Info.Add(new Get_Level_Info(5, "yes", "yes", "no", "no", "yes", 5, 20));
-                Origonal_Level_Info.Add(new Get_Level_Info(6, "yes", "yes", "no", "no", "no", 5, 25));
-                Origonal_Level_Info.Add(new Get_Level_Info(7, "yes", "yes", "yes", "no", "no", 5, 30));
-                Origonal_Level_Info.Add(new Get_Level_Info(8, "yes", "yes", "yes", "no", "no", 5, 35));
-                Origonal_Level_Info.Add(new Get_Level_Info(9, "yes", "yes", "yes", "no", "no", 5, 40));
-                Origonal_Level_Info.Add(new Get_Level_Info(10, "yes", "yes", "yes", "no", "yes", 5, 45));
-                Origonal_Level_Info.Add(new Get_Level_Info(11, "yes", "yes", "yes", "no", "no", 5, 50));
-                Origonal_Level_Info.Add(new Get_Level_Info(12, "yes", "yes", "yes", "no", "no", 5, 55));
-                Origonal_Level_Info.Add(new Get_Level_Info(13, "yes", "yes", "yes", "yes", "no", 5, 60));
-                Origonal_Level_Info.Add(new Get_Level_Info(14, "yes", "yes", "yes", "no", "no", 5, 65));
-                Origonal_Level_Info.Add(new Get_Level_Info(15, "yes", "yes", "yes", "yes", "yes", 5, 70));
-                Origonal_Level_Info.Add(new Get_Level_Info(16, "yes", "yes", "yes", "yes", "no", 5, 75));
-                Origonal_Level_Info.Add(new Get_Level_Info(17, "yes", "yes", "yes", "yes", "no", 5, 80));
-                Origonal_Level_Info.Add(new Get_Level_Info(18, "yes", "yes", "yes", "yes", "no", 5, 85));
-                Origonal_Level_Info.Add(new Get_Level_Info(19, "yes", "yes", "yes", "yes", "no", 5, 90));
-                Origonal_Level_Info.Add(new Get_Level_Info(20, "yes", "yes", "yes", "yes", "yes", 5, 100));
+                Origonal_Level_Info.Add(new Get_Level_Info(1, "yes", "2-5", "no", "0-0", "no", "0-0", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(2, "yes", "5-10", "no", "0-0", "no", "0-0", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(3, "yes", "10-15", "no", "0-0", "no", "0-0", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(4, "yes", "10-15", "yes", "2-5", "no", "0-0", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(5, "yes", "10-15", "yes", "5-10", "no", "0-0", "no", "0-0", "yes"));
+                Origonal_Level_Info.Add(new Get_Level_Info(6, "yes", "15-20", "yes", "10-15", "no", "0-0", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(7, "yes", "20-25", "yes", "10-15", "yes", "2-5", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(8, "yes", "20-25", "yes", "12-18", "yes", "5-10", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(9, "yes", "20-25", "yes", "15-20", "yes", "8-12", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(10, "yes", "30-35", "yes", "20-25", "yes", "10-15", "no", "0-0", "yes"));
+                Origonal_Level_Info.Add(new Get_Level_Info(11, "yes", "30-35", "yes", "20-25", "yes", "15-20", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(12, "yes", "40-45", "yes", "28-32", "yes", "22-25", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(13, "yes", "42-46", "yes", "30-35", "yes", "25-28", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(14, "yes", "45-50", "yes", "32-38", "yes", "28-30", "no", "0-0", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(15, "yes", "50-55", "yes", "36-42", "yes", "30-35", "yes", "2-5", "yes"));
+                Origonal_Level_Info.Add(new Get_Level_Info(16, "yes", "52-60", "yes", "40-45", "yes", "32-38", "yes", "5-10", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(17, "yes", "54-62", "yes", "42-48", "yes", "35-38", "yes", "10-15", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(18, "yes", "56-64", "yes", "45-50", "yes", "35-40", "yes", "12-20", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(19, "yes", "58-65", "yes", "48-52", "yes", "38-45", "yes", "15-22", "no"));
+                Origonal_Level_Info.Add(new Get_Level_Info(20, "yes", "60-70", "yes", "55-65", "yes", "48-58", "yes", "25-30", "yes"));
 
 
                 if (!File.Exists(Application.StartupPath + @"\Application_Resources"))
@@ -122,7 +122,7 @@ namespace Programming_Internal
                 foreach (Get_Level_Info i in Origonal_Level_Info)
                 {
                     //{0} is for the Name, {1} is for the Score and {2} is for a new line
-                    builder3.Append(string.Format("{0},{1},{2},{3},{4},{5},{6},{7}{8}", i.Level, i.AllowSmall, i.AllowBig, i.AllowGlass, i.AllowBottle, i.BossLevel, i.MaxEUnits, i.MinEUnits, Environment.NewLine));
+                    builder3.Append(string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}{10}", i.Level, i.AllowSmall, i.SmallRange, i.AllowBig, i.BigRange, i.AllowGlass, i.GlassRange, i.AllowBottle, i.BottleRange, i.BossLevel, Environment.NewLine));
                 }
                 File.WriteAllText(filepath3, builder3.ToString());
             }

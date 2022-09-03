@@ -58,7 +58,7 @@ namespace Programming_Internal
                 var line = reader3.ReadLine();
                 // Split into the diffrent things.
                 var values = line.Split(',');
-                GlobalVariables.Level_Info.Add(new Get_Level_Info(Int32.Parse(values[0]), values[1], values[2], values[3], values[4], values[5], int.Parse(values[6]), int.Parse(values[7])));
+                GlobalVariables.Level_Info.Add(new Get_Level_Info(Int32.Parse(values[0]), values[1], values[2], values[3], values[4], values[5], values[6], values[7], values[8], values[9]));
             }
             reader3.Close();
         }
@@ -128,6 +128,8 @@ namespace Programming_Internal
             //
             // ---------  TEMP  ------------
             //
+                GlobalVariables.Level = 1;
+
                 GlobalVariables.BasicUnit_Count = 5;
                 GlobalVariables.MagicUnit_Count = 5;
                 GlobalVariables.GunUnit_Count = 5;
