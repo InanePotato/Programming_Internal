@@ -71,8 +71,6 @@ namespace Programming_Internal
 
         private void PNL_Battle_Paint(object sender, PaintEventArgs e)
         {
-            GlobalVariables.ExplosionGraphics = e.Graphics;
-
             foreach(Unit unit in GlobalVariables.Units)
             {
                 unit.Unit_Draw(e.Graphics);
@@ -109,11 +107,6 @@ namespace Programming_Internal
                 foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
                 {
                     Eunit.Attack_Unit();
-                }
-
-                foreach (Explosion explosion in GlobalVariables.Explosions)
-                {
-                    explosion.ExplosionTick();
                 }
             }
         }

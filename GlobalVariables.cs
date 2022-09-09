@@ -63,9 +63,6 @@ namespace Programming_Internal
         private static List<Unit> v_Units = new List<Unit>();
         private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
         private static List<Get_Level_Info> v_Level_Info = new List<Get_Level_Info>();
-        private static List<Explosion> v_Explosion = new List<Explosion>();
-
-        private static Graphics v_ExplosionGraphics;
 
         public static int UnitUpgrades_Basic
         {
@@ -320,17 +317,6 @@ namespace Programming_Internal
         {
             get { return v_Level_Info; }
             set { v_Level_Info = value; }
-        }
-        public static List<Explosion> Explosions
-        {
-            get { return v_Explosion; }
-            set { v_Explosion = value; }
-        }
-
-        public static Graphics ExplosionGraphics
-        {
-            get { return v_ExplosionGraphics; }
-            set { v_ExplosionGraphics = value; }
         }
     }
 }
