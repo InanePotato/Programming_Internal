@@ -145,7 +145,7 @@ namespace Programming_Internal
                 }
                 else
                 {
-                    UnitTarget.Unit_Damage(Damage);
+                    //UnitTarget.Unit_Damage(Damage);
                 }
 
             }
@@ -154,6 +154,11 @@ namespace Programming_Internal
         public void Enemy_Unit_Destroy()
         {
             GlobalVariables.Enemy_Units.Remove(this);
+
+            //foreach(Unit unit in GlobalVariables.Units)
+            //{
+            //    unit.Refresh_Target();
+            //}
         }
     }
 }

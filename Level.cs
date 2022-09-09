@@ -284,12 +284,12 @@ namespace Programming_Internal
                 ESpawnY = ESpawnY + (ETypeGapY * 2);
             }
 
-            GlobalVariables.Enemy_Units.Reverse();
-
             if (BossLevel == true)
             {
                 GlobalVariables.Enemy_Units.Add(new Enemy_Unit(ESpawnX, ESpawnY, BossName, 1, EMinX));
             }
+
+            GlobalVariables.Enemy_Units.Reverse();
         }
 
         public void ReAjust_Unit_MinXMaxX(int Unit_MaxX, int EUnit_MinX)

@@ -19,6 +19,7 @@ namespace Programming_Internal
         public string Unit_Type, Unit_Name;
         public int Health, Damage, Attack_Speed, Unit_Level;
         public bool Range;
+        public bool move = true;
         public int Range_Distance = 200;
         public int Speed = 10;
         public int Max_X;
@@ -79,9 +80,9 @@ namespace Programming_Internal
 
         public void Move_Unit()
         {
+            move = true;
             if (Range == true)
             {
-                bool move = true;
                 foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
                 {
                     if (x + width + Range_Distance + (Speed / 2) >= Eunit.x)
@@ -102,7 +103,6 @@ namespace Programming_Internal
             }
             else
             {
-                bool move = true;
                 foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
                 {
                     if (x + width + (Speed / 2) >= Eunit.x)
@@ -131,25 +131,25 @@ namespace Programming_Internal
             {
                 AttackWaitTicks = 0;
 
-                foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+                if (GlobalVariables.Enemy_Units.Count != 0)
                 {
-                    if (UnitTarget == null) { UnitTarget = Eunit; }
-                    else
+                    UnitTarget = GlobalVariables.Enemy_Units.Last();
+
+                    if (UnitTarget != null)
                     {
-                        if (x - Eunit.UnitRec.Location.X < x - UnitTarget.UnitRec.Location.X)
+
+                        if (Range == true)
                         {
-                            UnitTarget = Eunit;
+
+                        }
+                        else
+                        {
+                            if (move == false)
+                            {
+                                UnitTarget.Damage_Enemy_Unit(Damage);
+                            }
                         }
                     }
-                }
-
-                if (Range == true)
-                {
-
-                }
-                else
-                {
-                    UnitTarget.Damage_Enemy_Unit(Damage);
                 }
             }
         }
@@ -170,5 +170,20 @@ namespace Programming_Internal
         {
             GlobalVariables.Units.Remove(this);
         }
+
+        //public void Refresh_Target()
+        //{
+        //    foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+        //    {
+        //        if (UnitTarget == null) { UnitTarget = Eunit; }
+        //        else
+        //        {
+        //            if (x - Eunit.UnitRec.Location.X < x - UnitTarget.UnitRec.Location.X)
+        //            {
+        //                UnitTarget = Eunit;
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

@@ -82,11 +82,21 @@ namespace Programming_Internal
             {
                 Eunit.Draw_Enemy_Unit(e.Graphics);
             }
+
+            foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+            {
+                if (Eunit.Boss == true) { Eunit.Draw_Enemy_Unit(e.Graphics); }
+            }
         }
 
         private void TMR_Attack_Tick(object sender, EventArgs e)
         {
-            foreach(Unit unit in GlobalVariables.Units)
+            if (GlobalVariables.Enemy_Units.Count() == 0)
+            {
+                GlobalVariables.ChildToOpen = "army_camp";
+            }
+
+            foreach (Unit unit in GlobalVariables.Units)
             {
                 unit.Unit_Attack();
             }
@@ -99,6 +109,14 @@ namespace Programming_Internal
             foreach (Explosion explosion in GlobalVariables.Explosions)
             {
                 explosion.ExplosionTick();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Unit unit in GlobalVariables.Units)
+            {
+                unit.Unit_Attack();
             }
         }
     }
