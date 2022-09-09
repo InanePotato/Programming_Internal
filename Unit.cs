@@ -170,20 +170,5 @@ namespace Programming_Internal
         {
             GlobalVariables.Units.Remove(this);
         }
-
-        //public void Refresh_Target()
-        //{
-        //    foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
-        //    {
-        //        if (UnitTarget == null) { UnitTarget = Eunit; }
-        //        else
-        //        {
-        //            if (x - Eunit.UnitRec.Location.X < x - UnitTarget.UnitRec.Location.X)
-        //            {
-        //                UnitTarget = Eunit;
-        //            }
-        //        }
-        //    }
-        //}
     }
 }

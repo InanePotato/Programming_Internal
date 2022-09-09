@@ -95,20 +95,26 @@ namespace Programming_Internal
             {
                 GlobalVariables.ChildToOpen = "army_camp";
             }
-
-            foreach (Unit unit in GlobalVariables.Units)
+            else if (GlobalVariables.Units.Count() == 0)
             {
-                unit.Unit_Attack();
+                GlobalVariables.ChildToOpen = "army_camp";
             }
-
-            foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+            else
             {
-                Eunit.Attack_Unit();
-            }
+                foreach (Unit unit in GlobalVariables.Units)
+                {
+                    unit.Unit_Attack();
+                }
 
-            foreach (Explosion explosion in GlobalVariables.Explosions)
-            {
-                explosion.ExplosionTick();
+                foreach (Enemy_Unit Eunit in GlobalVariables.Enemy_Units)
+                {
+                    Eunit.Attack_Unit();
+                }
+
+                foreach (Explosion explosion in GlobalVariables.Explosions)
+                {
+                    explosion.ExplosionTick();
+                }
             }
         }
 

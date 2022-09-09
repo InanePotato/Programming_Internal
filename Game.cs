@@ -133,7 +133,7 @@ namespace Programming_Internal
             //
             // ---------  TEMP  ------------
             //
-                GlobalVariables.Level = 20;
+                GlobalVariables.Level = 10;
 
                 GlobalVariables.BasicUnit_Count = 5;
                 GlobalVariables.MagicUnit_Count = 5;

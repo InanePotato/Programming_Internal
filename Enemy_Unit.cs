@@ -17,6 +17,7 @@ namespace Programming_Internal
         public string Unit_Name;
         public int Health, Damage, Attack_Speed;
         public bool Range;
+        public bool move = true;
         public int Range_Distance = 200;
         public Unit UnitTarget;
         public int Speed = 10;
@@ -63,9 +64,10 @@ namespace Programming_Internal
 
         public void Move_Enemy_Unit()
         {
+            move = true;
+
             if (Range == true)
             {
-                bool move = true;
                 foreach (Unit unit in GlobalVariables.Units)
                 {
                     if (x - Range_Distance - (Speed / 2) <= unit.x + unit.width)
@@ -86,7 +88,6 @@ namespace Programming_Internal
             }
             else
             {
-                bool move = true;
                 foreach (Unit unit in GlobalVariables.Units)
                 {
                     if (x - (Speed / 2) <= unit.x + unit.width)
@@ -127,38 +128,32 @@ namespace Programming_Internal
             {
                 AttackWaitTicks = 0;
 
-                foreach (Unit Unit in GlobalVariables.Units)
+                if (GlobalVariables.Units.Count != 0)
                 {
-                    if (UnitTarget == null) { UnitTarget = Unit; }
-                    else
+                    UnitTarget = GlobalVariables.Units.Last();
+
+                    if (UnitTarget != null)
                     {
-                        if (Unit.UnitRec.Location.X - x < UnitTarget.UnitRec.Location.X - x)
+
+                        if (Range == true)
                         {
-                            UnitTarget = Unit;
+
+                        }
+                        else
+                        {
+                            if (move == false)
+                            {
+                                UnitTarget.Unit_Damage(Damage);
+                            }
                         }
                     }
                 }
-
-                if (Range == true)
-                {
-
-                }
-                else
-                {
-                    //UnitTarget.Unit_Damage(Damage);
-                }
-
             }
         }
 
         public void Enemy_Unit_Destroy()
         {
             GlobalVariables.Enemy_Units.Remove(this);
-
-            //foreach(Unit unit in GlobalVariables.Units)
-            //{
-            //    unit.Refresh_Target();
-            //}
         }
     }
 }
