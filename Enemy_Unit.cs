@@ -14,6 +14,8 @@ namespace Programming_Internal
         public int height = 120;
         public Image Unit_Image;
         public Rectangle UnitRec;
+        public Image BoomImage;
+        public Rectangle BoomRec;
         public string Unit_Name;
         public int Health, Damage, Attack_Speed;
         public bool Range;
@@ -25,9 +27,12 @@ namespace Programming_Internal
         public bool Boss;
         public int AttackCounter = 0;
         public int AttackWaitTicks;
+        public Random rnd = new Random();
 
         public Enemy_Unit(int X, int Y, string Name, int Multiplier, int minX)
         {
+            BoomImage = Properties.Resources.Blank;
+
             x = X;
             y = Y;
             Unit_Name = Name;
@@ -111,7 +116,8 @@ namespace Programming_Internal
         public void Damage_Enemy_Unit(int damage)
         {
             Health = Health - damage;
-            //GlobalVariables.Explosions.Add(new Explosion(x, y + (width / 2)));
+            BoomRec = new Rectangle(x - 25, rnd.Next(y, y + width), 50, 50);
+            BoomImage = Properties.Resources.Explosion;
 
             if (Health <= 0)
             {
