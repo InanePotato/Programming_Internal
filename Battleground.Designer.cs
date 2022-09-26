@@ -34,14 +34,12 @@
             this.TMR_Battle = new System.Windows.Forms.Timer(this.components);
             this.TMR_Controls = new System.Windows.Forms.Timer(this.components);
             this.TMR_Attack = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.PNL_Battleground.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_Battleground
             // 
             this.PNL_Battleground.BackgroundImage = global::Programming_Internal.Properties.Resources.Battleground_Background2;
-            this.PNL_Battleground.Controls.Add(this.button1);
             this.PNL_Battleground.Controls.Add(this.PNL_Battle);
             this.PNL_Battleground.Location = new System.Drawing.Point(0, 0);
             this.PNL_Battleground.Name = "PNL_Battleground";
@@ -69,16 +67,6 @@
             // 
             this.TMR_Attack.Tick += new System.EventHandler(this.TMR_Attack_Tick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(401, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Battleground
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,6 +89,5 @@
         private System.Windows.Forms.Timer TMR_Battle;
         private System.Windows.Forms.Timer TMR_Controls;
         private System.Windows.Forms.Timer TMR_Attack;
-        private System.Windows.Forms.Button button1;
     }
 }

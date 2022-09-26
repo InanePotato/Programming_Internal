@@ -63,6 +63,7 @@ namespace Programming_Internal
         private static List<Unit> v_Units = new List<Unit>();
         private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
         private static List<Get_Level_Info> v_Level_Info = new List<Get_Level_Info>();
+        private static List<Boom> v_Boom = new List<Boom>();
 
         public static int UnitUpgrades_Basic
         {
@@ -317,6 +318,11 @@ namespace Programming_Internal
         {
             get { return v_Level_Info; }
             set { v_Level_Info = value; }
+        }
+        public static List<Boom> Boom
+        {
+            get { return v_Boom; }
+            set { v_Boom = value; }
         }
     }
 }

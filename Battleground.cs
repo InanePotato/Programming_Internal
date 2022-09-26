@@ -85,6 +85,11 @@ namespace Programming_Internal
             {
                 if (Eunit.Boss == true) { Eunit.Draw_Enemy_Unit(e.Graphics); }
             }
+
+            foreach (Boom boom in GlobalVariables.Boom)
+            {
+                boom.DrawBoom(e.Graphics);
+            }
         }
 
         private void TMR_Attack_Tick(object sender, EventArgs e)
@@ -108,14 +113,6 @@ namespace Programming_Internal
                 {
                     Eunit.Attack_Unit();
                 }
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            foreach (Unit unit in GlobalVariables.Units)
-            {
-                unit.Unit_Attack();
             }
         }
     }

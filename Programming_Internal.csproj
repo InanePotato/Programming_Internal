@@ -83,6 +83,7 @@
     <Compile Include="Battleground.Designer.cs">
       <DependentUpon>Battleground.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boom.cs" />
     <Compile Include="DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
