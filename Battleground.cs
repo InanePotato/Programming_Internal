@@ -88,7 +88,19 @@ namespace Programming_Internal
 
             foreach (Boom boom in GlobalVariables.Boom)
             {
-                boom.DrawBoom(e.Graphics);
+                if (boom.Drawn == true)
+                {
+                    GlobalVariables.Boom.Remove(boom);
+                    break;
+                }
+            }
+
+            if (GlobalVariables.Boom.Count > 0)
+            {
+                for (int i = 0; i <= GlobalVariables.Boom.Count - 1; i++)
+                {
+                    GlobalVariables.Boom[i].DrawBoom(e.Graphics);
+                }
             }
         }
 

@@ -25,6 +25,7 @@ namespace Programming_Internal
         public int Max_X;
         public List<Abilities>abilities = new List<Abilities>();
         public int AttackWaitTicks = 0;
+        public Random rnd = new Random();
 
         public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier, int maxX)
         {
@@ -157,7 +158,7 @@ namespace Programming_Internal
         public void Unit_Damage(int damage)
         {
             Health = Health - damage;
-            //GlobalVariables.Explosions.Add(new Explosion(x, y + (width / 2)));
+            GlobalVariables.Boom.Add(new Boom(x + width + rnd.Next(23, 27), rnd.Next(y, y + width)));
 
             if (Health <= 0)
             {

@@ -118,6 +118,7 @@ namespace Programming_Internal
             Health = Health - damage;
             BoomRec = new Rectangle(x - 25, rnd.Next(y, y + width), 50, 50);
             BoomImage = Properties.Resources.Explosion;
+            GlobalVariables.Boom.Add(new Boom((x - 27) + rnd.Next(0, 4), rnd.Next(y, y + width)));
 
             if (Health <= 0)
             {
