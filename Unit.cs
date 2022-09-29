@@ -158,7 +158,7 @@ namespace Programming_Internal
         public void Unit_Damage(int damage)
         {
             Health = Health - damage;
-            GlobalVariables.Boom.Add(new Boom(x + width + rnd.Next(23, 27), rnd.Next(y, y + width)));
+            GlobalVariables.Boom.Add(new Boom(((x + width) - 2) + rnd.Next(0, 4), rnd.Next(y, y + width)));
 
             if (Health <= 0)
             {
