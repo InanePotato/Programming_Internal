@@ -66,7 +66,7 @@ namespace Programming_Internal
         private void Game_Load(object sender, EventArgs e)
         {
             this.Size = new Size(900, 800);
-            PNL_Game.Location = new Point(0,0);
+            PNL_Game.Location = new Point(0, 0);
             PNL_Game.Size = new Size(886, 762);
 
             // get duck Images
@@ -133,15 +133,15 @@ namespace Programming_Internal
             //
             // ---------  TEMP  ------------
             //
-                GlobalVariables.Level = 1;
-                GlobalVariables.Coins = 0;
+            GlobalVariables.Level = 1;
+            GlobalVariables.Coins = 0;
 
-                GlobalVariables.AdminAccount = true;
+            GlobalVariables.AdminAccount = true;
 
-                GlobalVariables.BasicUnit_Count = 5;
-                GlobalVariables.BasicUnitUnlocked = true;
-                GlobalVariables.UnitUpgrades_Basic = 0;
-                GlobalVariables.SlotContents[0] = "basic";
+            GlobalVariables.BasicUnit_Count = 5;
+            GlobalVariables.BasicUnitUnlocked = true;
+            GlobalVariables.UnitUpgrades_Basic = 0;
+            GlobalVariables.SlotContents[0] = "basic";
             //
             // ------------------------------
             //
@@ -149,7 +149,7 @@ namespace Programming_Internal
             GlobalVariables.ChildOpen = "army_camp";
             openChildForm(new ArmyCamp());
 
-            foreach(Get_Unit_Info i in GlobalVariables.Unit_Info)
+            foreach (Get_Unit_Info i in GlobalVariables.Unit_Info)
             {
                 Console.WriteLine(i.Name + ": " + i.Cost);
             }
@@ -162,13 +162,13 @@ namespace Programming_Internal
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.BackgroundImage = null;
-                PNL_Game.Location = new Point(0,0);
+                PNL_Game.Location = new Point(0, 0);
                 PNL_Game.BorderStyle = BorderStyle.None;
             }
             else
             {
                 this.BackgroundImage = IMG_FormBackground;
-                PNL_Game.Location = new Point((Screen.FromHandle(this.Handle).WorkingArea.Width - PNL_Game.Width)/2, (Screen.FromHandle(this.Handle).WorkingArea.Height - PNL_Game.Height)/2);
+                PNL_Game.Location = new Point((Screen.FromHandle(this.Handle).WorkingArea.Width - PNL_Game.Width) / 2, (Screen.FromHandle(this.Handle).WorkingArea.Height - PNL_Game.Height) / 2);
                 PNL_Game.BorderStyle = BorderStyle.FixedSingle;
             }
 
@@ -197,7 +197,7 @@ namespace Programming_Internal
             {
                 GlobalVariables.Paused = true;
 
-                PNL_Menu.Location = new Point(0,PNL_Top.Height);
+                PNL_Menu.Location = new Point(0, PNL_Top.Height);
                 PNL_Menu.Size = new Size(200, PNL_Game.Height - PNL_Top.Height);
                 PNL_Menu.BringToFront();
                 PNL_Menu.Enabled = true;
@@ -214,9 +214,9 @@ namespace Programming_Internal
 
                 PNL_Menu.Enabled = false;
                 PNL_Menu.Visible = false;
-                
+
                 PNL_Menu.SendToBack();
-                
+
                 PNL_Menu.Location = new Point(0, 1000);
                 PNL_Menu.Size = new Size(10, 10);
             }
@@ -240,7 +240,7 @@ namespace Programming_Internal
         }
 
         private void closeChildForm()
-        {   
+        {
             if (activeForm != null)
             {
                 activeForm.Close();
@@ -260,7 +260,8 @@ namespace Programming_Internal
             {
                 GlobalVariables.ChildToOpen = null;
 
-                // ----- Open Child Code Here -----
+                GlobalVariables.ChildOpen = "map";
+                openChildForm(new Map());
             }
             else if (GlobalVariables.ChildToOpen == "battleground")
             {
@@ -287,7 +288,38 @@ namespace Programming_Internal
         {
             LBL_Coins.Text = GlobalVariables.Coins.ToString();
 
+            GlobalVariables.Strength = 0;
+            GlobalVariables.Health = 0;
 
+            string[] basicNames = new string[3]; basicNames[0] = "spear"; basicNames[1] = "sword"; basicNames[2] = "axe";
+            string[] rangeNames = new string[3]; rangeNames[0] = "archer"; rangeNames[1] = "catapult"; rangeNames[2] = "cannon";
+            string[] magicNames = new string[3]; magicNames[0] = "magician"; magicNames[1] = "wizard"; magicNames[2] = "sorcerer";
+            string[] gunNames = new string[3]; gunNames[0] = "agent"; gunNames[1] = "gunner"; gunNames[2] = "sniper";
+            string[] giantNames = new string[3]; giantNames[0] = "stacked"; giantNames[1] = "tall"; giantNames[2] = "buff";
+
+            int basicStrength = 0, basicHealth = 0;
+            int rangeStrength = 0, rangeHealth = 0;
+            int magicStrength = 0, magicHealth = 0;
+            int gunStrength = 0, gunHealth = 0;
+            int giantStrength = 0, giantHealth = 0;
+
+            foreach (Get_Unit_Info i in GlobalVariables.Unit_Info)
+            {
+                if (i.Name == basicNames[GlobalVariables.UnitUpgrades_Basic]) { basicStrength = i.Damage; basicHealth = i.Health; }
+                if (i.Name == rangeNames[GlobalVariables.UnitUpgrades_Range]) { rangeStrength = i.Damage; rangeHealth = i.Health; }
+                if (i.Name == magicNames[GlobalVariables.UnitUpgrades_Magic]) { magicStrength = i.Damage; magicHealth = i.Health; }
+                if (i.Name == gunNames[GlobalVariables.UnitUpgrades_Gun]) { gunStrength = i.Damage; gunHealth = i.Health; }
+                if (i.Name == giantNames[GlobalVariables.UnitUpgrades_Giant]) { giantStrength = i.Damage; giantHealth = i.Health; }
+            }
+
+            foreach (string slot in GlobalVariables.SlotContents)
+            {
+                if (slot == "basic") { for (int i = 0; i < GlobalVariables.BasicUnit_Count; i++) { GlobalVariables.Strength = GlobalVariables.Strength + basicStrength; GlobalVariables.Health = GlobalVariables.Health + basicHealth; } }
+                if (slot == "range") { for (int i = 0; i < GlobalVariables.RangeUnit_Count; i++) { GlobalVariables.Strength = GlobalVariables.Strength + rangeStrength; GlobalVariables.Health = GlobalVariables.Health + rangeHealth; } }
+                if (slot == "magic") { for (int i = 0; i < GlobalVariables.MagicUnit_Count; i++) { GlobalVariables.Strength = GlobalVariables.Strength + magicStrength; GlobalVariables.Health = GlobalVariables.Health + magicHealth; } }
+                if (slot == "gun") { for (int i = 0; i < GlobalVariables.GunUnit_Count; i++) { GlobalVariables.Strength = GlobalVariables.Strength + gunStrength; GlobalVariables.Health = GlobalVariables.Health + gunHealth; } }
+                if (slot == "giant") { for (int i = 0; i < GlobalVariables.GiantUnit_Count; i++) { GlobalVariables.Strength = GlobalVariables.Strength + giantStrength; GlobalVariables.Health = GlobalVariables.Health + giantHealth; } }
+            }
 
             LBL_Health.Text = GlobalVariables.Health.ToString();
             LBL_Strength.Text = GlobalVariables.Strength.ToString();

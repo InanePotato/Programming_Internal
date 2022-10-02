@@ -506,7 +506,11 @@ namespace Programming_Internal
 
         private void PIC_MapButton_Click(object sender, EventArgs e)
         {
-            GlobalVariables.ChildToOpen = "battleground";
+            if (GlobalVariables.SlotContents[0] != null && GlobalVariables.SlotContents[0] != "") { GlobalVariables.ChildToOpen = "map"; }
+            else if (GlobalVariables.SlotContents[1] != null && GlobalVariables.SlotContents[1] != "") { GlobalVariables.ChildToOpen = "map"; }
+            else if (GlobalVariables.SlotContents[2] != null && GlobalVariables.SlotContents[2] != "") { GlobalVariables.ChildToOpen = "map"; }
+            else if (GlobalVariables.SlotContents[3] != null && GlobalVariables.SlotContents[3] != "") { GlobalVariables.ChildToOpen = "map"; }
+            else if (GlobalVariables.SlotContents[4] != null && GlobalVariables.SlotContents[4] != "") { GlobalVariables.ChildToOpen = "map"; }
         }
     }
 }

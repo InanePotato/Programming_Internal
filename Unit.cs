@@ -24,6 +24,7 @@ namespace Programming_Internal
         public int Speed = 10;
         public int Max_X;
         public int AttackWaitTicks = 0;
+        public int multiplier;
         public Random rnd = new Random();
 
         public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier, int maxX)
@@ -34,6 +35,7 @@ namespace Programming_Internal
             Unit_Name = Name;
             Unit_Level = Level;
             Max_X = maxX;
+            multiplier = Multiplier;
 
             if (Unit_Type == "basic") { Unit_Image = GlobalVariables.Basic_Ducks[Unit_Level]; }
             if (Unit_Type == "range") { Unit_Image = GlobalVariables.Range_Ducks[Unit_Level]; }
@@ -144,11 +146,14 @@ namespace Programming_Internal
 
             if (Health <= 0)
             {
-                if (Unit_Type == "basic") { GlobalVariables.BasicUnit_Count--; }
-                if (Unit_Type == "range") { GlobalVariables.RangeUnit_Count--; }
-                if (Unit_Type == "magic") { GlobalVariables.MagicUnit_Count--; }
-                if (Unit_Type == "gun") { GlobalVariables.GunUnit_Count--; }
-                if (Unit_Type == "giant") { GlobalVariables.GiantUnit_Count--; }
+                for (int i = 0; i < multiplier; i++)
+                {
+                    if (Unit_Type == "basic") { GlobalVariables.BasicUnit_Count--; }
+                    if (Unit_Type == "range") { GlobalVariables.RangeUnit_Count--; }
+                    if (Unit_Type == "magic") { GlobalVariables.MagicUnit_Count--; }
+                    if (Unit_Type == "gun") { GlobalVariables.GunUnit_Count--; }
+                    if (Unit_Type == "giant") { GlobalVariables.GiantUnit_Count--; }
+                }
 
                 Console.WriteLine(Unit_Name + " has died. Remaining Units: " + GlobalVariables.Units.Count);
                 Unit_Destroy();
