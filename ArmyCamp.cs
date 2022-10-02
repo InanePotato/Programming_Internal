@@ -39,6 +39,17 @@ namespace Programming_Internal
 
         private void ArmyCamp_Load(object sender, EventArgs e)
         {
+            int count = 0;
+            foreach (string slot in GlobalVariables.SlotContents)
+            {
+                if (slot == "basic" && GlobalVariables.BasicUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
+                else if (slot == "range" && GlobalVariables.RangeUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
+                else if (slot == "magic" && GlobalVariables.MagicUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
+                else if (slot == "gun" && GlobalVariables.GunUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
+                else if (slot == "giant" && GlobalVariables.GiantUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
+                count++;
+            }
+
             PNL_PauseCover.Visible = false;
 
             UpdateSlots();

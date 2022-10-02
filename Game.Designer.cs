@@ -284,7 +284,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Game_FormClosed);
             this.Load += new System.EventHandler(this.Game_Load);
             this.SizeChanged += new System.EventHandler(this.Game_SizeChanged);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);
             this.PNL_Game.ResumeLayout(false);
             this.PNL_Menu.ResumeLayout(false);
             this.PNL_Top.ResumeLayout(false);

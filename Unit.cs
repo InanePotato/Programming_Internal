@@ -23,7 +23,6 @@ namespace Programming_Internal
         public int Range_Distance = 200;
         public int Speed = 10;
         public int Max_X;
-        public List<Abilities>abilities = new List<Abilities>();
         public int AttackWaitTicks = 0;
         public Random rnd = new Random();
 
@@ -52,23 +51,6 @@ namespace Programming_Internal
 
                     if (i.Range == "yes") { Range = true; }
                     else { Range = false; }
-
-                    //if (i.Abilities == "none" || i.Abilities == "none none none")
-                    //{
-                    //    abilities = null;
-                    //}
-                    //else
-                    //{
-                    //    string[] Abilities_Split = i.Abilities.Split(' ');
-                    //    foreach (string s in Abilities_Split)
-                    //    {
-                    //        if (s != "none")
-                    //        {
-                    //            string[] Ability = s.Split('%');
-                    //            abilities.Add(new Abilities(Ability[0], int.Parse(Ability[1])));
-                    //        }
-                    //    }
-                    //}
                 }
             }
         }
@@ -162,8 +144,14 @@ namespace Programming_Internal
 
             if (Health <= 0)
             {
-                Unit_Destroy();
+                if (Unit_Type == "basic") { GlobalVariables.BasicUnit_Count--; }
+                if (Unit_Type == "range") { GlobalVariables.RangeUnit_Count--; }
+                if (Unit_Type == "magic") { GlobalVariables.MagicUnit_Count--; }
+                if (Unit_Type == "gun") { GlobalVariables.GunUnit_Count--; }
+                if (Unit_Type == "giant") { GlobalVariables.GiantUnit_Count--; }
+
                 Console.WriteLine(Unit_Name + " has died. Remaining Units: " + GlobalVariables.Units.Count);
+                Unit_Destroy();
             }
         }
 

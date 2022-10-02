@@ -51,7 +51,7 @@
             this.PNL_Battle.BackColor = System.Drawing.Color.Transparent;
             this.PNL_Battle.Location = new System.Drawing.Point(0, 303);
             this.PNL_Battle.Name = "PNL_Battle";
-            this.PNL_Battle.Size = new System.Drawing.Size(886, 220);
+            this.PNL_Battle.Size = new System.Drawing.Size(886, 240);
             this.PNL_Battle.TabIndex = 0;
             this.PNL_Battle.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Battle_Paint);
             // 

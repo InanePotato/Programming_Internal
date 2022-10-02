@@ -134,32 +134,14 @@ namespace Programming_Internal
             // ---------  TEMP  ------------
             //
                 GlobalVariables.Level = 1;
-
-                GlobalVariables.BasicUnit_Count = 5;
-                GlobalVariables.MagicUnit_Count = 5;
-                GlobalVariables.GunUnit_Count = 5;
-                GlobalVariables.GiantUnit_Count = 5;
+                GlobalVariables.Coins = 0;
 
                 GlobalVariables.AdminAccount = true;
-                
+
+                GlobalVariables.BasicUnit_Count = 5;
                 GlobalVariables.BasicUnitUnlocked = true;
-                GlobalVariables.RangeUnitUnlocked = false;
-                GlobalVariables.MagicUnitUnlocked = false;
-                GlobalVariables.GunUnitUnlocked = false;
-                GlobalVariables.GiantUnitUnlocked = false;
-
                 GlobalVariables.UnitUpgrades_Basic = 0;
-                GlobalVariables.UnitUpgrades_Range = 0;
-                GlobalVariables.UnitUpgrades_Magic = 0;
-                GlobalVariables.UnitUpgrades_Gun = 0;
-                GlobalVariables.UnitUpgrades_Giant = 0;
-
                 GlobalVariables.SlotContents[0] = "basic";
-                GlobalVariables.SlotContents[1] = "magic";
-                GlobalVariables.SlotContents[2] = "gun";
-                GlobalVariables.SlotContents[3] = "giant";
-                GlobalVariables.SlotContents[4] = "none";
-
             //
             // ------------------------------
             //
@@ -240,21 +222,6 @@ namespace Programming_Internal
             }
         }
 
-        private void Game_Paint(object sender, PaintEventArgs e)
-        {
-            // draws a black border aroud the panel <--- turned off :)
-
-            //if (PNL_Game.BorderStyle == BorderStyle.FixedSingle)
-            //{
-            //    int thickness = 4;//it's up to you
-            //    int halfThickness = thickness / 2;
-            //    using (Pen p = new Pen(Color.Black, thickness))
-            //    {
-            //        e.Graphics.DrawRectangle(p, new Rectangle(PNL_Game.Location.X - halfThickness, PNL_Game.Location.Y - halfThickness, PNL_Game.Width + thickness, PNL_Game.Height + thickness));
-            //    }
-            //}
-        }
-
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -314,37 +281,14 @@ namespace Programming_Internal
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-
-            //DialogResult CloseApplication = MessageBox.Show("Do you really want to exit this application?","Exit Appliccation",MessageBoxButtons.YesNo);
-            //if (CloseApplication == DialogResult.Yes)
-            //{
-            //    GlobalVariables.Basic_Ducks_FR[0] = null;
-            //    GlobalVariables.Basic_Ducks_FR[1] = null;
-            //    GlobalVariables.Basic_Ducks_FR[2] = null;
-            //    GlobalVariables.Range_Ducks_FR[0] = null;
-            //    GlobalVariables.Range_Ducks_FR[1] = null;
-            //    GlobalVariables.Range_Ducks_FR[2] = null;
-            //    GlobalVariables.Magic_Ducks_FR[0] = null;
-            //    GlobalVariables.Magic_Ducks_FR[1] = null;
-            //    GlobalVariables.Magic_Ducks_FR[2] = null;
-            //    GlobalVariables.Gun_Ducks_FR[0] = null;
-            //    GlobalVariables.Gun_Ducks_FR[1] = null;
-            //    GlobalVariables.Gun_Ducks_FR[2] = null;
-            //    GlobalVariables.Giant_Ducks_FR[0] = null;
-            //    GlobalVariables.Giant_Ducks_FR[1] = null;
-            //    GlobalVariables.Giant_Ducks_FR[2] = null;
-
-            //    Application.Exit();
-            //}
-            //else
-            //{
-            //    e.Cancel = true;
-            //}
         }
 
         private void TMR_TopBarDisplay_Refresh_Tick(object sender, EventArgs e)
         {
             LBL_Coins.Text = GlobalVariables.Coins.ToString();
+
+
+
             LBL_Health.Text = GlobalVariables.Health.ToString();
             LBL_Strength.Text = GlobalVariables.Strength.ToString();
         }
