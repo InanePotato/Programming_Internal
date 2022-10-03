@@ -65,6 +65,7 @@ namespace Programming_Internal
         private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
         private static List<Get_Level_Info> v_Level_Info = new List<Get_Level_Info>();
         private static List<Boom> v_Boom = new List<Boom>();
+        private static List<Projectile> v_Projectiles = new List<Projectile>();
 
         private static Form v_frmHome;
 
@@ -326,6 +327,11 @@ namespace Programming_Internal
         {
             get { return v_Boom; }
             set { v_Boom = value; }
+        }
+        public static List<Projectile> Projectiles
+        {
+            get { return v_Projectiles; }
+            set { v_Projectiles = value; }
         }
 
         public static Form frmHome

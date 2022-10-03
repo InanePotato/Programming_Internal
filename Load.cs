@@ -47,7 +47,7 @@ namespace Programming_Internal
                 Origonal_Unit_Info.Add(new Get_Unit_Info("wizard", 12, 30, 11, "yes", "2%stun 5%fire none", 30));
                 Origonal_Unit_Info.Add(new Get_Unit_Info("sorcerer", 15, 30, 11, "yes", "5%stun 10%fire 1%backfire", 35));
                 Origonal_Unit_Info.Add(new Get_Unit_Info("agent", 10, 10, 11, "yes", "5%increase_evade none none", 25));
-                Origonal_Unit_Info.Add(new Get_Unit_Info("gunner", 5, 15, 1, "yes", "5%bleed 10%decrease_accuracy none", 30));
+                Origonal_Unit_Info.Add(new Get_Unit_Info("gunner", 5, 15, 5, "yes", "5%bleed 10%decrease_accuracy none", 30));
                 Origonal_Unit_Info.Add(new Get_Unit_Info("sniper", 50, 30, 13, "yes", "10%instant_kill 2%bleed none", 40));
                 Origonal_Unit_Info.Add(new Get_Unit_Info("stacked", 25, 50, 12, "no", "100%split none none", 30));
                 Origonal_Unit_Info.Add(new Get_Unit_Info("tall", 30, 80, 14, "no", "2%increase_evade none none", 40));
@@ -101,7 +101,7 @@ namespace Programming_Internal
 
                 Origonal_Level_Info.Add(new Get_Level_Info(1, "yes", "2-5", "no", "0-0", "no", "0-0", "no", "0-0", "none"));
                 Origonal_Level_Info.Add(new Get_Level_Info(2, "yes", "5-10", "no", "0-0", "no", "0-0", "no", "0-0", "none"));
-                Origonal_Level_Info.Add(new Get_Level_Info(3, "yes", "10-15", "no", "0-0", "no", "0-0", "no", "0-0", "none"));
+                Origonal_Level_Info.Add(new Get_Level_Info(3, "yes", "10-15", "yes", "1-2", "no", "0-0", "no", "0-0", "none"));
                 Origonal_Level_Info.Add(new Get_Level_Info(4, "yes", "10-15", "yes", "2-5", "no", "0-0", "no", "0-0", "none"));
                 Origonal_Level_Info.Add(new Get_Level_Info(5, "yes", "10-15", "yes", "5-10", "no", "0-0", "no", "0-0", "boss1"));
                 Origonal_Level_Info.Add(new Get_Level_Info(6, "yes", "15-20", "yes", "10-15", "no", "0-0", "no", "0-0", "none"));

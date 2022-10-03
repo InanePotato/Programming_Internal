@@ -389,14 +389,14 @@ namespace Programming_Internal
 
         private void PIC_ShopButton_MouseHover(object sender, EventArgs e)
         {
-            PIC_ShopButton.Size = new Size(PIC_ShopButton.Width + 10, PIC_ShopButton.Height + 10);
-            PIC_ShopButton.Location = new Point(PIC_ShopButton.Location.X - 5, PIC_ShopButton.Location.Y - 10);
+            PIC_ShopButton.Size = new Size(138, 138);
+            PIC_ShopButton.Location = new Point(555, 120);
         }
 
         private void PIC_ShopButton_MouseLeave(object sender, EventArgs e)
         {
-            PIC_ShopButton.Size = new Size(PIC_ShopButton.Width - 10, PIC_ShopButton.Height - 10);
-            PIC_ShopButton.Location = new Point(PIC_ShopButton.Location.X + 5, PIC_ShopButton.Location.Y + 10);
+            PIC_ShopButton.Size = new Size(128, 128);
+            PIC_ShopButton.Location = new Point(560, 130);
         }
 
         private void TMR_PausePlayCheck_Tick(object sender, EventArgs e)
@@ -511,6 +511,18 @@ namespace Programming_Internal
             else if (GlobalVariables.SlotContents[2] != null && GlobalVariables.SlotContents[2] != "") { GlobalVariables.ChildToOpen = "map"; }
             else if (GlobalVariables.SlotContents[3] != null && GlobalVariables.SlotContents[3] != "") { GlobalVariables.ChildToOpen = "map"; }
             else if (GlobalVariables.SlotContents[4] != null && GlobalVariables.SlotContents[4] != "") { GlobalVariables.ChildToOpen = "map"; }
+        }
+
+        private void PIC_MapButton_MouseHover(object sender, EventArgs e)
+        {
+            PIC_MapButton.Size = new Size(138, 138);
+            PIC_MapButton.Location = new Point(333, 93);
+        }
+
+        private void PIC_MapButton_MouseLeave(object sender, EventArgs e)
+        {
+            PIC_MapButton.Size = new Size(128, 128);
+            PIC_MapButton.Location = new Point(338, 103);
         }
     }
 }

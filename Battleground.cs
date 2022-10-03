@@ -29,6 +29,9 @@ namespace Programming_Internal
             //------------------------ Prep level ------------------------//
             //------------------------------------------------------------//
 
+            GlobalVariables.Projectiles.Clear();
+            GlobalVariables.Boom.Clear();
+
             LevelControl = new Level(GlobalVariables.Level);
             LevelControl.Spawn_Players_Units(0,0,20,100,10000);
 
@@ -100,6 +103,14 @@ namespace Programming_Internal
                 for (int i = 0; i <= GlobalVariables.Boom.Count - 1; i++)
                 {
                     GlobalVariables.Boom[i].DrawBoom(e.Graphics);
+                }
+            }
+
+            if (GlobalVariables.Projectiles.Count != 0)
+            {
+                for (int i = 0; i <= GlobalVariables.Projectiles.Count - 1; i++)
+                {
+                    GlobalVariables.Projectiles[i].MoveAndDraw(e.Graphics);
                 }
             }
         }

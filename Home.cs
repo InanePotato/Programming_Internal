@@ -27,5 +27,11 @@ namespace Programming_Internal
         {
             Application.Exit();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            PIC_Title.Location = new Point((this.Width - PIC_Title.Width) / 2, PIC_Title.Location.Y);
+            BTN_Play.Location = new Point((this.Width - BTN_Play.Width) / 2, BTN_Play.Location.Y);
+        }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.PNL_ArmyCamp = new System.Windows.Forms.Panel();
+            this.PIC_MapButton = new System.Windows.Forms.PictureBox();
             this.PNL_PauseCover = new System.Windows.Forms.Panel();
             this.PIC_ShopButton = new System.Windows.Forms.PictureBox();
             this.LBL_Slot4Units = new System.Windows.Forms.Label();
@@ -46,11 +47,10 @@
             this.PNL_ACPausedCover = new System.Windows.Forms.Panel();
             this.TMR_PausePlayCheck = new System.Windows.Forms.Timer(this.components);
             this.TMR_Update = new System.Windows.Forms.Timer(this.components);
-            this.PIC_MapButton = new System.Windows.Forms.PictureBox();
             this.PNL_ArmyCamp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_MapButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_ShopButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_MapButton)).BeginInit();
             this.SuspendLayout();
             // 
             // PNL_ArmyCamp
@@ -76,6 +76,22 @@
             this.PNL_ArmyCamp.Name = "PNL_ArmyCamp";
             this.PNL_ArmyCamp.Size = new System.Drawing.Size(886, 714);
             this.PNL_ArmyCamp.TabIndex = 5;
+            // 
+            // PIC_MapButton
+            // 
+            this.PIC_MapButton.BackColor = System.Drawing.Color.Transparent;
+            this.PIC_MapButton.BackgroundImage = global::Programming_Internal.Properties.Resources.MapSign;
+            this.PIC_MapButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PIC_MapButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PIC_MapButton.Location = new System.Drawing.Point(338, 103);
+            this.PIC_MapButton.Name = "PIC_MapButton";
+            this.PIC_MapButton.Size = new System.Drawing.Size(128, 128);
+            this.PIC_MapButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PIC_MapButton.TabIndex = 16;
+            this.PIC_MapButton.TabStop = false;
+            this.PIC_MapButton.Click += new System.EventHandler(this.PIC_MapButton_Click);
+            this.PIC_MapButton.MouseLeave += new System.EventHandler(this.PIC_MapButton_MouseLeave);
+            this.PIC_MapButton.MouseHover += new System.EventHandler(this.PIC_MapButton_MouseHover);
             // 
             // PNL_PauseCover
             // 
@@ -248,19 +264,6 @@
             this.TMR_Update.Enabled = true;
             this.TMR_Update.Tick += new System.EventHandler(this.TMR_Update_Tick);
             // 
-            // PIC_MapButton
-            // 
-            this.PIC_MapButton.BackColor = System.Drawing.Color.Transparent;
-            this.PIC_MapButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PIC_MapButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PIC_MapButton.Location = new System.Drawing.Point(338, 103);
-            this.PIC_MapButton.Name = "PIC_MapButton";
-            this.PIC_MapButton.Size = new System.Drawing.Size(128, 128);
-            this.PIC_MapButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PIC_MapButton.TabIndex = 16;
-            this.PIC_MapButton.TabStop = false;
-            this.PIC_MapButton.Click += new System.EventHandler(this.PIC_MapButton_Click);
-            // 
             // ArmyCamp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,9 +277,9 @@
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.ArmyCamp_Load);
             this.PNL_ArmyCamp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PIC_MapButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_ShopButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_KingDuck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_MapButton)).EndInit();
             this.ResumeLayout(false);
 
         }

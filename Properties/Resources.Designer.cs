@@ -83,6 +83,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow {
+            get {
+                object obj = ResourceManager.GetObject("arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Attack_Speed_Icon {
             get {
                 object obj = ResourceManager.GetObject("Attack_Speed_Icon", resourceCulture);
@@ -156,6 +166,26 @@ namespace Programming_Internal.Properties {
         internal static System.Drawing.Bitmap Boss2 {
             get {
                 object obj = ResourceManager.GetObject("Boss2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bullet {
+            get {
+                object obj = ResourceManager.GetObject("bullet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cannon_ball {
+            get {
+                object obj = ResourceManager.GetObject("cannon_ball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,6 +373,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fire_ball {
+            get {
+                object obj = ResourceManager.GetObject("fire_ball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Health_Icon {
             get {
                 object obj = ResourceManager.GetObject("Health_Icon", resourceCulture);
@@ -396,6 +436,16 @@ namespace Programming_Internal.Properties {
         internal static System.Drawing.Bitmap LoadScreenImage {
             get {
                 object obj = ResourceManager.GetObject("LoadScreenImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MapSign {
+            get {
+                object obj = ResourceManager.GetObject("MapSign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -476,6 +526,16 @@ namespace Programming_Internal.Properties {
         internal static System.Drawing.Bitmap Strength_Icon {
             get {
                 object obj = ResourceManager.GetObject("Strength_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TitleImage {
+            get {
+                object obj = ResourceManager.GetObject("TitleImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

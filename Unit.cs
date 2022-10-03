@@ -25,6 +25,7 @@ namespace Programming_Internal
         public int Max_X;
         public int AttackWaitTicks = 0;
         public int multiplier;
+        public string ProjectileType;
         public Random rnd = new Random();
 
         public Unit(int X, int Y, string Type, string Name, int Level, int Multiplier, int maxX)
@@ -51,7 +52,14 @@ namespace Programming_Internal
                     Damage = i.Damage * Multiplier;
                     Attack_Speed = i.Attack_Speed;
 
-                    if (i.Range == "yes") { Range = true; }
+                    if (i.Range == "yes")
+                    {
+                        Range = true;
+                        if (i.Name == "archer") { ProjectileType = "arrow"; }
+                        else if (i.Name == "catapult" || i.Name == "cannon") { ProjectileType = "cannon_ball"; }
+                        else if (i.Name == "wizard" || i.Name == "sorcerer") { ProjectileType = "fire_ball"; }
+                        else { ProjectileType = "bullet"; }
+                    }
                     else { Range = false; }
                 }
             }
@@ -125,7 +133,11 @@ namespace Programming_Internal
 
                         if (Range == true)
                         {
-
+                            if (move == false)
+                            {
+                                GlobalVariables.Projectiles.Add(new Projectile(x + width, Max_X, y + (height / 2), ProjectileType, Damage, UnitTarget));
+                            }
+                            
                         }
                         else
                         {
