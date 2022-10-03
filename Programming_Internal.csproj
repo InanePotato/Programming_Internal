@@ -102,6 +102,12 @@
     <Compile Include="Get_LiveVars.cs" />
     <Compile Include="Get_Unit_Info.cs" />
     <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Level.cs" />
     <Compile Include="Load.cs">
       <SubType>Form</SubType>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Load.resx">
       <DependentUpon>Load.cs</DependentUpon>
@@ -377,6 +386,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Explostion %2856x48%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadScreenImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

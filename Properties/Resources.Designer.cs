@@ -393,6 +393,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LoadScreenImage {
+            get {
+                object obj = ResourceManager.GetObject("LoadScreenImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Menu_Icon {
             get {
                 object obj = ResourceManager.GetObject("Menu_Icon", resourceCulture);

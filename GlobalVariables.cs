@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Programming_Internal
 {
@@ -64,6 +65,8 @@ namespace Programming_Internal
         private static List<Enemy_Unit> v_Enemy_Units = new List<Enemy_Unit>();
         private static List<Get_Level_Info> v_Level_Info = new List<Get_Level_Info>();
         private static List<Boom> v_Boom = new List<Boom>();
+
+        private static Form v_frmHome;
 
         public static int UnitUpgrades_Basic
         {
@@ -323,6 +326,12 @@ namespace Programming_Internal
         {
             get { return v_Boom; }
             set { v_Boom = value; }
+        }
+
+        public static Form frmHome
+        {
+            get { return v_frmHome; }
+            set { v_frmHome = value; }
         }
     }
 }

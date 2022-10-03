@@ -281,7 +281,7 @@ namespace Programming_Internal
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            GlobalVariables.frmHome.Show();
         }
 
         private void TMR_TopBarDisplay_Refresh_Tick(object sender, EventArgs e)

@@ -22,6 +22,10 @@ namespace Programming_Internal
         string filepath3 = Application.StartupPath + @"\Application_Resources\Level_Settings.txt";
         List<Get_Level_Info> Origonal_Level_Info = new List<Get_Level_Info>();
 
+        string LoadText_Prefix = "Loading";
+        string LoadText_Suffix = ".";
+        int WaitTick = 5;
+
         public Load()
         {
             InitializeComponent();
@@ -130,9 +134,50 @@ namespace Programming_Internal
                 }
                 File.WriteAllText(filepath3, builder3.ToString());
             }
+        }
+        private void TMR_LoadProgress_Tick(object sender, EventArgs e)
+        {
+            if (PB_LoadProgress.Value < 120)
+            {
+                if (PB_LoadProgress.Value < 15) { LoadText_Prefix = "preparing application resources"; }
+                else if (PB_LoadProgress.Value < 30) { LoadText_Prefix = "loading Unit_Settings.text"; }
+                else if (PB_LoadProgress.Value < 45) { LoadText_Prefix = "loading EUnit_Settings.text"; }
+                else if (PB_LoadProgress.Value < 60) { LoadText_Prefix = "loading Level_Settings.text"; }
+                else if (PB_LoadProgress.Value < 75) { LoadText_Prefix = "reading Saves.text"; }
+                else if (PB_LoadProgress.Value < 90) { LoadText_Prefix = "loading game saves"; }
+                else if (PB_LoadProgress.Value < 105) { LoadText_Prefix = "praparing game for launch"; }
+                else { LoadText_Prefix = "launching game"; }
 
-            new Game().Show();
-            this.Close();
+                LBL_LoadingText.Text = LoadText_Prefix + LoadText_Suffix;
+
+                //PB_LoadProgress.Value++;
+                PB_LoadProgress.PerformStep();
+            }
+            else
+            {
+                if (WaitTick == 0)
+                {
+                    GlobalVariables.frmHome = new Home();
+                    GlobalVariables.frmHome.Show();
+                    this.Close();
+                }
+                else
+                {
+                    WaitTick--;
+                }
+            }
+
+
+        }
+
+        private void TMR_EditLoadTextSuffix_Tick(object sender, EventArgs e)
+        {
+            if (LoadText_Suffix == "") { LoadText_Suffix = "."; }
+            else if (LoadText_Suffix == ".") { LoadText_Suffix = ".."; }
+            else if (LoadText_Suffix == "..") { LoadText_Suffix = "..."; }
+            else if (LoadText_Suffix == "...") { LoadText_Suffix = ""; }
+
+            LBL_LoadingText.Text = LoadText_Prefix + LoadText_Suffix;
         }
     }
 }
