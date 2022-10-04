@@ -131,14 +131,6 @@ namespace Programming_Internal
             GlobalVariables.BossPics[2] = Properties.Resources.Blank;
             GlobalVariables.BossPics[3] = Properties.Resources.Boss_Final;
 
-            //
-            // ---------  TEMP  ------------
-            //
-                GlobalVariables.AdminAccount = true;
-            //
-            // ------------------------------
-            //
-
             GlobalVariables.ChildOpen = "army_camp";
             openChildForm(new ArmyCamp());
 
@@ -390,11 +382,6 @@ namespace Programming_Internal
             }
         }
 
-        private void BTN_Quit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BTN_OpenAdmin_Click(object sender, EventArgs e)
         {
             if (GlobalVariables.AdminMode == false)
@@ -406,12 +393,17 @@ namespace Programming_Internal
 
         private void BTN_MainMenu_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void BTN_Help_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("The aim of the game is to defeat all 20 levels of evil lemons on your quest to receive grapes."
+                + Environment.NewLine + Environment.NewLine + "How to play:" + Environment.NewLine +
+                "The game is mostly self-explanatory, you can build your army and order your troops by clicking the plusses in each troop slot in your army camp. " +
+                "If you wish to purchase more units or upgrade your current ones, you can click onto the shop sign in your army camp. " +
+                "To fight, just click on the map sign in your army camp, select a level, and you’re on your way to victory or certain death.", "Instructions",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

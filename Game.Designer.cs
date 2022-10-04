@@ -34,7 +34,6 @@
             this.PNL_Menu = new System.Windows.Forms.Panel();
             this.BTN_OpenAdmin = new System.Windows.Forms.Button();
             this.BTN_Help = new System.Windows.Forms.Button();
-            this.BTN_Quit = new System.Windows.Forms.Button();
             this.BTN_MainMenu = new System.Windows.Forms.Button();
             this.PNL_ChildForm = new System.Windows.Forms.Panel();
             this.Break_Line = new System.Windows.Forms.Panel();
@@ -76,12 +75,11 @@
             this.PNL_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(45)))), ((int)(((byte)(34)))));
             this.PNL_Menu.Controls.Add(this.BTN_OpenAdmin);
             this.PNL_Menu.Controls.Add(this.BTN_Help);
-            this.PNL_Menu.Controls.Add(this.BTN_Quit);
             this.PNL_Menu.Controls.Add(this.BTN_MainMenu);
             this.PNL_Menu.Enabled = false;
-            this.PNL_Menu.Location = new System.Drawing.Point(16, 788);
+            this.PNL_Menu.Location = new System.Drawing.Point(27, 795);
             this.PNL_Menu.Name = "PNL_Menu";
-            this.PNL_Menu.Size = new System.Drawing.Size(32, 32);
+            this.PNL_Menu.Size = new System.Drawing.Size(40, 36);
             this.PNL_Menu.TabIndex = 1;
             this.PNL_Menu.Visible = false;
             // 
@@ -91,7 +89,7 @@
             this.BTN_OpenAdmin.FlatAppearance.BorderSize = 0;
             this.BTN_OpenAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_OpenAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_OpenAdmin.Location = new System.Drawing.Point(0, 192);
+            this.BTN_OpenAdmin.Location = new System.Drawing.Point(0, 128);
             this.BTN_OpenAdmin.Name = "BTN_OpenAdmin";
             this.BTN_OpenAdmin.Size = new System.Drawing.Size(200, 56);
             this.BTN_OpenAdmin.TabIndex = 3;
@@ -115,21 +113,6 @@
             this.BTN_Help.UseMnemonic = false;
             this.BTN_Help.UseVisualStyleBackColor = true;
             this.BTN_Help.Click += new System.EventHandler(this.BTN_Help_Click);
-            // 
-            // BTN_Quit
-            // 
-            this.BTN_Quit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Quit.FlatAppearance.BorderSize = 0;
-            this.BTN_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Quit.Location = new System.Drawing.Point(0, 130);
-            this.BTN_Quit.Name = "BTN_Quit";
-            this.BTN_Quit.Size = new System.Drawing.Size(200, 56);
-            this.BTN_Quit.TabIndex = 1;
-            this.BTN_Quit.Text = "Save & Quit";
-            this.BTN_Quit.UseMnemonic = false;
-            this.BTN_Quit.UseVisualStyleBackColor = true;
-            this.BTN_Quit.Click += new System.EventHandler(this.BTN_Quit_Click);
             // 
             // BTN_MainMenu
             // 
@@ -308,7 +291,6 @@
         private System.Windows.Forms.Panel PNL_Menu;
         private System.Windows.Forms.Button BTN_MainMenu;
         private System.Windows.Forms.Button BTN_Help;
-        private System.Windows.Forms.Button BTN_Quit;
         private System.Windows.Forms.Panel Break_Line;
         private System.Windows.Forms.Panel PNL_ChildForm;
         private System.Windows.Forms.Timer TMR_ChildFromControl;

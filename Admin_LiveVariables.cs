@@ -116,6 +116,7 @@ namespace Programming_Internal
             LiveVars.Add(new Get_LiveVars("Coins", "int", GlobalVariables.Coins.ToString()));
             LiveVars.Add(new Get_LiveVars("Strength", "int", GlobalVariables.Strength.ToString()));
             LiveVars.Add(new Get_LiveVars("Health", "int", GlobalVariables.Health.ToString()));
+            LiveVars.Add(new Get_LiveVars("Levels_Unlocked", "int", GlobalVariables.LevelsUnlocked.ToString()));
 
             LiveVars.Add(new Get_LiveVars("BasicUnit_Count", "int", GlobalVariables.BasicUnit_Count.ToString()));
             LiveVars.Add(new Get_LiveVars("RangeUnit_Count", "int", GlobalVariables.RangeUnit_Count.ToString()));
@@ -191,6 +192,7 @@ namespace Programming_Internal
                 else if (SelectedVariable == "Coins") { GlobalVariables.Coins = int.Parse(txt_Value.Text); }
                 else if (SelectedVariable == "Strength") { GlobalVariables.Strength = int.Parse(txt_Value.Text); }
                 else if (SelectedVariable == "Health") { GlobalVariables.Health = int.Parse(txt_Value.Text); }
+                else if (SelectedVariable == "Levels_Unlocked") { GlobalVariables.LevelsUnlocked = int.Parse(txt_Value.Text); }
                 else if (SelectedVariable == "BasicUnit_Count") { GlobalVariables.BasicUnit_Count = int.Parse(txt_Value.Text); }
                 else if (SelectedVariable == "RangeUnit_Count") { GlobalVariables.RangeUnit_Count = int.Parse(txt_Value.Text); }
                 else if (SelectedVariable == "MagicUnit_Count") { GlobalVariables.MagicUnit_Count = int.Parse(txt_Value.Text); }
