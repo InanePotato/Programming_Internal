@@ -393,6 +393,7 @@ namespace Programming_Internal
 
         private void BTN_MainMenu_Click(object sender, EventArgs e)
         {
+            GlobalVariables.Paused = false;
             this.Close();
         }
 
