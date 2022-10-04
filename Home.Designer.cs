@@ -41,6 +41,7 @@
             this.LBL_CreateSave = new System.Windows.Forms.Label();
             this.BTN_BackToSelect = new System.Windows.Forms.Button();
             this.BTN_CreateNewSave = new System.Windows.Forms.Button();
+            this.TXT_AdminPassword = new System.Windows.Forms.TextBox();
             this.CBTN_DeleteSelectedSave = new Programming_Internal.CircleButton();
             this.CBTN_AdminAccess = new Programming_Internal.CircleButton();
             this.CBTN_Help = new Programming_Internal.CircleButton();
@@ -191,6 +192,16 @@
             this.BTN_CreateNewSave.Visible = false;
             this.BTN_CreateNewSave.Click += new System.EventHandler(this.BTN_CreateNewSave_Click);
             // 
+            // TXT_AdminPassword
+            // 
+            this.TXT_AdminPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_AdminPassword.Location = new System.Drawing.Point(12, 417);
+            this.TXT_AdminPassword.Name = "TXT_AdminPassword";
+            this.TXT_AdminPassword.Size = new System.Drawing.Size(140, 26);
+            this.TXT_AdminPassword.TabIndex = 16;
+            this.TXT_AdminPassword.Visible = false;
+            this.TXT_AdminPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_AdminPassword_KeyPress);
+            // 
             // CBTN_DeleteSelectedSave
             // 
             this.CBTN_DeleteSelectedSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -211,7 +222,7 @@
             // CBTN_AdminAccess
             // 
             this.CBTN_AdminAccess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CBTN_AdminAccess.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.CBTN_AdminAccess.BackColor = System.Drawing.Color.Silver;
             this.CBTN_AdminAccess.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CBTN_AdminAccess.FlatAppearance.BorderSize = 0;
             this.CBTN_AdminAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,7 +236,7 @@
             // 
             // CBTN_Help
             // 
-            this.CBTN_Help.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.CBTN_Help.BackColor = System.Drawing.Color.Silver;
             this.CBTN_Help.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CBTN_Help.FlatAppearance.BorderSize = 0;
             this.CBTN_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -242,6 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 511);
+            this.Controls.Add(this.TXT_AdminPassword);
             this.Controls.Add(this.CBTN_DeleteSelectedSave);
             this.Controls.Add(this.CBTN_AdminAccess);
             this.Controls.Add(this.CBTN_Help);
@@ -286,5 +298,6 @@
         private CircleButton CBTN_Help;
         private CircleButton CBTN_AdminAccess;
         private CircleButton CBTN_DeleteSelectedSave;
+        private System.Windows.Forms.TextBox TXT_AdminPassword;
     }
 }

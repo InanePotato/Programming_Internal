@@ -141,6 +141,16 @@ namespace Programming_Internal
             {
                 BTN_CreateNewSave.Enabled = true;
             }
+
+            if (GlobalVariables.AdminAccount == true)
+            {
+                CBTN_AdminAccess.BackColor = Color.FromArgb(64, 64, 64);
+            }
+            else
+            {
+                if (TXT_AdminPassword.Visible == true) { CBTN_AdminAccess.BackColor = Color.Gainsboro; }
+                else { CBTN_AdminAccess.BackColor = Color.Silver; }
+            }
         }
 
         public void ResetSelectedSave()
@@ -287,7 +297,15 @@ namespace Programming_Internal
 
         public void RefreshSavesDisplay()
         {
-            if (GlobalVariables.SaveInfo.Count == 0 || GlobalVariables.SaveInfo == null) { NoSaves = true; }
+            if (GlobalVariables.SaveInfo.Count == 0 || GlobalVariables.SaveInfo == null)
+            {
+                NoSaves = true;
+
+                BTN_Save1.Text = "[ New Save ]";
+                BTN_Save2.Text = "[ New Save ]";
+                BTN_Save3.Text = "[ New Save ]";
+                BTN_Save4.Text = "[ New Save ]";
+            }
             else
             {
                 NoSaves = false;
@@ -334,12 +352,49 @@ namespace Programming_Internal
 
         private void CBTN_AdminAccess_Click(object sender, EventArgs e)
         {
-
+            if (GlobalVariables.AdminAccount == true) { GlobalVariables.AdminAccount = false; }
+            else
+            {
+                if (TXT_AdminPassword.Visible == false) { TXT_AdminPassword.Visible = true; }
+                else { TXT_AdminPassword.Visible = false; }
+            }
         }
 
         private void CBTN_Help_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("The aim of the game is to defeat all 20 levels of evil lemons on your quest to receive grapes."
+                + Environment.NewLine + Environment.NewLine + "How to play:" + Environment.NewLine +
+                "The game is mostly self-explanatory, you can build your army and order your troops by clicking the plusses in each troop slot in your army camp. " +
+                "If you wish to purchase more units or upgrade your current ones, you can click onto the shop sign in your army camp. " +
+                "To fight, just click on the map sign in your army camp, select a level, and you’re on your way to victory or certain death.", "Instructions",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
+        private void TXT_AdminPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+
+                
+
+                if (TXT_AdminPassword.Text == "@InanePotato1")
+                {
+                    TXT_AdminPassword.Text = "";
+                    TXT_AdminPassword.Visible = false;
+                    GlobalVariables.AdminAccount = true;
+                }
+                else
+                {
+                    TXT_AdminPassword.Text = "";
+                    TXT_AdminPassword.Visible = false;
+                    MessageBox.Show("Incorrect password, please try again later!", "Incorrect Password", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else if (e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
