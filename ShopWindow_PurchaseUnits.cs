@@ -26,7 +26,6 @@ namespace Programming_Internal
 
         private void ShopWindow_PurchaseUnits_Load(object sender, EventArgs e)
         {
-            // x = 11    width = 677    height = 182
             int location_x = 5;
             int location_y = (PNL_UnitDisplay.Height - 182) / 2;
             int size_width = 677;
@@ -86,55 +85,7 @@ namespace Programming_Internal
                     BTN_BasicUnit_Purchase1.Text = "Purchase Unit (x1)" + Environment.NewLine + "Cost: " + i.Cost.ToString() + " coins";
                     BTN_BasicUnit_Purchase10.Text = "Purchase Unit (x10)" + Environment.NewLine + "Cost: " + (i.Cost * 10).ToString() + " coins";
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_BasicAbilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_BasicAbilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_BasicAbilities.Text = "Coming soon!";                
                 }
 
                 if (i.Name == RangeUnit_Name)
@@ -147,55 +98,7 @@ namespace Programming_Internal
                     BTN_RangeUnit_Purchase1.Text = "Purchase Unit (x1)" + Environment.NewLine + "Cost: " + i.Cost.ToString() + " coins";
                     BTN_RangeUnit_Purchase10.Text = "Purchase Unit (x10)" + Environment.NewLine + "Cost: " + (i.Cost * 10).ToString() + " coins";
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_RangeUnit_Abilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_RangeUnit_Abilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_RangeUnit_Abilities.Text = "Coming soon!";
                 }
 
                 if (i.Name == MagicUnit_Name)
@@ -208,55 +111,7 @@ namespace Programming_Internal
                     BTN_MagicUnit_Purchase1.Text = "Purchase Unit (x1)" + Environment.NewLine + "Cost: " + i.Cost.ToString() + " coins";
                     BTN_MagicUnit_Purchase10.Text = "Purchase Unit (x10)" + Environment.NewLine + "Cost: " + (i.Cost * 10).ToString() + " coins";
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_MagicUnit_Abilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_MagicUnit_Abilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_MagicUnit_Abilities.Text = "Coming soon!";
                 }
 
                 if (i.Name == GunUnit_Name)
@@ -269,55 +124,7 @@ namespace Programming_Internal
                     BTN_GunUnit_Purchase1.Text = "Purchase Unit (x1)" + Environment.NewLine + "Cost: " + i.Cost.ToString() + " coins";
                     BTN_GunUnit_Purchase10.Text = "Purchase Unit (x10)" + Environment.NewLine + "Cost: " + (i.Cost * 10).ToString() + " coins";
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_GunUnit_Abilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_GunUnit_Abilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_GunUnit_Abilities.Text = "Coming soon!";
                 }
 
                 if (i.Name == GiantUnit_Name)
@@ -330,55 +137,7 @@ namespace Programming_Internal
                     BTN_GiantUnit_Purchase1.Text = "Purchase Unit (x1)" + Environment.NewLine + "Cost: " + i.Cost.ToString() + " coins";
                     BTN_GiantUnit_Purchase10.Text = "Purchase Unit (x10)" + Environment.NewLine + "Cost: " + (i.Cost * 10).ToString() + " coins";
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_GiantUnit_Abilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_GiantUnit_Abilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_GiantUnit_Abilities.Text = "Coming soon!";
                 }
             }
 
@@ -417,22 +176,22 @@ namespace Programming_Internal
 
         private void BTN_Next_Click(object sender, EventArgs e)
         {
-            if (currently_selected == "basic") { currently_selected = "range"; }
-            else if (currently_selected == "range") { currently_selected = "magic"; }
-            else if (currently_selected == "magic") { currently_selected = "gun"; }
-            else if (currently_selected == "gun") { currently_selected = "giant"; }
-            else if (currently_selected == "giant") { currently_selected = "basic"; }
+            if (currently_selected == "basic") { currently_selected = "magic"; }
+            else if (currently_selected == "range") { currently_selected = "gun"; }
+            else if (currently_selected == "magic") { currently_selected = "giant"; }
+            else if (currently_selected == "gun") { currently_selected = "basic"; }
+            else if (currently_selected == "giant") { currently_selected = "range"; }
 
             UpdateDisplay();
         }
 
         private void BTN_Previous_Click(object sender, EventArgs e)
         {
-            if (currently_selected == "basic") { currently_selected = "giant"; }
-            else if (currently_selected == "range") { currently_selected = "basic"; }
-            else if (currently_selected == "magic") { currently_selected = "range"; }
-            else if (currently_selected == "gun") { currently_selected = "magic"; }
-            else if (currently_selected == "giant") { currently_selected = "gun"; }
+            if (currently_selected == "basic") { currently_selected = "gun"; }
+            else if (currently_selected == "range") { currently_selected = "giant"; }
+            else if (currently_selected == "magic") { currently_selected = "basic"; }
+            else if (currently_selected == "gun") { currently_selected = "range"; }
+            else if (currently_selected == "giant") { currently_selected = "magic"; }
 
             UpdateDisplay();
         }

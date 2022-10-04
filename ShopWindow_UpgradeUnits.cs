@@ -129,55 +129,7 @@ namespace Programming_Internal
 
                     BTN_Unlock.Text = "Unlock (" + Cost + " coins)";
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_UnlockAbilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_UnlockAbilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_UnlockAbilities.Text = "Coming Soon!";
                 }
             }
         }
@@ -223,55 +175,7 @@ namespace Programming_Internal
                     lbl_UpgradeUnit_AttackSpeed.Text = i.Attack_Speed.ToString();
                     lbl_UpgradeUnit_Range.Text = i.Range;
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_UpgradeUnit_Abilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_UpgradeUnit_Abilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_UpgradeUnit_Abilities.Text = "Coming Soon!";
                 }
                 else if (i.Name == NextName)
                 {
@@ -283,55 +187,7 @@ namespace Programming_Internal
                     Cost = i.Cost * 20;
                     BTN_Upgrade.Text = "Upgrade (" + Cost + " coins)";
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_UpgradeUnit2_Abilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_UpgradeUnit2_Abilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_UpgradeUnit2_Abilities.Text = "Coming Soon!";
                 }
             }
         }
@@ -359,55 +215,7 @@ namespace Programming_Internal
                     lbl_FinalUnit_AttackSpeed.Text = i.Attack_Speed.ToString();
                     lbl_FinalUnit_Range.Text = i.Range;
 
-                    if (i.Abilities == "none")
-                    {
-                        lbl_FinalUnit_Abilities.Text = "   - none" + Environment.NewLine + "   - none" + Environment.NewLine + "   - none";
-                    }
-                    else
-                    {
-                        string[] abilities = new string[3];
-                        abilities = i.Abilities.Split(' ');
-
-                        string[] ability1_TEXT = new string[2];
-                        if (abilities[0] == "none")
-                        {
-                            ability1_TEXT[0] = "";
-                            ability1_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability1_TEXT = abilities[0].Split('%');
-                            ability1_TEXT[0] = ability1_TEXT[0] + "% ";
-                        }
-
-                        string[] ability2_TEXT = new string[2];
-                        if (abilities[1] == "none")
-                        {
-                            ability2_TEXT[0] = "";
-                            ability2_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability2_TEXT = abilities[1].Split('%');
-                            ability2_TEXT[0] = ability2_TEXT[0] + "% ";
-                        }
-
-                        string[] ability3_TEXT = new string[2];
-                        if (abilities[2] == "none")
-                        {
-                            ability3_TEXT[0] = "";
-                            ability3_TEXT[1] = "none";
-                        }
-                        else
-                        {
-                            ability3_TEXT = abilities[2].Split('%');
-                            ability3_TEXT[0] = ability3_TEXT[0] + "% ";
-                        }
-
-                        lbl_FinalUnit_Abilities.Text = "   - " + ability1_TEXT[0] + ability1_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability2_TEXT[0] + ability2_TEXT[1] + Environment.NewLine +
-                                                  "   - " + ability3_TEXT[0] + ability3_TEXT[1] + Environment.NewLine;
-                    }
+                    lbl_FinalUnit_Abilities.Text = "Coming Soon!";
                 }
             }
         }

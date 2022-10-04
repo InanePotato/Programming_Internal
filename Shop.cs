@@ -126,15 +126,7 @@ namespace Programming_Internal
 
         private void BTN_Commander_Window_Click(object sender, EventArgs e)
         {
-            if (BTN_Commander_Window.Cursor == Cursors.Hand)
-            {
-                Reset_Open_Window_Buttons();
-
-                BTN_Commander_Window.Enabled = false;
-                BTN_Commander_Window.Cursor = Cursors.Default;
-                BTN_Commander_Window.BackColor = Color.FromArgb(84, 63, 55);
-                closeShopWindow(); // change to openshop window when the window accualy exists :)
-            }
+            
         }
 
         public void Reset_Open_Window_Buttons()
@@ -145,7 +137,7 @@ namespace Programming_Internal
 
             BTN_PurchaseUnit_Window.Cursor = Cursors.Hand;
             BTN_UpgradeUnit_Window.Cursor = Cursors.Hand;
-            BTN_Commander_Window.Cursor = Cursors.Hand;
+            BTN_Commander_Window.Cursor = Cursors.Default;
 
             BTN_PurchaseUnit_Window.Enabled = true;
             BTN_UpgradeUnit_Window.Enabled = true;
