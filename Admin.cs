@@ -36,14 +36,7 @@ namespace Programming_Internal
         private void Admin_Load(object sender, EventArgs e)
         {
             GlobalVariables.AdminSnap = true;
-
-            //BTN_Home.BackColor = Color.FromArgb(46, 51, 73);
-            //BTN_Home.Cursor = Cursors.Default;
-            //openChildAdminForm(new Admin_Home(GlobalVariables.AdminSnap));
-
-            //BTN_LiveVariables.BackColor = Color.FromArgb(24, 30, 54);
-            //BTN_UnitSettings.BackColor = Color.FromArgb(24, 30, 54);
-            //BTN_Users.BackColor = Color.FromArgb(24, 30, 54);
+            GlobalVariables.CloseAdmin = false;
         }
 
         private void BTN_Home_Click(object sender, EventArgs e)
@@ -122,6 +115,11 @@ namespace Programming_Internal
                 BTN_Home.Cursor = Cursors.Hand;
                 BTN_LiveVariables.Cursor = Cursors.Hand;
                 BTN_UnitSettings.Cursor = Cursors.Hand;
+
+                openChildAdminForm(new Admin_Saves(GlobalVariables.AdminSnap));
+                GlobalVariables.SnappedAdminWindowOpen = "saves";
+
+                lbl_Title.Text = "Saves";
             }
         }
 

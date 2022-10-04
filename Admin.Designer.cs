@@ -111,7 +111,7 @@
             this.BTN_Users.Name = "BTN_Users";
             this.BTN_Users.Size = new System.Drawing.Size(186, 42);
             this.BTN_Users.TabIndex = 5;
-            this.BTN_Users.Text = "Users";
+            this.BTN_Users.Text = "Saves";
             this.BTN_Users.UseVisualStyleBackColor = true;
             this.BTN_Users.Click += new System.EventHandler(this.BTN_Users_Click);
             // 
