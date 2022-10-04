@@ -27,6 +27,7 @@ namespace Programming_Internal
         public bool Boss;
         public int AttackCounter = 0;
         public int AttackWaitTicks;
+        public string ProjectileType;
         public Random rnd = new Random();
 
         public Enemy_Unit(int X, int Y, string Name, int Multiplier, int minX)
@@ -55,7 +56,12 @@ namespace Programming_Internal
                     Damage = i.Damage * Multiplier;
                     Attack_Speed = i.Attack_Speed;
 
-                    if (i.Range == "yes") { Range = true; }
+                    if (i.Range == "yes")
+                    {
+                        Range = true;
+                        if (i.Name == "finalboss") { ProjectileType = "lemon"; }
+                        else { ProjectileType = "lemonade_ball"; }
+                    }
                     else { Range = false; }
                 }
             }
@@ -153,7 +159,10 @@ namespace Programming_Internal
 
                         if (Range == true)
                         {
-
+                            if (move == false)
+                            {
+                                GlobalVariables.EProjectiles.Add(new EProjectile(x, Min_X, y + (height / 2), ProjectileType, Damage, UnitTarget));
+                            }
                         }
                         else
                         {

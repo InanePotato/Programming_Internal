@@ -17,6 +17,7 @@ namespace Programming_Internal
         string UnitSeting_FilePath = Application.StartupPath + @"\Application_Resources\Unit_Settings.txt";
         string EUnitSeting_FilePath = Application.StartupPath + @"\Application_Resources\EUnit_Settings.txt";
         string LevelSeting_FilePath = Application.StartupPath + @"\Application_Resources\Level_Settings.txt";
+        string Saves_FilePath = Application.StartupPath + @"\Application_Resources\Saves.txt";
 
         public Game()
         {
@@ -133,15 +134,7 @@ namespace Programming_Internal
             //
             // ---------  TEMP  ------------
             //
-            GlobalVariables.Level = 1;
-            GlobalVariables.Coins = 0;
-
-            GlobalVariables.AdminAccount = true;
-
-            GlobalVariables.BasicUnit_Count = 5;
-            GlobalVariables.BasicUnitUnlocked = true;
-            GlobalVariables.UnitUpgrades_Basic = 0;
-            GlobalVariables.SlotContents[0] = "basic";
+                GlobalVariables.AdminAccount = true;
             //
             // ------------------------------
             //
@@ -281,6 +274,37 @@ namespace Programming_Internal
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
+            foreach (Get_Save_Info save in GlobalVariables.SaveInfo)
+            {
+                if (save.Name == GlobalVariables.CurrentSaveName)
+                {
+                    save.Coins = GlobalVariables.Coins;
+                    save.Levels_Unlocked = GlobalVariables.LevelsUnlocked;
+                    save.Slot1_Contents = GlobalVariables.SlotContents[0];
+                    save.Slot2_Contents = GlobalVariables.SlotContents[1];
+                    save.Slot3_Contents = GlobalVariables.SlotContents[2];
+                    save.Slot4_Contents = GlobalVariables.SlotContents[3];
+                    save.Slot5_Contents = GlobalVariables.SlotContents[4];
+                    save.Basic_Unlocked = GlobalVariables.BasicUnitUnlocked;
+                    save.Basic_Count = GlobalVariables.BasicUnit_Count;
+                    save.Basic_Level = GlobalVariables.UnitUpgrades_Basic;
+                    save.Range_Unlocked = GlobalVariables.RangeUnitUnlocked;
+                    save.Range_Count = GlobalVariables.RangeUnit_Count;
+                    save.Range_Level = GlobalVariables.UnitUpgrades_Range;
+                    save.Magic_Unlocked = GlobalVariables.MagicUnitUnlocked;
+                    save.Magic_Count = GlobalVariables.MagicUnit_Count;
+                    save.Magic_Level = GlobalVariables.UnitUpgrades_Magic;
+                    save.Gun_Unlocked = GlobalVariables.GunUnitUnlocked;
+                    save.Gun_Count = GlobalVariables.GunUnit_Count;
+                    save.Gun_Level = GlobalVariables.UnitUpgrades_Gun;
+                    save.Giant_Unlocked = GlobalVariables.GiantUnitUnlocked;
+                    save.Giant_Count = GlobalVariables.GiantUnit_Count;
+                    save.Giant_Level = GlobalVariables.UnitUpgrades_Giant;
+                }
+            }
+
+            GlobalVariables.CurrentSaveName = null;
+
             GlobalVariables.frmHome.Show();
         }
 

@@ -28,6 +28,7 @@ namespace Programming_Internal
         private static int v_GunUnit_Count;
         private static int v_GiantUnit_Count;
         private static int v_Level;
+        private static int v_LevelsUnlocked;
 
         private static bool v_Paused;
         private static bool v_BasicUnitUnlocked;
@@ -41,6 +42,7 @@ namespace Programming_Internal
         private static bool v_AdminAccount;
         private static bool v_SlotChange;
 
+        private static string v_CurrentSaveName;
         private static string v_ChildOpen;
         private static string v_ChildToOpen;
         private static string v_SnappedAdminWindowOpen;
@@ -66,6 +68,8 @@ namespace Programming_Internal
         private static List<Get_Level_Info> v_Level_Info = new List<Get_Level_Info>();
         private static List<Boom> v_Boom = new List<Boom>();
         private static List<Projectile> v_Projectiles = new List<Projectile>();
+        private static List<EProjectile> v_EProjectiles = new List<EProjectile>();
+        private static List<Get_Save_Info> v_SaveInfo = new List<Get_Save_Info>();
 
         private static Form v_frmHome;
 
@@ -159,6 +163,11 @@ namespace Programming_Internal
             get { return v_Level; }
             set { v_Level = value; }
         }
+        public static int LevelsUnlocked
+        {
+            get { return v_LevelsUnlocked; }
+            set { v_LevelsUnlocked = value; }
+        }
 
         public static bool Paused
         {
@@ -216,6 +225,11 @@ namespace Programming_Internal
             set { v_SlotChange = value; }
         }
 
+        public static string CurrentSaveName
+        {
+            get { return v_CurrentSaveName; }
+            set { v_CurrentSaveName = value; }
+        }
         public static string ChildOpen
         {
             get { return v_ChildOpen; }
@@ -332,6 +346,16 @@ namespace Programming_Internal
         {
             get { return v_Projectiles; }
             set { v_Projectiles = value; }
+        }
+        public static List<EProjectile> EProjectiles
+        {
+            get { return v_EProjectiles; }
+            set { v_EProjectiles = value; }
+        }
+        public static List<Get_Save_Info> SaveInfo
+        {
+            get { return v_SaveInfo; }
+            set { v_SaveInfo = value; }
         }
 
         public static Form frmHome

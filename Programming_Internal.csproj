@@ -84,6 +84,9 @@
       <DependentUpon>Battleground.cs</DependentUpon>
     </Compile>
     <Compile Include="Boom.cs" />
+    <Compile Include="CircleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -91,6 +94,7 @@
       <DependentUpon>DragControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Enemy_Unit.cs" />
+    <Compile Include="EProjectile.cs" />
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +104,7 @@
     <Compile Include="Get_EUnit_Info.cs" />
     <Compile Include="Get_Level_Info.cs" />
     <Compile Include="Get_LiveVars.cs" />
+    <Compile Include="Get_Save_Info.cs" />
     <Compile Include="Get_Unit_Info.cs" />
     <Compile Include="GlobalVariables.cs" />
     <Compile Include="Home.cs">
@@ -411,6 +416,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TitleImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lemonade_ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lemon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteIcon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyIcon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpIcon3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

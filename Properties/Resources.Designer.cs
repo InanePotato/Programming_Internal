@@ -203,6 +203,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DeleteIcon {
+            get {
+                object obj = ResourceManager.GetObject("DeleteIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Duck {
             get {
                 object obj = ResourceManager.GetObject("Duck", resourceCulture);
@@ -393,6 +403,36 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HelpIcon {
+            get {
+                object obj = ResourceManager.GetObject("HelpIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KeyIcon {
+            get {
+                object obj = ResourceManager.GetObject("KeyIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lemon {
+            get {
+                object obj = ResourceManager.GetObject("lemon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lemon_Big {
             get {
                 object obj = ResourceManager.GetObject("Lemon_Big", resourceCulture);
@@ -426,6 +466,16 @@ namespace Programming_Internal.Properties {
         internal static System.Drawing.Bitmap Lemon_Small {
             get {
                 object obj = ResourceManager.GetObject("Lemon_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lemonade_ball {
+            get {
+                object obj = ResourceManager.GetObject("lemonade_ball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

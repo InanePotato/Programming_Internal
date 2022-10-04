@@ -139,9 +139,6 @@
   <data name="Shop_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shop Panel Background1 (top gap).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoadScreenImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoadScreenImage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Duck_Axe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - Axe (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,14 +154,8 @@
   <data name="Unit_Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unit_Settings.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="Sign_Blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sign - Blank (128x128).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Duck_King2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - King 2 (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Coin_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coin (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lemon_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lemon - Small (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,38 +163,50 @@
   <data name="Rage_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rage_Icon (42x42).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Attack_Speed_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Attack_Speed_Icon (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lemonade_ball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lemonade_ball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Duck_Tall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - Tall (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Health_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heart2 (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Battleground_Background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Battleground_Background2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuBlack (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Explosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Explostion (56x48).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KeyIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KeyIcon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AC_SlotBackground_Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AC_SlotBackground2_Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Duck_Sniper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Duck - Sniper (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Shop_Exit_Button_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit Button (35x35).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Duck_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Sword (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Duck_Agent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - Agent (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Boss1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss1 (128x128).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sign_Blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign - Blank (128x128).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Attack_Speed_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Attack_Speed_Icon (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Shop_Exit_Button_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit Button (35x35).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Duck_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Duck - Sword (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lemon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lemon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Duck_Gunner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - Gunner (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +217,8 @@
   <data name="Duck_Stacked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - Sacked (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Duck_Sorcerer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Duck - Sorcerer (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TitleImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TitleImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MapSign" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MapSign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,14 +229,17 @@
   <data name="fire_ball" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire_ball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Menu_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuBlack (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Boss1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss1 (128x128).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lemon_Big" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lemon - Big (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AC_SlotBckground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AC_SlotBckground2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Duck_Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Wizard (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bullet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,8 +250,8 @@
   <data name="Lemon_Glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lemonade - Glass (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Duck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Duck - Icon (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Duck_Sniper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Sniper (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Duck_Buff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duck - Buff (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,16 +259,25 @@
   <data name="Lemon_Bottle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lemonade - Bottle (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Duck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Icon (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Duck_Sorcerer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Duck - Sorcerer (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Battleground_Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Battleground_Background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Health_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Heart2 (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoadScreenImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadScreenImage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Duck_Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Duck - Wizard (Enlarged x4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DeleteIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteIcon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TitleImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TitleImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Coin_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coin (32x32).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelpIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpIcon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

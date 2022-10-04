@@ -113,6 +113,14 @@ namespace Programming_Internal
                     GlobalVariables.Projectiles[i].MoveAndDraw(e.Graphics);
                 }
             }
+
+            if (GlobalVariables.EProjectiles.Count != 0)
+            {
+                for (int i = 0; i <= GlobalVariables.EProjectiles.Count - 1; i++)
+                {
+                    GlobalVariables.EProjectiles[i].MoveAndDraw(e.Graphics);
+                }
+            }
         }
 
         private void TMR_Attack_Tick(object sender, EventArgs e)

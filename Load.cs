@@ -22,6 +22,8 @@ namespace Programming_Internal
         string filepath3 = Application.StartupPath + @"\Application_Resources\Level_Settings.txt";
         List<Get_Level_Info> Origonal_Level_Info = new List<Get_Level_Info>();
 
+        string filepath4 = Application.StartupPath + @"\Application_Resources\Saves.txt";
+
         string LoadText_Prefix = "Loading";
         string LoadText_Suffix = ".";
         int WaitTick = 5;
@@ -133,6 +135,11 @@ namespace Programming_Internal
                     builder3.Append(string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}{10}", i.Level, i.AllowSmall, i.SmallRange, i.AllowBig, i.BigRange, i.AllowGlass, i.GlassRange, i.AllowBottle, i.BottleRange, i.Boss, Environment.NewLine));
                 }
                 File.WriteAllText(filepath3, builder3.ToString());
+            }
+
+            if (!File.Exists(filepath4))
+            {
+                File.Create(filepath4);
             }
         }
         private void TMR_LoadProgress_Tick(object sender, EventArgs e)

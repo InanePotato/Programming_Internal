@@ -42,11 +42,11 @@ namespace Programming_Internal
             int count = 0;
             foreach (string slot in GlobalVariables.SlotContents)
             {
-                if (slot == "basic" && GlobalVariables.BasicUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
-                else if (slot == "range" && GlobalVariables.RangeUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
-                else if (slot == "magic" && GlobalVariables.MagicUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
-                else if (slot == "gun" && GlobalVariables.GunUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
-                else if (slot == "giant" && GlobalVariables.GiantUnit_Count == 0) { GlobalVariables.SlotContents[count] = ""; }
+                if (slot == "basic" && GlobalVariables.BasicUnit_Count <= 0) { GlobalVariables.SlotContents[count] = ""; GlobalVariables.BasicUnit_Count = 0; }
+                else if (slot == "range" && GlobalVariables.RangeUnit_Count <= 0) { GlobalVariables.SlotContents[count] = ""; GlobalVariables.RangeUnit_Count = 0; }
+                else if (slot == "magic" && GlobalVariables.MagicUnit_Count <= 0) { GlobalVariables.SlotContents[count] = ""; GlobalVariables.MagicUnit_Count = 0; }
+                else if (slot == "gun" && GlobalVariables.GunUnit_Count <= 0) { GlobalVariables.SlotContents[count] = ""; GlobalVariables.GunUnit_Count = 0; }
+                else if (slot == "giant" && GlobalVariables.GiantUnit_Count <= 0) { GlobalVariables.SlotContents[count] = ""; GlobalVariables.GiantUnit_Count = 0; }
                 count++;
             }
 
