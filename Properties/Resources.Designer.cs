@@ -173,6 +173,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boss3 {
+            get {
+                object obj = ResourceManager.GetObject("Boss3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bullet {
             get {
                 object obj = ResourceManager.GetObject("bullet", resourceCulture);
@@ -233,6 +243,16 @@ namespace Programming_Internal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Duck_Archer {
+            get {
+                object obj = ResourceManager.GetObject("Duck_Archer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Duck_Axe {
             get {
                 object obj = ResourceManager.GetObject("Duck_Axe", resourceCulture);
@@ -246,6 +266,26 @@ namespace Programming_Internal.Properties {
         internal static System.Drawing.Bitmap Duck_Buff {
             get {
                 object obj = ResourceManager.GetObject("Duck_Buff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Duck_Canon {
+            get {
+                object obj = ResourceManager.GetObject("Duck_Canon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Duck_Catapult {
+            get {
+                object obj = ResourceManager.GetObject("Duck_Catapult", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

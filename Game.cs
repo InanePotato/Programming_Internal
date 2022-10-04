@@ -81,14 +81,14 @@ namespace Programming_Internal
             GlobalVariables.Basic_Ducks_FR[2] = Properties.Resources.Duck_Axe;
             GlobalVariables.Basic_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
-            GlobalVariables.Range_Ducks[0] = Properties.Resources.Blank;
-            GlobalVariables.Range_Ducks[1] = Properties.Resources.Blank;
-            GlobalVariables.Range_Ducks[2] = Properties.Resources.Blank;
-            GlobalVariables.Range_Ducks_FR[0] = Properties.Resources.Blank;
+            GlobalVariables.Range_Ducks[0] = Properties.Resources.Duck_Archer;
+            GlobalVariables.Range_Ducks[1] = Properties.Resources.Duck_Catapult;
+            GlobalVariables.Range_Ducks[2] = Properties.Resources.Duck_Canon;
+            GlobalVariables.Range_Ducks_FR[0] = Properties.Resources.Duck_Archer;
             GlobalVariables.Range_Ducks_FR[0].RotateFlip(RotateFlipType.RotateNoneFlipX);
-            GlobalVariables.Range_Ducks_FR[1] = Properties.Resources.Blank;
+            GlobalVariables.Range_Ducks_FR[1] = Properties.Resources.Duck_Catapult;
             GlobalVariables.Range_Ducks_FR[1].RotateFlip(RotateFlipType.RotateNoneFlipX);
-            GlobalVariables.Range_Ducks_FR[2] = Properties.Resources.Blank;
+            GlobalVariables.Range_Ducks_FR[2] = Properties.Resources.Duck_Canon;
             GlobalVariables.Range_Ducks_FR[2].RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             GlobalVariables.Magic_Ducks[0] = Properties.Resources.Duck_Magician;
@@ -128,7 +128,7 @@ namespace Programming_Internal
 
             GlobalVariables.BossPics[0] = Properties.Resources.Boss1;
             GlobalVariables.BossPics[1] = Properties.Resources.Boss2;
-            GlobalVariables.BossPics[2] = Properties.Resources.Blank;
+            GlobalVariables.BossPics[2] = Properties.Resources.Boss3;
             GlobalVariables.BossPics[3] = Properties.Resources.Boss_Final;
 
             GlobalVariables.ChildOpen = "army_camp";
