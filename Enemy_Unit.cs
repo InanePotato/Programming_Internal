@@ -128,15 +128,17 @@ namespace Programming_Internal
 
             if (Health <= 0)
             {
-                if (Unit_Name == "big") { GlobalVariables.Coins = GlobalVariables.Coins + 10; }
-                else if (Unit_Name == "glass") { GlobalVariables.Coins = GlobalVariables.Coins + 20; }
-                else if (Unit_Name == "bottle") { GlobalVariables.Coins = GlobalVariables.Coins + 40; }
-                else if (Unit_Name == "boss1") { GlobalVariables.Coins = GlobalVariables.Coins + 80; }
-                else if (Unit_Name == "boss2") { GlobalVariables.Coins = GlobalVariables.Coins + 110; }
-                else if (Unit_Name == "boss3") { GlobalVariables.Coins = GlobalVariables.Coins + 150; }
-                else if (Unit_Name == "finalboss") { GlobalVariables.Coins = GlobalVariables.Coins + 200; }
-                else { GlobalVariables.Coins = GlobalVariables.Coins + 5; }
-                
+                if (Unit_Name == "big") { GlobalVariables.Coins = GlobalVariables.Coins + 10; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 10; }
+                else if (Unit_Name == "glass") { GlobalVariables.Coins = GlobalVariables.Coins + 20; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 20; }
+                else if (Unit_Name == "bottle") { GlobalVariables.Coins = GlobalVariables.Coins + 40; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 40; }
+                else if (Unit_Name == "boss1") { GlobalVariables.Coins = GlobalVariables.Coins + 80; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 80; }
+                else if (Unit_Name == "boss2") { GlobalVariables.Coins = GlobalVariables.Coins + 110; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 110; }
+                else if (Unit_Name == "boss3") { GlobalVariables.Coins = GlobalVariables.Coins + 150; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 150; }
+                else if (Unit_Name == "finalboss") { GlobalVariables.Coins = GlobalVariables.Coins + 200; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 200; }
+                else { GlobalVariables.Coins = GlobalVariables.Coins + 5; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 5; }
+
+                GlobalVariables.BattleEnemyCasualties = GlobalVariables.BattleEnemyCasualties + 1;
+
                 Console.WriteLine(Unit_Name + " has died. Remaining EUnits: " + GlobalVariables.Enemy_Units.Count);
                 Enemy_Unit_Destroy();
             }

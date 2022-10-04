@@ -14,6 +14,7 @@ namespace Programming_Internal
     public partial class Battleground : Form
     {
         Level LevelControl;
+        bool BattleOver = false;
 
         public Battleground()
         {
@@ -28,6 +29,10 @@ namespace Programming_Internal
             //------------------------------------------------------------//
             //------------------------ Prep level ------------------------//
             //------------------------------------------------------------//
+
+            GlobalVariables.BattleCoinsEarned = 0;
+            GlobalVariables.BattleEnemyCasualties = 0;
+            GlobalVariables.BattlePlayerCasualties = 0;
 
             GlobalVariables.Projectiles.Clear();
             GlobalVariables.Boom.Clear();
@@ -68,7 +73,7 @@ namespace Programming_Internal
 
         private void TMR_Controls_Tick(object sender, EventArgs e)
         {
-            if (GlobalVariables.Paused == true) { TMR_Battle.Enabled = false; TMR_Attack.Enabled = false; }
+            if (GlobalVariables.Paused == true || BattleOver == true) { TMR_Battle.Enabled = false; TMR_Attack.Enabled = false; }
             else { TMR_Battle.Enabled = true; TMR_Attack.Enabled = true; }
         }
 
@@ -127,11 +132,29 @@ namespace Programming_Internal
         {
             if (GlobalVariables.Enemy_Units.Count() == 0)
             {
-                GlobalVariables.ChildToOpen = "army_camp";
+                BattleOver = true;
+                PNL_BattleResults.Location = new Point((this.Width - PNL_BattleResults.Width) / 2, (this.Height - PNL_BattleResults.Height) / 2);
+                PNL_BattleResults.Show();
+                LBL_Title.Text = "Victory!!";
+                LBL_BattleResults.Text = "Casualties: " + GlobalVariables.BattlePlayerCasualties.ToString()
+                    + Environment.NewLine + "Enemies Killed: " + GlobalVariables.BattleEnemyCasualties.ToString()
+                    + Environment.NewLine + "Coins Earned: " + GlobalVariables.BattleCoinsEarned.ToString();
+                GlobalVariables.BattleCoinsEarned = 0;
+                GlobalVariables.BattleEnemyCasualties = 0;
+                GlobalVariables.BattlePlayerCasualties = 0;
             }
             else if (GlobalVariables.Units.Count() == 0)
             {
-                GlobalVariables.ChildToOpen = "army_camp";
+                BattleOver = true;
+                PNL_BattleResults.Location = new Point((this.Width - PNL_BattleResults.Width) / 2, (this.Height - PNL_BattleResults.Height) / 2);
+                PNL_BattleResults.Show();
+                LBL_Title.Text = "Defeat!!";
+                LBL_BattleResults.Text = "Casualties: " + GlobalVariables.BattlePlayerCasualties.ToString()
+                    + Environment.NewLine + "Enemies Killed: " + GlobalVariables.BattleEnemyCasualties.ToString()
+                    + Environment.NewLine + "Coins Earned: " + GlobalVariables.BattleCoinsEarned.ToString();
+                GlobalVariables.BattleCoinsEarned = 0;
+                GlobalVariables.BattleEnemyCasualties = 0;
+                GlobalVariables.BattlePlayerCasualties = 0;
             }
             else
             {
@@ -145,6 +168,11 @@ namespace Programming_Internal
                     Eunit.Attack_Unit();
                 }
             }
+        }
+
+        private void BTN_BackToAC_Click(object sender, EventArgs e)
+        {
+            GlobalVariables.ChildToOpen = "army_camp";
         }
     }
 }

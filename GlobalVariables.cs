@@ -29,6 +29,9 @@ namespace Programming_Internal
         private static int v_GiantUnit_Count;
         private static int v_Level;
         private static int v_LevelsUnlocked;
+        private static int v_BattlePlayerCasualties;
+        private static int v_BattleEnemyCasualties;
+        private static int v_BattleCoinsEarned;
 
         private static bool v_Paused;
         private static bool v_BasicUnitUnlocked;
@@ -167,6 +170,21 @@ namespace Programming_Internal
         {
             get { return v_LevelsUnlocked; }
             set { v_LevelsUnlocked = value; }
+        }
+        public static int BattlePlayerCasualties
+        {
+            get { return v_BattlePlayerCasualties; }
+            set { v_BattlePlayerCasualties = value; }
+        }
+        public static int BattleEnemyCasualties
+        {
+            get { return v_BattleEnemyCasualties; }
+            set { v_BattleEnemyCasualties = value; }
+        }
+        public static int BattleCoinsEarned
+        {
+            get { return v_BattleCoinsEarned; }
+            set { v_BattleCoinsEarned = value; }
         }
 
         public static bool Paused

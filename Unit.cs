@@ -167,6 +167,8 @@ namespace Programming_Internal
                     if (Unit_Type == "giant") { GlobalVariables.GiantUnit_Count--; }
                 }
 
+                GlobalVariables.BattlePlayerCasualties = GlobalVariables.BattlePlayerCasualties + 1;
+
                 Console.WriteLine(Unit_Name + " has died. Remaining Units: " + GlobalVariables.Units.Count);
                 Unit_Destroy();
             }
