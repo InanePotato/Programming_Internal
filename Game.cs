@@ -274,6 +274,8 @@ namespace Programming_Internal
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
+            closeChildForm();
+
             foreach (Get_Save_Info save in GlobalVariables.SaveInfo)
             {
                 if (save.Name == GlobalVariables.CurrentSaveName)

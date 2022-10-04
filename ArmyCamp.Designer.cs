@@ -275,6 +275,7 @@
             this.Name = "ArmyCamp";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ArmyCamp_FormClosing);
             this.Load += new System.EventHandler(this.ArmyCamp_Load);
             this.PNL_ArmyCamp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_MapButton)).EndInit();

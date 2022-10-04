@@ -28,7 +28,7 @@ namespace Programming_Internal
         Image Slot2Image;
         Image Slot3Image;
         Image Slot4Image;
-
+        Form frmSelectUnit;
 
         public ArmyCamp()
         {
@@ -468,7 +468,10 @@ namespace Programming_Internal
         {
             if (PNL_Slot0.Cursor == Cursors.Hand)
             {
-                new Select_Unit(0).Show();
+                if (frmSelectUnit != null) { frmSelectUnit.Close(); }
+
+                frmSelectUnit = new Select_Unit(0);
+                frmSelectUnit.Show();
             }
         }
 
@@ -476,7 +479,10 @@ namespace Programming_Internal
         {
             if (PNL_Slot1.Cursor == Cursors.Hand)
             {
-                new Select_Unit(1).Show();
+                if (frmSelectUnit != null) { frmSelectUnit.Close(); }
+
+                frmSelectUnit = new Select_Unit(1);
+                frmSelectUnit.Show();
             }
         }
 
@@ -484,7 +490,10 @@ namespace Programming_Internal
         {
             if (PNL_Slot2.Cursor == Cursors.Hand)
             {
-                new Select_Unit(2).Show();
+                if (frmSelectUnit != null) { frmSelectUnit.Close(); }
+
+                frmSelectUnit = new Select_Unit(2);
+                frmSelectUnit.Show();
             }
         }
 
@@ -492,7 +501,10 @@ namespace Programming_Internal
         {
             if (PNL_Slot3.Cursor == Cursors.Hand)
             {
-                new Select_Unit(3).Show();
+                if (frmSelectUnit != null) { frmSelectUnit.Close(); }
+
+                frmSelectUnit = new Select_Unit(3);
+                frmSelectUnit.Show();
             }
         }
 
@@ -500,7 +512,10 @@ namespace Programming_Internal
         {
             if (PNL_Slot4.Cursor == Cursors.Hand)
             {
-                new Select_Unit(4).Show();
+                if (frmSelectUnit != null) { frmSelectUnit.Close(); }
+
+                frmSelectUnit = new Select_Unit(4);
+                frmSelectUnit.Show();
             }
         }
 
@@ -523,6 +538,11 @@ namespace Programming_Internal
         {
             PIC_MapButton.Size = new Size(128, 128);
             PIC_MapButton.Location = new Point(338, 103);
+        }
+
+        private void ArmyCamp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (frmSelectUnit != null) { frmSelectUnit.Close(); }
         }
     }
 }
