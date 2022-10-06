@@ -159,11 +159,11 @@ namespace Programming_Internal
 
             if (GlobalVariables.ChildOpen == "battleground")
             {
-
+                openChildForm(new Battleground());
             }
             else if (GlobalVariables.ChildOpen == "map")
             {
-
+                openChildForm(new Map());
             }
             else if (GlobalVariables.ChildOpen == "shop")
             {
