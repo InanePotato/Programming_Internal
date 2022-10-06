@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PNL_LevelDisplay = new System.Windows.Forms.Panel();
+            this.BTN_Fight = new System.Windows.Forms.Button();
             this.BTN_Back = new System.Windows.Forms.Button();
             this.BTN_Level20 = new System.Windows.Forms.Button();
             this.BTN_Level19 = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.BTN_Level3 = new System.Windows.Forms.Button();
             this.BTN_Level2 = new System.Windows.Forms.Button();
             this.BTN_Level1 = new System.Windows.Forms.Button();
-            this.BTN_Fight = new System.Windows.Forms.Button();
             this.PNL_LevelDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,9 +86,25 @@
             this.PNL_LevelDisplay.Size = new System.Drawing.Size(525, 525);
             this.PNL_LevelDisplay.TabIndex = 0;
             // 
+            // BTN_Fight
+            // 
+            this.BTN_Fight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BTN_Fight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Fight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Fight.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Fight.ForeColor = System.Drawing.SystemColors.Control;
+            this.BTN_Fight.Location = new System.Drawing.Point(272, 428);
+            this.BTN_Fight.Name = "BTN_Fight";
+            this.BTN_Fight.Size = new System.Drawing.Size(225, 75);
+            this.BTN_Fight.TabIndex = 29;
+            this.BTN_Fight.Text = "Fight";
+            this.BTN_Fight.UseVisualStyleBackColor = false;
+            this.BTN_Fight.Click += new System.EventHandler(this.BTN_Fight_Click);
+            // 
             // BTN_Back
             // 
             this.BTN_Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BTN_Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Back.ForeColor = System.Drawing.SystemColors.Control;
@@ -379,20 +395,6 @@
             this.BTN_Level1.Text = "1";
             this.BTN_Level1.UseVisualStyleBackColor = false;
             this.BTN_Level1.Click += new System.EventHandler(this.BTN_Level1_Click);
-            // 
-            // BTN_Fight
-            // 
-            this.BTN_Fight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BTN_Fight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Fight.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Fight.ForeColor = System.Drawing.SystemColors.Control;
-            this.BTN_Fight.Location = new System.Drawing.Point(272, 428);
-            this.BTN_Fight.Name = "BTN_Fight";
-            this.BTN_Fight.Size = new System.Drawing.Size(225, 75);
-            this.BTN_Fight.TabIndex = 29;
-            this.BTN_Fight.Text = "Fight";
-            this.BTN_Fight.UseVisualStyleBackColor = false;
-            this.BTN_Fight.Click += new System.EventHandler(this.BTN_Fight_Click);
             // 
             // Map
             // 

@@ -68,6 +68,7 @@
             // BTN_BackToAC
             // 
             this.BTN_BackToAC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BTN_BackToAC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_BackToAC.FlatAppearance.BorderSize = 0;
             this.BTN_BackToAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_BackToAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

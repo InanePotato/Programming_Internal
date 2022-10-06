@@ -132,6 +132,11 @@ namespace Programming_Internal
         {
             if (GlobalVariables.Enemy_Units.Count() == 0)
             {
+                if (GlobalVariables.LevelsUnlocked == GlobalVariables.Level)
+                {
+                    GlobalVariables.LevelsUnlocked++;
+                }
+
                 BattleOver = true;
                 PNL_BattleResults.Location = new Point((this.Width - PNL_BattleResults.Width) / 2, (this.Height - PNL_BattleResults.Height) / 2);
                 PNL_BattleResults.Show();
