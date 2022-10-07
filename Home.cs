@@ -280,7 +280,7 @@ namespace Programming_Internal
         {
             SetupSelectSave();
 
-            GlobalVariables.SaveInfo.Add(new Get_Save_Info(TXT_CreateSaveName.Text, 100, 1, "basic", "", "", "", "", true, 5, 0, false, 0, 0, false, 0, 0, false, 0, 0, false, 0, 0));
+            GlobalVariables.SaveInfo.Add(new Get_Save_Info(TXT_CreateSaveName.Text, 100, 1, "basic", "range", "", "", "", true, 5, 0, true, 2, 0, false, 0, 0, false, 0, 0, false, 0, 0));
 
             TXT_CreateSaveName.Text = "";
 
