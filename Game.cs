@@ -403,7 +403,8 @@ namespace Programming_Internal
                 + Environment.NewLine + Environment.NewLine + "How to play:" + Environment.NewLine +
                 "The game is mostly self-explanatory, you can build your army and order your troops by clicking the plusses in each troop slot in your army camp. " +
                 "If you wish to purchase more units or upgrade your current ones, you can click onto the shop sign in your army camp. " +
-                "To fight, just click on the map sign in your army camp, select a level, and you’re on your way to victory or certain death.", "Instructions",
+                "To fight, just click on the map sign in your army camp, select a level, and you’re on your way to victory or certain death." +
+                "Be carful when you fight and advancing through levels, if the troops die during battle, there is no bringing them back", "Instructions",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
