@@ -132,6 +132,7 @@
             this.Name = "Battleground";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Battleground_FormClosing);
             this.Load += new System.EventHandler(this.Battleground_Load);
             this.PNL_Battleground.ResumeLayout(false);
             this.PNL_BattleResults.ResumeLayout(false);
