@@ -18,9 +18,9 @@ namespace Programming_Internal
         //---------------------------------------------//
         bool showingSnap = false; // used to tell if the form is suposed to be 'snapped' and if it accualy is or not
 
-        //--------------------------------------------------------------//
-        // Declares variables used for rounding the corners of the form //
-        //--------------------------------------------------------------//
+        //------------------------------------------------------------------------//
+        // Declares / sets up variables used for rounding the corners of the form //
+        //------------------------------------------------------------------------//
         
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
