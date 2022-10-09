@@ -306,11 +306,13 @@ namespace Programming_Internal
             foreach (Unit unit in GlobalVariables.Units)
             {
                 unit.Unit_Destroy();
+                break;
             }
 
             foreach (Enemy_Unit unit in GlobalVariables.Enemy_Units)
             {
                 unit.Enemy_Unit_Destroy();
+                break;
             }
         }
     }
