@@ -29,6 +29,7 @@ namespace Programming_Internal
         public int AttackWaitTicks; // used to tell how long since the last attack
         public string ProjectileType; // used to know what type of projectiles the unit uses (if any)
         public Random rnd = new Random(); // used to produce random numbers (for the spawning of explosions)
+        public int multiplier; // used to tell how much units worth this rectangle is holding
 
         // when a new instance of the Enemy unit class is creates, it requires a: x point, y point, name, multiplier value, and min x point
         public Enemy_Unit(int X, int Y, string Name, int Multiplier, int minX)
@@ -41,6 +42,8 @@ namespace Programming_Internal
             Unit_Name = Name;
             // sets the minimum x value to the given min x
             Min_X = minX;
+            // sets the multiplier to the value given
+            multiplier = Multiplier;
 
             // by default the image is set to the global variable image array value 0 (the image of the small duck)
             Unit_Image = GlobalVariables.Enemy_Lemons[0];
@@ -166,14 +169,14 @@ namespace Programming_Internal
             {
                 // if so the unit is 'dead'
                 // finds out what unit it is, and awards the apropriate ammount of coins (also keeps track of this in the battle stat for coins earned)
-                if (Unit_Name == "big") { GlobalVariables.Coins = GlobalVariables.Coins + 10; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 10; }
-                else if (Unit_Name == "glass") { GlobalVariables.Coins = GlobalVariables.Coins + 20; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 20; }
-                else if (Unit_Name == "bottle") { GlobalVariables.Coins = GlobalVariables.Coins + 40; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 40; }
-                else if (Unit_Name == "boss1") { GlobalVariables.Coins = GlobalVariables.Coins + 80; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 80; }
-                else if (Unit_Name == "boss2") { GlobalVariables.Coins = GlobalVariables.Coins + 110; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 110; }
-                else if (Unit_Name == "boss3") { GlobalVariables.Coins = GlobalVariables.Coins + 150; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 150; }
-                else if (Unit_Name == "finalboss") { GlobalVariables.Coins = GlobalVariables.Coins + 200; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 200; }
-                else { GlobalVariables.Coins = GlobalVariables.Coins + 5; GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + 5; }
+                if (Unit_Name == "big") { GlobalVariables.Coins = GlobalVariables.Coins + (10 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (10 * multiplier); }
+                else if (Unit_Name == "glass") { GlobalVariables.Coins = GlobalVariables.Coins + (20 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (20 * multiplier); }
+                else if (Unit_Name == "bottle") { GlobalVariables.Coins = GlobalVariables.Coins + (40 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (40 * multiplier); }
+                else if (Unit_Name == "boss1") { GlobalVariables.Coins = GlobalVariables.Coins + (80 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (80 * multiplier); }
+                else if (Unit_Name == "boss2") { GlobalVariables.Coins = GlobalVariables.Coins + (110 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (110 * multiplier); }
+                else if (Unit_Name == "boss3") { GlobalVariables.Coins = GlobalVariables.Coins + (150 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (150 * multiplier); }
+                else if (Unit_Name == "finalboss") { GlobalVariables.Coins = GlobalVariables.Coins + (200 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (200 * multiplier); }
+                else { GlobalVariables.Coins = GlobalVariables.Coins + (5 * multiplier); GlobalVariables.BattleCoinsEarned = GlobalVariables.BattleCoinsEarned + (5 * multiplier); }
 
                 // adds this enemy 'death' the the battle stat for enemy casualties
                 GlobalVariables.BattleEnemyCasualties = GlobalVariables.BattleEnemyCasualties + 1;
