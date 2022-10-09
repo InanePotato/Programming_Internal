@@ -57,7 +57,7 @@
             // PNL_LevelDisplay
             // 
             this.PNL_LevelDisplay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PNL_LevelDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PNL_LevelDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.PNL_LevelDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PNL_LevelDisplay.Controls.Add(this.BTN_Fight);
             this.PNL_LevelDisplay.Controls.Add(this.BTN_Back);
