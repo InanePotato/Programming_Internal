@@ -196,6 +196,12 @@ namespace Programming_Internal
                 {
                     // if so, then unlocks the next level
                     GlobalVariables.LevelsUnlocked++;
+
+                    // award bonus coins for compleating level for the first time
+                    if (GlobalVariables.Level > 15) { GlobalVariables.Coins = GlobalVariables.Coins + (400); }
+                    if (GlobalVariables.Level > 10) { GlobalVariables.Coins = GlobalVariables.Coins + (300); }
+                    if (GlobalVariables.Level > 5) { GlobalVariables.Coins = GlobalVariables.Coins + (200); }
+                    else { GlobalVariables.Coins = GlobalVariables.Coins + (100); }
                 }
 
                 // sets the battle over bool to true
