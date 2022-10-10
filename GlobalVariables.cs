@@ -10,6 +10,10 @@ namespace Programming_Internal
 {
     internal class GlobalVariables
     {
+        //---------------------------------------------------------------------------------------//
+        // Creates/declares all the int, string, bool, image, list, and form variable and arrays //
+        //---------------------------------------------------------------------------------------//
+
         private static int v_UnitUpgrades_Basic;
         private static int v_UnitUpgrades_Range;
         private static int v_UnitUpgrades_Magic;
@@ -75,6 +79,11 @@ namespace Programming_Internal
         private static List<Get_Save_Info> v_SaveInfo = new List<Get_Save_Info>();
 
         private static Form v_frmHome;
+
+
+        //-----------------------------------------------------------------//
+        // sets properties so all the variables and arrays can be accessed //
+        //-----------------------------------------------------------------//
 
         public static int UnitUpgrades_Basic
         {

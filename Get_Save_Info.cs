@@ -8,6 +8,7 @@ namespace Programming_Internal
 {
     internal class Get_Save_Info
     {
+        //creates a Constructor with 23 overloads | name, coins, levels_unlocked, slot1_contents, slot2_contents, slot3_contents, slot4_contents, slot5_contents, basic_unocked, basic_count, basic_level, range_unlocked, range_count, range_level, magic_unlocked, magic_count, magic_level, gun_unlocked, gun_count, gun_level, giant_unlocked, giant_count, giant_level
         public Get_Save_Info(string name, int coins, int levels_unlocked, string slot1_contents, string slot2_contents, string slot3_contents, string slot4_contents, string slot5_contents, bool basic_unocked, int basic_count, int basic_level, bool range_unlocked, int range_count, int range_level, bool magic_unlocked, int magic_count, int magic_level, bool gun_unlocked, int gun_count, int gun_level, bool giant_unlocked, int giant_count, int giant_level)
         {
             Name = name;
@@ -35,6 +36,7 @@ namespace Programming_Internal
             Giant_Level = giant_level;
         }
 
+        //set properties so we can access the name, coins, levels_unlocked, slot1_contents, slot2_contents, slot3_contents, slot4_contents, slot5_contents, basic_unocked, basic_count, basic_level, range_unlocked, range_count, range_level, magic_unlocked, magic_count, magic_level, gun_unlocked, gun_count, gun_level, giant_unlocked, giant_count, and giant_level values
         public string Name { get; set; }
         public int Coins { get; set; }
         public int Levels_Unlocked { get; set; }

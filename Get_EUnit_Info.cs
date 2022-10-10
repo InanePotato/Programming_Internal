@@ -8,6 +8,7 @@ namespace Programming_Internal
 {
     internal class Get_EUnit_Info
     {
+        //creates a Constructor with 5 overloads | name, damage, health, attack_speed, range
         public Get_EUnit_Info(string name, int damage, int health, int attack_speed, string range)
         {
             Name = name;
@@ -17,7 +18,7 @@ namespace Programming_Internal
             Range = range;
         }
 
-        //set properties so we can access the name and score
+        //set properties so we can access the name, damage, health, attack speed, and range values
         public string Name { get; set; }
         public int Damage { get; set; }
         public int Health { get; set; }

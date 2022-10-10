@@ -89,7 +89,7 @@
             this.BTN_Save1.Name = "BTN_Save1";
             this.BTN_Save1.Size = new System.Drawing.Size(387, 50);
             this.BTN_Save1.TabIndex = 5;
-            this.BTN_Save1.Text = "[ New Save ]";
+            this.BTN_Save1.Text = "[ New Game ]";
             this.BTN_Save1.UseVisualStyleBackColor = false;
             this.BTN_Save1.Click += new System.EventHandler(this.BTN_Save1_Click);
             // 
@@ -105,7 +105,7 @@
             this.BTN_Save2.Name = "BTN_Save2";
             this.BTN_Save2.Size = new System.Drawing.Size(387, 50);
             this.BTN_Save2.TabIndex = 6;
-            this.BTN_Save2.Text = "[ New Save ]";
+            this.BTN_Save2.Text = "[ New Game ]";
             this.BTN_Save2.UseVisualStyleBackColor = false;
             this.BTN_Save2.Click += new System.EventHandler(this.BTN_Save2_Click);
             // 
@@ -121,7 +121,7 @@
             this.BTN_Save3.Name = "BTN_Save3";
             this.BTN_Save3.Size = new System.Drawing.Size(387, 50);
             this.BTN_Save3.TabIndex = 7;
-            this.BTN_Save3.Text = "[ New Save ]";
+            this.BTN_Save3.Text = "[ New Game ]";
             this.BTN_Save3.UseVisualStyleBackColor = false;
             this.BTN_Save3.Click += new System.EventHandler(this.BTN_Save3_Click);
             // 
@@ -137,7 +137,7 @@
             this.BTN_Save4.Name = "BTN_Save4";
             this.BTN_Save4.Size = new System.Drawing.Size(387, 50);
             this.BTN_Save4.TabIndex = 8;
-            this.BTN_Save4.Text = "[ New Save ]";
+            this.BTN_Save4.Text = "[ New Game ]";
             this.BTN_Save4.UseVisualStyleBackColor = false;
             this.BTN_Save4.Click += new System.EventHandler(this.BTN_Save4_Click);
             // 

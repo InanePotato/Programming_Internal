@@ -8,6 +8,7 @@ namespace Programming_Internal
 {
     internal class Get_Level_Info
     {
+        //creates a Constructor with 10 overloads | level, allowsmall, smallRange, allowbig, bigRange, allowGlass, glassRange, allowBottle, Bottlerange, boss
         public Get_Level_Info(int level, string allowSmall, string smallRange, string allowBig, string bigRange, string allowGlass, string glassRange, string allowBottle, string bottleRange, string boss)
         {
             Level = level;
@@ -22,6 +23,7 @@ namespace Programming_Internal
             Boss = boss;
         }
 
+        //set properties so we can access the level, allowsmall, smallRange, allowbig, bigRange, allowGlass, glassRange, allowBottle, Bottlerange, and boss values
         public int Level { get; set; }
         public string AllowSmall { get; set; }
         public string SmallRange { get; set; }
