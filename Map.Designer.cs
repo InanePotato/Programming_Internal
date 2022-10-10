@@ -51,7 +51,11 @@
             this.BTN_Level3 = new System.Windows.Forms.Button();
             this.BTN_Level2 = new System.Windows.Forms.Button();
             this.BTN_Level1 = new System.Windows.Forms.Button();
+            this.PNL_LevelOverview = new System.Windows.Forms.Panel();
+            this.LBL_Text = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.PNL_LevelDisplay.SuspendLayout();
+            this.PNL_LevelOverview.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_LevelDisplay
@@ -81,7 +85,7 @@
             this.PNL_LevelDisplay.Controls.Add(this.BTN_Level3);
             this.PNL_LevelDisplay.Controls.Add(this.BTN_Level2);
             this.PNL_LevelDisplay.Controls.Add(this.BTN_Level1);
-            this.PNL_LevelDisplay.Location = new System.Drawing.Point(145, 93);
+            this.PNL_LevelDisplay.Location = new System.Drawing.Point(50, 93);
             this.PNL_LevelDisplay.Name = "PNL_LevelDisplay";
             this.PNL_LevelDisplay.Size = new System.Drawing.Size(525, 525);
             this.PNL_LevelDisplay.TabIndex = 0;
@@ -396,17 +400,52 @@
             this.BTN_Level1.UseVisualStyleBackColor = false;
             this.BTN_Level1.Click += new System.EventHandler(this.BTN_Level1_Click);
             // 
+            // PNL_LevelOverview
+            // 
+            this.PNL_LevelOverview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PNL_LevelOverview.Controls.Add(this.LBL_Text);
+            this.PNL_LevelOverview.Controls.Add(this.label1);
+            this.PNL_LevelOverview.ForeColor = System.Drawing.SystemColors.Control;
+            this.PNL_LevelOverview.Location = new System.Drawing.Point(606, 93);
+            this.PNL_LevelOverview.Name = "PNL_LevelOverview";
+            this.PNL_LevelOverview.Size = new System.Drawing.Size(230, 525);
+            this.PNL_LevelOverview.TabIndex = 1;
+            // 
+            // LBL_Text
+            // 
+            this.LBL_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Text.Location = new System.Drawing.Point(18, 182);
+            this.LBL_Text.Name = "LBL_Text";
+            this.LBL_Text.Size = new System.Drawing.Size(193, 275);
+            this.LBL_Text.TabIndex = 1;
+            this.LBL_Text.Text = "No level selected.\r\n\r\nPlease select a level to fight.";
+            this.LBL_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 92);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Level\r\nOverview";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Programming_Internal.Properties.Resources.Battleground_Background2;
             this.ClientSize = new System.Drawing.Size(886, 714);
+            this.Controls.Add(this.PNL_LevelOverview);
             this.Controls.Add(this.PNL_LevelDisplay);
             this.Name = "Map";
             this.Text = "Map";
             this.Load += new System.EventHandler(this.Map_Load);
             this.PNL_LevelDisplay.ResumeLayout(false);
+            this.PNL_LevelOverview.ResumeLayout(false);
+            this.PNL_LevelOverview.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -436,5 +475,8 @@
         private System.Windows.Forms.Button BTN_Level8;
         private System.Windows.Forms.Button BTN_Level7;
         private System.Windows.Forms.Button BTN_Fight;
+        private System.Windows.Forms.Panel PNL_LevelOverview;
+        private System.Windows.Forms.Label LBL_Text;
+        private System.Windows.Forms.Label label1;
     }
 }

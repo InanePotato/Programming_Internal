@@ -19,7 +19,7 @@ namespace Programming_Internal
 
         private void Map_Load(object sender, EventArgs e)
         {
-            PNL_LevelDisplay.Location = new Point((this.Width - PNL_LevelDisplay.Width) / 2, (this.Height - PNL_LevelDisplay.Height) / 2);
+            PNL_LevelDisplay.Location = new Point(PNL_LevelDisplay.Location.X, (this.Height - PNL_LevelDisplay.Height) / 2);
             ResetButtonEnables();
         }
 
@@ -144,6 +144,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 1;
             BTN_Level1.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level1.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level2_Click(object sender, EventArgs e)
@@ -152,6 +153,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 2;
             BTN_Level2.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level2.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level3_Click(object sender, EventArgs e)
@@ -160,6 +162,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 3;
             BTN_Level3.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level3.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level4_Click(object sender, EventArgs e)
@@ -168,6 +171,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 4;
             BTN_Level4.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level4.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level5_Click(object sender, EventArgs e)
@@ -176,6 +180,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 5;
             BTN_Level5.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level5.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level6_Click(object sender, EventArgs e)
@@ -184,6 +189,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 6;
             BTN_Level6.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level6.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level7_Click(object sender, EventArgs e)
@@ -192,6 +198,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 7;
             BTN_Level7.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level7.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level8_Click(object sender, EventArgs e)
@@ -200,6 +207,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 8;
             BTN_Level8.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level8.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level9_Click(object sender, EventArgs e)
@@ -208,6 +216,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 9;
             BTN_Level9.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level9.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level10_Click(object sender, EventArgs e)
@@ -216,6 +225,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 10;
             BTN_Level10.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level10.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level11_Click(object sender, EventArgs e)
@@ -224,6 +234,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 11;
             BTN_Level11.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level11.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level12_Click(object sender, EventArgs e)
@@ -232,6 +243,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 12;
             BTN_Level12.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level12.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level13_Click(object sender, EventArgs e)
@@ -240,6 +252,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 13;
             BTN_Level13.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level13.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level14_Click(object sender, EventArgs e)
@@ -248,6 +261,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 14;
             BTN_Level14.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level14.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level15_Click(object sender, EventArgs e)
@@ -256,6 +270,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 15;
             BTN_Level15.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level15.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level16_Click(object sender, EventArgs e)
@@ -264,6 +279,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 16;
             BTN_Level16.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level16.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level17_Click(object sender, EventArgs e)
@@ -272,6 +288,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 17;
             BTN_Level17.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level17.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level18_Click(object sender, EventArgs e)
@@ -280,6 +297,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 18;
             BTN_Level18.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level18.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level19_Click(object sender, EventArgs e)
@@ -288,6 +306,7 @@ namespace Programming_Internal
             GlobalVariables.Level = 19;
             BTN_Level19.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level19.ForeColor = Color.White;
+            RefreshLevelOverview();
         }
 
         private void BTN_Level20_Click(object sender, EventArgs e)
@@ -296,6 +315,81 @@ namespace Programming_Internal
             GlobalVariables.Level = 20;
             BTN_Level20.BackColor = Color.FromArgb(150, 0, 0, 0);
             BTN_Level20.ForeColor = Color.White;
+            RefreshLevelOverview();
+        }
+
+        public void RefreshLevelOverview()
+        {
+            LBL_Text.Text = "No level selected." + Environment.NewLine + Environment.NewLine + "Please select a level to fight.";
+
+            if (GlobalVariables.Level != 0)
+            {
+                int Enemy_Strength = 0;
+                int Enemy_Health = 0;
+                string Boss = "none";
+
+                int[] SmallRange = new int[2];
+                int[] BigRange = new int[2];
+                int[] GlassRange = new int[2];
+                int[] BottleRange = new int[2];
+
+                foreach (Get_Level_Info i in GlobalVariables.Level_Info)
+                {
+                    if (i.Level == GlobalVariables.Level)
+                    {
+                        var Values1 = i.SmallRange.Split('-');
+                        SmallRange[0] = int.Parse(Values1[0]);
+                        SmallRange[1] = int.Parse(Values1[1]);
+
+                        var Values2 = i.BigRange.Split('-');
+                        BigRange[0] = int.Parse(Values2[0]);
+                        BigRange[1] = int.Parse(Values2[1]);
+
+                        var Values3 = i.GlassRange.Split('-');
+                        GlassRange[0] = int.Parse(Values3[0]);
+                        GlassRange[1] = int.Parse(Values3[1]);
+
+                        var Values4 = i.BottleRange.Split('-');
+                        BottleRange[0] = int.Parse(Values4[0]);
+                        BottleRange[1] = int.Parse(Values4[1]);
+
+                        Boss = i.Boss;
+                    }
+                }
+
+                foreach (Get_EUnit_Info EUnit in GlobalVariables.EUnit_Info)
+                {
+                    if (EUnit.Name == "small")
+                    {
+                        Enemy_Strength = Enemy_Strength + (SmallRange[1] * EUnit.Damage);
+                        Enemy_Health = Enemy_Health + (SmallRange[1] * EUnit.Health);
+                    }
+                    else if (EUnit.Name == "big")
+                    {
+                        Enemy_Strength = Enemy_Strength + (BigRange[1] * EUnit.Damage);
+                        Enemy_Health = Enemy_Health + (BigRange[1] * EUnit.Health);
+                    }
+                    else if (EUnit.Name == "glass")
+                    {
+                        Enemy_Strength = Enemy_Strength + (GlassRange[1] * EUnit.Damage);
+                        Enemy_Health = Enemy_Health + (GlassRange[1] * EUnit.Health);
+                    }
+                    else if (EUnit.Name == "bottle")
+                    {
+                        Enemy_Strength = Enemy_Strength + (BottleRange[1] * EUnit.Damage);
+                        Enemy_Health = Enemy_Health + (BottleRange[1] * EUnit.Health);
+                    }
+                    else if (EUnit.Name == Boss)
+                    {
+                        Enemy_Strength = Enemy_Strength + EUnit.Damage;
+                        Enemy_Health = Enemy_Health + EUnit.Health;
+                    }
+                }
+
+                LBL_Text.Text = "Level:" + Environment.NewLine + GlobalVariables.Level.ToString() + Environment.NewLine + Environment.NewLine
+                    + "Enemy Strength:" + Environment.NewLine + Enemy_Strength.ToString() + Environment.NewLine + Environment.NewLine
+                    + "Enemy Health:" + Environment.NewLine + Enemy_Health.ToString();
+            }
         }
     }
 }
