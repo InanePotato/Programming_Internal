@@ -414,9 +414,9 @@
             // LBL_Text
             // 
             this.LBL_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Text.Location = new System.Drawing.Point(18, 182);
+            this.LBL_Text.Location = new System.Drawing.Point(18, 165);
             this.LBL_Text.Name = "LBL_Text";
-            this.LBL_Text.Size = new System.Drawing.Size(193, 275);
+            this.LBL_Text.Size = new System.Drawing.Size(193, 307);
             this.LBL_Text.TabIndex = 1;
             this.LBL_Text.Text = "No level selected.\r\n\r\nPlease select a level to fight.";
             this.LBL_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -425,7 +425,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 73);
+            this.label1.Location = new System.Drawing.Point(19, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 92);
             this.label1.TabIndex = 0;

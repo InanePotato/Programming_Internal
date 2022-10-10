@@ -20,6 +20,7 @@ namespace Programming_Internal
         private void Map_Load(object sender, EventArgs e)
         {
             PNL_LevelDisplay.Location = new Point(PNL_LevelDisplay.Location.X, (this.Height - PNL_LevelDisplay.Height) / 2);
+            PNL_LevelOverview.Location = new Point(PNL_LevelOverview.Location.X, (this.Height - PNL_LevelOverview.Height) / 2);
             ResetButtonEnables();
         }
 
@@ -327,6 +328,7 @@ namespace Programming_Internal
                 int Enemy_Strength = 0;
                 int Enemy_Health = 0;
                 string Boss = "none";
+                string Boss_Level = "no";
 
                 int[] SmallRange = new int[2];
                 int[] BigRange = new int[2];
@@ -354,6 +356,8 @@ namespace Programming_Internal
                         BottleRange[1] = int.Parse(Values4[1]);
 
                         Boss = i.Boss;
+                        if (i.Boss != "" && i.Boss != "none") { Boss_Level = "yes"; }
+                        else { Boss_Level = "no"; }
                     }
                 }
 
@@ -388,7 +392,8 @@ namespace Programming_Internal
 
                 LBL_Text.Text = "Level:" + Environment.NewLine + GlobalVariables.Level.ToString() + Environment.NewLine + Environment.NewLine
                     + "Enemy Strength:" + Environment.NewLine + Enemy_Strength.ToString() + Environment.NewLine + Environment.NewLine
-                    + "Enemy Health:" + Environment.NewLine + Enemy_Health.ToString();
+                    + "Enemy Health:" + Environment.NewLine + Enemy_Health.ToString() + Environment.NewLine + Environment.NewLine
+                    + "Boss Level:" + Environment.NewLine + Boss_Level;
             }
         }
     }
