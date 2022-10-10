@@ -367,7 +367,10 @@ namespace Programming_Internal
                 "The game is mostly self-explanatory, you can build your army and order your troops by clicking the plusses in each troop slot in your army camp. " +
                 "If you wish to purchase more units or upgrade your current ones, you can click onto the shop sign in your army camp. " +
                 "To fight, just click on the map sign in your army camp, select a level, and you’re on your way to victory or certain death." +
-                "Be careful when you fight and advancing through levels, if the troops die during battle, there is no bringing them back", "Instructions",
+                "Be careful when you fight and advancing through levels, if the troops die during battle, there is no bringing them back. " +
+                "In the top bar of the game next to the coin's icon, you will be able to see a live update of your army's total strength & total health, " +
+                "this can be used, along with the level overview on the map, to help you decide if your army is ready for battle."
+                + Environment.NewLine + Environment.NewLine + "Good luck on your adventure commander duck, were counting on you!!", "Instructions",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
