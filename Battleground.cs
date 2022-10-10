@@ -66,6 +66,32 @@ namespace Programming_Internal
             // format: max x, min x
             LevelControl.ReAjust_Unit_MinXMaxX(PNL_Battle.Width - 120, PNL_Battle.Width - this.Width);
 
+            // Setup army health progress bars
+            int DucksTotalHealth = 0; // declares variable used to find out the total health of the players army
+            int LemonTotalHealth = 0; // declares variable used to find out the total health of the lemon army
+
+            // goes through all the units spawned into the game
+            foreach (Unit unit in GlobalVariables.Units)
+            {
+                // adds their health to the total health of the players army
+                DucksTotalHealth = DucksTotalHealth + unit.Health;
+            }
+            // goes through all the enemy units spawned into the game
+            foreach(Enemy_Unit EUnit in GlobalVariables.Enemy_Units)
+            {
+                // adds their health to the total health of the enemy army
+                LemonTotalHealth = LemonTotalHealth + EUnit.Health;
+            }
+
+            // sets the maxamum value of the duck army health progress bar to the duck army total health
+            PB_DuckArmyHealth.Maximum = DucksTotalHealth;
+            // sets the value of the duck army progress bar to the total health of the duck army (fulls the bar)
+            PB_DuckArmyHealth.Value = DucksTotalHealth;
+            // sets the maxamum value of the lemon army health progress bar to the lemon army total health
+            PB_LemonArmyHealth.Maximum = LemonTotalHealth;
+            // sets the value of the lemon army progress bar to the total health of the lemon army (fulls the bar)
+            PB_LemonArmyHealth.Value = LemonTotalHealth;
+
             //------------------------------------------------------------//
             //------------------------ Start Game ------------------------//
             //------------------------------------------------------------//
@@ -258,6 +284,28 @@ namespace Programming_Internal
                     Eunit.Attack_Unit();
                 }
             }
+
+            // refreshes the health progress bars
+            int DucksTotalHealth = 0; // declares variable used to find out the total health of the players army
+            int LemonTotalHealth = 0; // declares variable used to find out the total health of the lemon army
+
+            // goes through all the units spawned into the game
+            foreach (Unit unit in GlobalVariables.Units)
+            {
+                // adds their health to the total health of the players army
+                DucksTotalHealth = DucksTotalHealth + unit.Health;
+            }
+            // goes through all the enemy units spawned into the game
+            foreach (Enemy_Unit EUnit in GlobalVariables.Enemy_Units)
+            {
+                // adds their health to the total health of the enemy army
+                LemonTotalHealth = LemonTotalHealth + EUnit.Health;
+            }
+
+            // sets the value of the duck army progress bar to the total health of the duck army (fulls the bar)
+            PB_DuckArmyHealth.Value = DucksTotalHealth;
+            // sets the value of the lemon army progress bar to the total health of the lemon army (fulls the bar)
+            PB_LemonArmyHealth.Value = LemonTotalHealth;
         }
 
         private void BTN_BackToAC_Click(object sender, EventArgs e)
