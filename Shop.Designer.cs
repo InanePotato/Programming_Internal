@@ -69,7 +69,6 @@
             this.BTN_Commander_Window.TabIndex = 20;
             this.BTN_Commander_Window.Text = "Coming Soon";
             this.BTN_Commander_Window.UseVisualStyleBackColor = false;
-            this.BTN_Commander_Window.Click += new System.EventHandler(this.BTN_Commander_Window_Click);
             // 
             // BTN_UpgradeUnit_Window
             // 
