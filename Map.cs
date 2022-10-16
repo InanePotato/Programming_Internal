@@ -154,14 +154,18 @@ namespace Programming_Internal
         // responsible for taking the player to the battleground form when they want to start the battle
         private void BTN_Fight_Click(object sender, EventArgs e)
         {
+            // checks whether a level has been selected
             if (GlobalVariables.Level != 0)
             {
+                // if a level has been selected:
                 // sets the appropriate global variable to battleground, this is because the game form is responsible
                 // for changing all the child forms, so a global variable is used to tell it what to open
                 GlobalVariables.ChildToOpen = "battleground";
             }
             else
             {
+                // otherwise a level hasn't been selected,
+                // show a message box telling the player to select a level before fighting
                 MessageBox.Show("No level currently selected, please select a level before fighting.","Battle Loading Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
