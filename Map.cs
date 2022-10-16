@@ -22,7 +22,7 @@ namespace Programming_Internal
             // centers the level display and overview panels on the y axis
             PNL_LevelDisplay.Location = new Point(PNL_LevelDisplay.Location.X, (this.Height - PNL_LevelDisplay.Height) / 2);
             PNL_LevelOverview.Location = new Point(PNL_LevelOverview.Location.X, (this.Height - PNL_LevelOverview.Height) / 2);
-            
+
             // calls on the reset level buttons method
             // this resets the properties (eg. cursor, enabled, back & fore colors) back to their default, non-selected values
             ResetLevelButtons();
@@ -32,6 +32,9 @@ namespace Programming_Internal
         // (eg. cursor, enabled, back & fore colors) back to their default, non-selected values
         public void ResetLevelButtons()
         {
+            // resets selected level
+            GlobalVariables.Level = 0;
+
             // goes through all of the buttons, and checks if the level they corrospond to has been unlocked,
             // if so, then enables them and changes their hover cursor to a hand.
             // otherwise, it dissables them and changes it's hover cursor back to the default
@@ -151,9 +154,16 @@ namespace Programming_Internal
         // responsible for taking the player to the battleground form when they want to start the battle
         private void BTN_Fight_Click(object sender, EventArgs e)
         {
-            // sets the appropriate global variable to battleground, this is because the game form is responsible
-            // for changing all the child forms, so a global variable is used to tell it what to open
-            GlobalVariables.ChildToOpen = "battleground";
+            if (GlobalVariables.Level != 0)
+            {
+                // sets the appropriate global variable to battleground, this is because the game form is responsible
+                // for changing all the child forms, so a global variable is used to tell it what to open
+                GlobalVariables.ChildToOpen = "battleground";
+            }
+            else
+            {
+                MessageBox.Show("No level currently selected, please select a level before fighting.","Battle Loading Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         // responsible for the selection of level 1
